@@ -9,7 +9,7 @@ head:
     apple_touch_icon: "/img/favicon.png"
     keywords:
     site_verification:
-        google:
+        google: K6UOPYRUBfjWnLR348uE4N43ywFv2cLuLY2kFrymcK8
         baidu:
 
     # Enable generate structured-data as JSON+LD for SEO or not.
@@ -184,9 +184,9 @@ sidebar:
 # MaterialCDN
 # When you set 'use' as true, the needed css, js, font file will have a new src.
 # The new src will have the base domain you configured in 'base'.
-materialcdn: 
-    use: 
-    base: 
+materialcdn:
+    use:
+    base:
 
 # Comment Systems
 # Available value of "use":
@@ -197,7 +197,7 @@ comment:
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
-    gentie_productKey: 
+    gentie_productKey:
 
 # Search Systems
 # Available value:
@@ -211,7 +211,7 @@ search:
 #     baidu | google | cnzz
 analytics:
     use: google
-    site_id: 
+    site_id: UA-119345306-1
 
 # Leancloud Views
 leancloud:
