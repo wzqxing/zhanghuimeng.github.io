@@ -61,7 +61,7 @@ To play with fools, O what a fool was I!
 
 ## 我的感想
 
-这首诗本身没有什么可圈可点的地方。物化和贬低女性这个就不说了。似乎这首诗和上一首[《The Unfaithful Shepherdess》](post/the-unfaithful-shepherdess-by-anonymous)，都是出自威廉·伯德的乐谱集中的歌词，不过这一首来自《Psalmes, Sonets and Songs》<a href="#bib1" id="bib1ref"><sup>[1]</sup></a>，当时也属于作者不明的那一类。同样地，我也在网上找到了这首歌的一个演唱版本<a href="#bib2" id="bib2ref"><sup>[2]</sup></a>，并不难听，不过录制得不好。
+这首诗本身没有什么可圈可点的地方。物化和贬低女性这个就不说了。似乎这首诗和上一首[《The Unfaithful Shepherdess》](/post/the-unfaithful-shepherdess-by-anonymous)，都是出自威廉·伯德的乐谱集中的歌词，不过这一首来自《Psalmes, Sonets and Songs》<a href="#bib1" id="bib1ref"><sup>[1]</sup></a>，当时也属于作者不明的那一类。同样地，我也在网上找到了这首歌的一个演唱版本<a href="#bib2" id="bib2ref"><sup>[2]</sup></a>，并不难听，不过录制得不好。
 
 一位名为Steven May的研究者认为这首诗可能是维尔所作的<a href="#bib3" id="bib3ref"><sup>[3]</sup></a>。看起来编著者似乎认同了这种观点。这位第十七代牛津伯爵倒是一个很有趣的人。他来自一个古老的家庭，父亲早逝，随后伊丽莎白一世成为了他的监护人，并将他安排在威廉·塞西尔（William Cecil）家中居住。他后来娶了塞西尔的女儿安妮，生了五个孩子，却在拒绝承认第一个孩子是他的之后与她分居五年。维尔是一个出色的马术家，曾经在意大利和法国四处旅行。他是在伊丽莎白的宫廷中最开始撰写情诗的人之一，并因其剧作受到赞誉，虽然他的剧本没有流传到现在。由于维尔对文学、宗教、音乐和医学方面的作品的慷慨赞助，有许多作品是题献给他的。他也赞助了很多剧团、音乐家、杂技演员和动物。
 
