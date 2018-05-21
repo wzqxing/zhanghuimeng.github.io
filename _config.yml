@@ -38,9 +38,9 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
@@ -71,6 +71,9 @@ sitemap:
 baidusitemap: 
   path: baidusitemap.xml
 
+math:
+  engine: 'mathjax'
+  
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
