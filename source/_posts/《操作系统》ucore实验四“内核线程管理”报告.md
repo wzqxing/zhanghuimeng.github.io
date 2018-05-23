@@ -109,6 +109,7 @@ alloc_proc(void) {
 事实上initproc返回时会假装自己是通过系统调用`do_fork`生成的，所以返回过程会比较复杂：
 
 > uCore会执行进程切换，让initproc执行。在对initproc进行初始化时，设置了`initproc->context.eip = (uintptr_t)forkret`，这样，当执行`switch_to`函数并返回后，initproc将执行其实际上的执行入口地址forkret。而forkret会调用位于kern/trap/trapentry.S中的forkrets函数执行，具体代码如下：
+
 ```
 .globl __trapret
 __trapret:
@@ -126,6 +127,7 @@ forkrets:
 movl 4(%esp), %esp //把esp指向当前进程的中断帧
 jmp __trapret
 ```
+
 > 可以看出，forkrets函数首先把esp指向当前进程的中断帧，从_trapret开始执行到iret前，esp指向了current->tf.tf_eip，而如果此时执行的是initproc，则current->tf.tf_eip=kernel_thread_entry，initproc->tf.tf_cs = KERNEL_CS，所以当执行完iret后，就开始在内核中执行kernel_thread_entry函数了，而initproc->tf.tf_regs.reg_ebx = init_main，所以在kernl_thread_entry中执行“call %ebx”后，就开始执行initproc的主体了。Initprocde的主体函数很简单就是输出一段字符串，然后就返回到kernel_tread_entry函数，并进一步调用do_exit执行退出操作了。本来do_exit应该完成一些资源回收工作等，但这些不是实验四涉及的，而是由后续的实验来完成。至此，实验四中的主要工作描述完毕。
 
 ### 练习2：为新创建的内核线程分配资源（需要编码）
