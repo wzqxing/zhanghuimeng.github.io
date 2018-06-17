@@ -3,6 +3,7 @@ title: '《英诗金库》I-46：Full Fathom Five, by W. Shakespeare'
 urlname: full-fathom-five-by-w-shakespeare
 toc: true
 date: 2018-04-26 01:10:09
+updated: 2018-6-17 14:08:00
 tags: [英诗金库, 莎士比亚, 朱生豪, 暴风雨]
 ---
 
@@ -64,6 +65,16 @@ Ding, dong, bell.
 * 为了凑字，有些地方翻译得并不准确。比如，“sea change”并不直接等同于“沧海桑田”，原文中也没有讲过钟声“悠远缠绵”，这就属于译者的自由发挥了。
 * 有些地方的语义不太正确。比如“五浔乃翁”一句，如果没有背景，很难想象这一句说的是“你的父亲在五英寻深的水底”。
 但是作为一种尝试还是有点意思的。
+
+### "sea-change"
+
+2018.06.17 UPD：今天居然在《计算机系统结构》这门课的课件里也见到了这个习语。
+
+![](ca-slide-1.png)
+
+![](ca-slide-2.png)
+
+这里的“sea-change”指的是单处理器时代的消亡和并行结构的兴起。说实话，我现在对这个问题的体会并不是很深：本学期的《操作系统》面对的主要还是一个单处理器系统（uCore），虽然体会到了同步互斥问题的难度，不过这个问题是单处理器时代进行上下文切换的时候就已经存在的，很难说和多核结构有什么极大的关系。我打算今年暑假的时候去做一下MIT6.824的并行系统实验，大概会对这个问题有更深刻的理解。
 
 ## 参考文献
 <a id="bib1" href="#bib1ref"><sup>[1]</sup></a> Full Fathom Five. http://www.celticlyricscorner.net/meav/full.htm
