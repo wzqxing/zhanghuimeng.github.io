@@ -3,7 +3,7 @@ title: '《英诗金库》I-37：Love''s Farewell, by D. Drayton'
 urlname: love-s-farewell-by-d-drayton
 toc: true
 date: 2018-04-17 01:15:24
-tags: [英诗金库, 德雷顿, 李霁野, 十四行诗]
+tags: [GoldenTreasury, D.Drayton, 李霁野, Sonnet]
 ---
 
 ## 作品基本信息

@@ -3,7 +3,7 @@ title: '《英诗金库》I-52：Pack, clouds, away, and welcome day, by T. HeyW
 urlname: pack-clouds-away-and-welcome-day-by-t-heyWood
 toc: true
 date: 2018-05-06 00:23:04
-tags: [英诗金库, 海伍德, 戴镏龄, 鲁克丽丝受辱记]
+tags: [GoldenTreasury, T.Heywood, 戴镏龄]
 ---
 
 ## 作品基本信息

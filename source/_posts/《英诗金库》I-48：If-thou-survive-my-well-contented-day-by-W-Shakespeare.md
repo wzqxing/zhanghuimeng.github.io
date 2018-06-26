@@ -3,7 +3,7 @@ title: '《英诗金库》I-48：If thou survive my well-contented day, by W. Sh
 urlname: if-thou-survive-my-well-contented-day-by-w-shakespeare
 toc: true
 date: 2018-05-02 02:06:10
-tags: [英诗金库, 莎士比亚, 屠岸, 十四行诗]
+tags: [GoldenTreasury, W.Shakespeare, 屠岸, Sonnet]
 ---
 
 ## 作品基本信息

@@ -3,7 +3,8 @@ title: '《英诗金库》I-45：Fear no more the heat o'' the sun, by W. Shakes
 urlname: fear-no-more-the-heat-o-the-sun-by-w-shakespeare
 toc: true
 date: 2018-04-25 00:58:01
-tags: [英诗金库, 莎士比亚, 朱生豪, 辛白林]
+updated: 2018-06-26 16:46:00
+tags: [GoldenTreasury, W.Shakespeare, 朱生豪]
 ---
 
 ## 作品基本信息
@@ -142,9 +143,13 @@ And renowned be thy grave!
 
 其余部分都挺好的。可以看出，紫蓉的译文更“literal”（逐字翻译），但朱生豪的译文显得更自由一些。我无法评价两者的好坏，不过有一点我认为紫蓉处理得更好，就是最后部分中咒语（或者说祈祷？大概）的语气。我觉得“巫術無法傷害你！魔咒無法施予你！”比“没有巫师把你惊动！没有符咒扰你魂魄！”更符合原文的语气，不过，这当然也是我的个人看法了。
 
+2018.6.26 UPD：
+期末考试之前的某天晚上听歌的时候，偶然在Loreena Mckennitt的《The Visit》专辑中找到了这首歌的改编版<a href="#bib3" id="bib3ref"><sup>[3]</sup></a>。我以前好像还算是个她的狂热粉丝呢，怎么对这种事情毫无印象。这首歌名为《Cymbeline》，大概我那个时候还对莎士比亚一无所知，所以也没有好好听吧。总之从某种意义上来说，很棒的一首歌。（不过就是中东气息多了点……？）
+
 ## 参考文献
 <a id="bib1" href="#bib1ref"><sup>[1]</sup></a> 莎劇《辛白林》︰葬禮之歌. http://blog.xuite.net/vistara/wretch/104151975-%E8%8E%8E%E5%8A%87%E3%80%8A%E8%BE%9B%E7%99%BD%E6%9E%97%E3%80%8B%EF%B8%B0%E8%91%AC%E7%A6%AE%E4%B9%8B%E6%AD%8C
 <a id="bib2" href="#bib2ref"><sup>[2]</sup></a> 辛白林. https://zh.wikipedia.org/wiki/%E8%BE%9B%E7%99%BD%E6%9E%97
+<a id="bib3" href="#bib3ref"><sup>[3]</sup></a> Cymbeline by Loreena Mckennitt. <http://music.163.com/song?id=2923344&userid=261028414>
 
 ## 脚注
 <a id="note1" href="#note1ref"><sup>1</sup></a>*Golden*: 'resembling gold, either in beauty or value.' Cf. the Golden Age, the Golden Legend, the Golden Treasury, etc.（像金子一样美丽，或像金子一样贵重。参见黄金时代，黄金传奇，英诗金库。）

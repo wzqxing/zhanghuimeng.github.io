@@ -3,7 +3,7 @@ title: '《英诗金库》I-40：The Unfaithful Shepherdess, by Anonymous'
 urlname: the-unfaithful-shepherdess-by-anonymous
 toc: true
 date: 2018-04-20 01:02:44
-tags: [英诗金库, 曹明伦]
+tags: [GoldenTreasury, 曹明伦]
 ---
 
 ## 作品基本信息

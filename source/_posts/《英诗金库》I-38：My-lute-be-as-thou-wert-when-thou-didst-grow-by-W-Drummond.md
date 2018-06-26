@@ -3,7 +3,7 @@ title: '《英诗金库》I-38：My lute, be as thou wert when thou didst grow, 
 urlname: my-lute-be-as-thou-wert-when-thou-didst-grow-by-w-drummond
 toc: true
 date: 2018-04-18 01:33:51
-tags: [英诗金库, 德拉蒙德, 李霁野, 十四行诗]
+tags: [GoldenTreasury, W.Drummond, 李霁野, Sonnet]
 ---
 
 ## 作品基本信息

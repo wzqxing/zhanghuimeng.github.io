@@ -1,7 +1,7 @@
 ---
 title: '《英诗金库》I-35：Care-charmer Sleep, by S. Daniel'
 date: 2018-04-15 00:29:35
-tags: 英诗金库
+tags: [GoldenTreasury, S.Daniel, Sonnet, 付勇林]
 urlname: care-charmer-sleep-by-s-daniel
 ---
 

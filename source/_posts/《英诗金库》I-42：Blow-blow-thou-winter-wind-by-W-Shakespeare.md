@@ -1,9 +1,9 @@
 ---
 title: '《英诗金库》I-42：Blow, blow, thou winter wind, by W. Shakespeare'
-urlname: blow-blow-thou-winter-wind-by-w-shakespeare'
+urlname: blow-blow-thou-winter-wind-by-w-shakespeare
 toc: true
 date: 2018-04-22 01:06:37
-tags: [英诗金库, 莎士比亚, 朱生豪, 皆大欢喜]
+tags: [GoldenTreasury, W.Shakespeare, 朱生豪]
 ---
 
 ## 作品基本信息

@@ -3,7 +3,7 @@ title: '《英诗金库》I-51：Cupid and Campaspe, by J. Lyly'
 urlname: cupid-and-campaspe-by-j-lyly
 toc: true
 date: 2018-05-05 01:04:30
-tags: [英诗金库, 黎里, 戴镏龄]
+tags: [GoldenTreasury, J.Lyly, 戴镏龄]
 ---
 
 ## 作品基本信息

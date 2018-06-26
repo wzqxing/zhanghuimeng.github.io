@@ -3,7 +3,7 @@ title: '《英诗金库》I-47：Call for the robin redbreast and the wren, by J
 urlname: call-for-the-robin-redbreast-and-the-wren-by-j-webster
 toc: true
 date: 2018-04-30 01:22:30
-tags: [英诗金库, 韦伯斯特, 卞之琳, 白魔]
+tags: [GoldenTreasury, J.Webster, 卞之琳]
 ---
 
 

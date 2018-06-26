@@ -3,13 +3,13 @@ title: '《英诗金库》I-53：Prothalamion, by E. Spenser'
 urlname: prothalamion-by-e-spenser
 toc: true
 date: 2018-05-09 01:24:35
-tags: [英诗金库, 斯宾塞, 戴镏龄]
+tags: [GoldenTreasury, E.Spencer, 戴镏龄]
 ---
 
 ## 作品基本信息
 
 作品名称：Prothalamion
-作者：Edmund Spenser（威廉·莎士比亚）
+作者：Edmund Spenser（爱德蒙·斯宾塞）
 出版年代：1599
 编注：此诗选自《皆大欢喜》第二幕第七场，诗中将大自然的善与人类的恶进行了对照。
 

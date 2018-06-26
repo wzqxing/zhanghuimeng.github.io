@@ -3,7 +3,7 @@ title: '《英诗金库》I-49：No longer mourn for me when I am dead, by W. Sh
 urlname: no-longer-mourn-for-me-when-i-am-dead-by-w-shakespeare
 toc: true
 date: 2018-05-03 02:14:17
-tags: [英诗金库, 莎士比亚, 梁宗岱, 十四行诗]
+tags: [GoldenTreasury, W.Shakespeare, 梁宗岱, Sonnet]
 ---
 
 ## 作品基本信息

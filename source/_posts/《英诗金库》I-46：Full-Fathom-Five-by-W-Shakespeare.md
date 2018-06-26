@@ -4,7 +4,7 @@ urlname: full-fathom-five-by-w-shakespeare
 toc: true
 date: 2018-04-26 01:10:09
 updated: 2018-6-17 14:08:00
-tags: [英诗金库, 莎士比亚, 朱生豪, 暴风雨]
+tags: [GoldenTreasury, W.Shakespeare, 朱生豪]
 ---
 
 ## 作品基本信息

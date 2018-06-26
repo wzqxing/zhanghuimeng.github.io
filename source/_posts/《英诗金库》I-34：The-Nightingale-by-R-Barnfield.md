@@ -1,7 +1,7 @@
 ---
 title: '《英诗金库》I-34：The Nightingale, by R. Barnfield'
 date: 2018-04-04 01:25:00
-tags: 英诗金库
+tags: [GoldenTreasury, R.Barnfield, 付勇林]
 urlname: the-nightingale-by-r-barnfield
 ---
 

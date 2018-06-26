@@ -3,7 +3,7 @@ title: '《英诗金库》I-41：If women could be fair and yet not fond, by E. 
 urlname: if-women-could-be-fair-and-yet-not-fond-by-e-vere
 toc: true
 date: 2018-04-21 01:23:19
-tags: [英诗金库, 维尔, 戴镏龄]
+tags: [GoldenTreasury, E. Vere, 戴镏龄]
 ---
 
 ## 作品基本信息
