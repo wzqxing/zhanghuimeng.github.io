@@ -12,7 +12,7 @@ date: 2018-06-26 11:56:04
 36. [《英诗金库》I-36：Madrigal, by W. Shakespeare](/post/madrigal-by-w-shakespeare)
 37. [《英诗金库》I-37：Love's Farewell, by D. Drayton](/post/love-s-farewell-by-d-drayton)
 38. [《英诗金库》I-38：My lute, be as thou wert when thou didst grow, by W. Drummond](/post/my-lute-be-as-thou-wert-when-thou-didst-grow-by-w-drummond)
-39. [英诗金库》I-39：O me! what eyes hath Love put in my head, by W. Shakespeare](/post/o-me-what-eyes-hath-love-put-in-my-head-by-w-shakespeare)
+39. [《英诗金库》I-39：O me! what eyes hath Love put in my head, by W. Shakespeare](/post/o-me-what-eyes-hath-love-put-in-my-head-by-w-shakespeare)
 40. [《英诗金库》I-40：The Unfaithful Shepherdess, by Anonymous](/post/the-unfaithful-shepherdess-by-anonymous)
 41. [《英诗金库》I-41：If women could be fair and yet not fond, by E. Vere](/post/if-women-could-be-fair-and-yet-not-fond-by-e-vere)
 42. [《英诗金库》I-42：Blow, blow, thou winter wind, by W. Shakespeare](/post/blow-blow-thou-winter-wind-by-w-shakespeare)
@@ -27,3 +27,4 @@ date: 2018-06-26 11:56:04
 51. [《英诗金库》I-51：Cupid and Campaspe, by J. Lyly](/post/cupid-and-campaspe-by-j-lyly)
 52. [《英诗金库》I-52：Pack, clouds, away, and welcome day, by T. HeyWood](/post/ pack-clouds-away-and-welcome-day-by-t-heyWood)
 53. [《英诗金库》I-53：Prothalamion, by E. Spenser](/post/prothalamion-by-e-spenser)
+54. [《英诗金库》I-54：Art thou poor, by T. Dekker](/post/art-thou-poor-by-t-dekker)

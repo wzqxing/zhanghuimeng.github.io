@@ -200,6 +200,8 @@ sidebar:
         icon: chrome_reader_mode
         divider: false
     pages:
+        英诗金库: #这应该是显示的名字
+            link: "/GoldenTreasury" #这是链接
         #About:
             #link: "/about"
             #icon: person
