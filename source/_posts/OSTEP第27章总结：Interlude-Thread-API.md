@@ -3,7 +3,7 @@ title: 'OSTEP第27章总结：Interlude: Thread API'
 urlname: ostep-ch-27-summary-interlude-thread-api
 toc: true
 date: 2018-04-16 19:43:44
-tags: [操作系统, OSTEP]
+tags: [OS, OSTEP]
 ---
 
 本章主要介绍了POSIX标准下的线程API，包括：

@@ -3,7 +3,7 @@ title: OSTEP第25章总结：A Dialogue on Currency
 urlname: ostep-ch-25-summary-a-dialogue-on-currency
 toc: true
 date: 2018-04-16 11:08:53
-tags: [操作系统, OSTEP]
+tags: [OS, OSTEP]
 ---
 
 这一章是**并发**部分的开头，是一篇只有两页的对话，对并发中可能出现的问题进行了简单的讨论，所以并没有太多可以总结的。**教授**再一次拿出了桃子作为比喻的工具。

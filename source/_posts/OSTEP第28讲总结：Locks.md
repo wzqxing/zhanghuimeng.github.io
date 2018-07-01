@@ -3,7 +3,7 @@ title: OSTEP第28章总结：Locks
 urlname: ostep-ch-28-summary-locks
 toc: true
 date: 2018-04-18 16:51:47
-tags: [操作系统, OSTEP]
+tags: [OS, OSTEP]
 ---
 
 本章主要介绍了锁的基础知识，以及各种锁的实现方法和评价标准：

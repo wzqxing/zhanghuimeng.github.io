@@ -1,7 +1,7 @@
 ---
 title: OSTEP第29章总结：Lock-Based Concurrent Data Structures
 urlname: ostep-ch-29-summary-lock-based-concurrent-data-structures
-tags: [操作系统, OSTEP]
+tags: [OS, OSTEP]
 toc: true
 mathjax: true
 date: 2018-04-26 15:10:37

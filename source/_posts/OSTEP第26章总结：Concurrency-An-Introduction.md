@@ -3,7 +3,7 @@ title: 'OSTEP第26章总结：Concurrency: An Introduction'
 urlname: ostep-ch-26-summary-concurrency-an-introduction
 toc: true
 date: 2018-04-16 15:17:58
-tags: [操作系统, OSTEP]
+tags: [OS, OSTEP]
 ---
 
 本章对多线程程序面临的两个问题（竞争条件和等待）进行了初步介绍。包括以下关键词：
