@@ -1,7 +1,8 @@
 ---
 title: '《英诗金库》I-36：Madrigal, by W. Shakespeare'
 date: 2018-04-16 00:57:22
-tags: [GoldenTresury, W.Shakespeare, 朱生豪]
+updated: 2018-07-10 02:17:00
+tags: [GoldenTreasury, W.Shakespeare, 朱生豪]
 urlname: madrigal-by-w-shakespeare
 toc: true
 ---
