@@ -3,6 +3,7 @@ title: 'OSTEP第05章总结：Interlude: Process API'
 urlname: ostep-ch-05-summary-interlude-process-api
 toc: true
 date: 2018-07-07 16:49:54
+updated: 2018-07-11 00:22:00
 tags: [OSTEP, OS]
 ---
 
@@ -227,9 +228,17 @@ grep -o foo file | wc -l
 
 ```
 
-## 温馨提示：RTFM
+## 温馨提示
+
+### RTFM
 
 我们刚才只是大概介绍了这些系统调用的基本原理，还有许多细节没有涉及到。为了了解这些细节，你应当去阅读手册。作为一个系统程序员，阅读**手册**（manual/man pages）是非常重要的，因为里面提供了很多细节，而且还可以帮助你减少烦你的同事的次数。如果你直接去问他们细节问题，他们可能会回答你：“[RTFM](https://zh.wikipedia.org/zh/RTFM)。”（Read the fucking manual！）
+
+### Get it right
+
+兰普森（[Butler W. Lampson](https://zh.wikipedia.org/wiki/%E5%B7%B4%E7%89%B9%E5%8B%92%C2%B7%E8%98%AD%E6%99%AE%E6%A3%AE)）在他那篇广受好评的论文“[Hints for Computer Systems Design](https://microsoft.com/en-us/research/wp-content/uploads/2016/02/acrobat-17.pdf)”中这样说：“做正确的事。（**Get it right.**）抽象和简化都不能代替正确的做法。”
+
+实际上，设计进程创建API有很多方法，但是UNIX的设计者选择了正确的那一种。（虽然我觉得本章中并没有充分论述它的正确性）
 
 ## 作业
 
