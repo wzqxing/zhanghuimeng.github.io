@@ -4,7 +4,7 @@ urlname: os-mooc-final-exam-analysis
 toc: true
 date: 2018-05-20 12:00:04
 updated: 2018-05-20 12:00:04
-tags: 操作系统
+tags: OS
 ---
 
 以下内容来自学堂在线《操作系统》在线课程的期末考试。因为只有单选题，所以没有什么难的。
