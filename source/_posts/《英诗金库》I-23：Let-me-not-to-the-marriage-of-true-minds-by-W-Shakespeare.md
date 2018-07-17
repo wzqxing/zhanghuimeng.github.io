@@ -3,6 +3,7 @@ title: '《英诗金库》I-23：Let me not to the marriage of true minds, by W.
 urlname: let-me-not-to-the-marriage-of-true-minds-by-w-shakespeare
 toc: true
 date: 2018-06-29 00:44:07
+updated: 2018-06-29 00:44:07
 tags: [GoldenTreasury, W.Shakespeare, 屠岸, Sonnet]
 ---
 
@@ -62,7 +63,7 @@ I never writ, nor no man<a href="#note7" id="note7ref"><sup>7</sup></a> ever lov
 TODO
 
 ## 参考文献
-<a id="bib1" href="#bib1ref"><sup>[1]</sup></a> Shakespeare, William. *Sonnet 116*. Ed. Amanda Mabillard. *Shakespeare Online*. 8 Dec. 2012. <http://www.shakespeare-online.com/sonnets/116detail.html>. 
+<a id="bib1" href="#bib1ref"><sup>[1]</sup></a> Shakespeare, William. *Sonnet 116*. Ed. Amanda Mabillard. *Shakespeare Online*. 8 Dec. 2012. <http://www.shakespeare-online.com/sonnets/116detail.html>.
 
 ## 脚注
 <a id="note1" href="#note1ref"><sup>1</sup></a>*Let me not … Admit*: 'May I never own that there are.'

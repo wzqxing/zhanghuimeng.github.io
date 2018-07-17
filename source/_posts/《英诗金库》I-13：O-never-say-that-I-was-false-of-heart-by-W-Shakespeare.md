@@ -3,6 +3,7 @@ title: '《英诗金库》I-13：O never say that I was false of heart, by W. Sh
 urlname: o-never-say-that-i-was-false-of-heart-by-w-shakespeare
 toc: true
 date: 2018-06-27 21:39:29
+updated: 2018-06-27 21:39:29
 tags: [GoldenTreasury, W.Shakespeare, 屠岸, Sonnet]
 ---
 

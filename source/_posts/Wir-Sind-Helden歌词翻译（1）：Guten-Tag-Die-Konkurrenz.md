@@ -3,7 +3,8 @@ title: Wir Sind Helden歌词翻译（1）：Guten Tag & Die Konkurrenz
 urlname: wir-sind-helden-song-translation-1-guten-tag-die-konkurrenz
 toc: true
 date: 2018-05-26 01:14:40
-tags: [歌词, 翻译, WirSindHelden]
+updated: 2018-07-17 22:29:00
+tags: [Lyrics, Translation, WirSindHelden]
 ---
 
 好不容易熬过了操作系统期末考试（虽然考得真的很糟，因为忙于维护博客而忽略了一些重要的知识点，比如RAID之类的，不过毕竟这是自己选择的结果，也没有啥好说的），决定干点轻松愉快的事情——翻译德语歌词！

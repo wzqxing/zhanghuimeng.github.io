@@ -4,7 +4,7 @@ urlname: building-resilience-in-spokes-translation
 toc: true
 date: 2018-07-05 23:31:15
 updated: 2018-07-06 09:51:00
-tags: [Github, Spokes]
+tags: [Github, Spokes, Translation]
 ---
 
 这篇文章翻译自[Building resilience in Spokes](https://githubengineering.com/building-resilience-in-spokes/)，我加入了一些自己的注解。

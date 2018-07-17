@@ -3,6 +3,7 @@ title: '《英诗金库》I-3：When I have seen by Time''s fell hand defaced, b
 urlname: when-i-have-seen-by-time-s-fell-hand-defaced-by-w-shakespeare
 toc: true
 date: 2018-06-26 21:31:38
+updated: 2018-06-26 21:31:38
 tags: [GoldenTreasury, W.Shakespeare, 屠岸, Sonnet]
 ---
 

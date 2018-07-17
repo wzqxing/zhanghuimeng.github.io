@@ -3,6 +3,7 @@ title: '《英诗金库》I-2：Summons to Love, by W. Drummond'
 urlname: summons-to-love-by-w-drummond
 toc: true
 date: 2018-06-26 21:10:07
+updated: 2018-06-26 21:10:07
 tags: [GoldenTreasury, W.Drummond, 曹明伦]
 ---
 

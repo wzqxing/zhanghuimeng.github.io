@@ -3,6 +3,7 @@ title: '《英诗金库》I-21：Forget not yet the tried intent, by T. Wyatt'
 urlname: forget-not-yet-the-tried-intent-by-t-wyatt
 toc: true
 date: 2018-06-28 23:38:46
+updated: 2018-06-28 23:38:46
 tags: [GoldenTreasury, T.Wyatt, 林天斗]
 ---
 

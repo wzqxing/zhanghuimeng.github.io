@@ -3,6 +3,7 @@ title: '《英诗金库》I-54：Art thou poor, by T. Dekker'
 urlname: art-thou-poor-by-t-dekker
 toc: true
 date: 2018-06-26 17:01:34
+updated: 2018-06-26 17:01:34
 tags: [GoldenTreasury, T.Dekker, 戴镏龄]
 ---
 

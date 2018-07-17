@@ -3,6 +3,7 @@ title: '《英诗金库》I-22：To Aurora, by W. Alexander'
 urlname: to-aurora-by-w-alexander
 toc: true
 date: 2018-06-29 00:12:22
+updated: 2018-06-29 00:12:22
 tags: [GoldenTreasury, W.Alexander, 付勇林, Sonnet]
 ---
 

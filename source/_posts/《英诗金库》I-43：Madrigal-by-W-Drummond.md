@@ -3,6 +3,7 @@ title: '《英诗金库》I-43：Madrigal, by W. Drummond'
 urlname: madrigal-by-w-drummond
 toc: true
 date: 2018-04-22 23:56:33
+updated: 2018-04-22 23:56:33
 tags: [GoldenTreasury, W.Drummond, 曹明伦]
 ---
 
