@@ -3,7 +3,8 @@ title: 《操作系统》ucore实验四“内核线程管理”报告
 urlname: os-ucore-lab-4-report
 toc: true
 date: 2018-05-23 10:25:22
-tags: [操作系统, ucore]
+updated: 2018-05-23 10:25:22
+tags: [OS, ucore]
 ---
 
 ## 实验目的
