@@ -75,6 +75,21 @@ $$d_K(y) = y^a \bmod n$$
 
 ### Miller-Rabin算法
 
+```
+Miller-Rabin(n)
+    把n-1写成n-1 = 2^k * m，其中m是一个奇数
+    选取随机整数a，使得1 <= a <= n-1
+    b = a^m (mod n)
+    if b == 1 (mod n)
+        return ("n is prime")
+    for i = 0 to k-1
+        if b == -1 (mod n)
+            return ("n is prime")
+        else
+            b = b^2 (mod n)
+    return ("n is composite")
+```
+
 ## 攻击方法
 
 ### 分解公开模数的攻击（分解因子算法）
