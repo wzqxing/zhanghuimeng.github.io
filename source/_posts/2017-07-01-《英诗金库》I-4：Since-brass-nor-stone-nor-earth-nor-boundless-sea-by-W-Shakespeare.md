@@ -2,7 +2,7 @@
 title: '《英诗金库》I-4：Since brass, nor stone, nor earth, nor boundless sea, by W. Shakespeare'
 urlname: since-brass-nor-stone-nor-earth-nor-boundless-sea-by-w-shakespeare
 toc: true
-date: 2018-06-26 21:47:02
+date: 2017-07-01 00:00:00
 updated: 2018-06-26 21:47:02
 tags: [GoldenTreasury, W.Shakespeare, 梁宗岱, Sonnet]
 ---

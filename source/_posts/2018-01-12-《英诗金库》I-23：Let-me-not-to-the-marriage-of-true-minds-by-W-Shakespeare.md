@@ -2,7 +2,7 @@
 title: '《英诗金库》I-23：Let me not to the marriage of true minds, by W. Shakespeare'
 urlname: let-me-not-to-the-marriage-of-true-minds-by-w-shakespeare
 toc: true
-date: 2018-06-29 00:44:07
+date: 2018-01-12 00:00:00
 updated: 2018-06-29 00:44:07
 tags: [GoldenTreasury, W.Shakespeare, 屠岸, Sonnet]
 ---

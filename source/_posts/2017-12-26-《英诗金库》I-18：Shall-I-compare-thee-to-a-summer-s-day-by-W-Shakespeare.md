@@ -2,7 +2,7 @@
 title: '《英诗金库》I-18：Shall I compare thee to a summer''s day, by W. Shakespeare'
 urlname: shall-i-compare-thee-to-a-summer-s-day-by-w-shakespeare
 toc: true
-date: 2018-06-28 17:38:08
+date: 2017-12-26 00:00:00
 updated: 2018-06-28 17:38:08
 tags: [GoldenTreasury, W.Shakespeare, 戴镏龄, Sonnet]
 ---

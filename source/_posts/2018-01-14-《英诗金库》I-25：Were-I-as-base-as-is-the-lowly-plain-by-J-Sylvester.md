@@ -2,7 +2,7 @@
 title: '《英诗金库》I-25：Were I as base as is the lowly plain, by J. Sylvester'
 urlname: were-i-as-base-as-is-the-lowly-plain-by-j-sylvester
 toc: true
-date: 2018-06-29 01:48:40
+date: 2018-01-14 00:00:00
 updated: 2018-06-29 01:48:40
 tags: [GoldenTreasury, J.Sylvester, 李霁野, Sonnet]
 ---

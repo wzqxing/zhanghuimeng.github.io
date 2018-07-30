@@ -2,7 +2,7 @@
 title: '《英诗金库》I-11：How like a winter hath my absence been, by W. Shakespeare'
 urlname: how-like-a-winter-hath-my-absence-been-by-w-shakespeare
 toc: true
-date: 2018-06-27 20:40:29
+date: 2017-07-08 00:00:00
 updated: 2018-06-27 20:40:29
 tags: [GoldenTreasury, W.Shakespeare, 杨熙龄]
 ---

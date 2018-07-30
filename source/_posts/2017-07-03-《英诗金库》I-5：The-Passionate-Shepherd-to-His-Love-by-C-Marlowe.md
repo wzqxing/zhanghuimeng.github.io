@@ -2,7 +2,7 @@
 title: '《英诗金库》I-5：The Passionate Shepherd to His Love, by C. Marlowe'
 urlname: the-passionate-shepherd-to-his-love-by-c-marlowe
 toc: true
-date: 2018-06-27 00:36:03
+date: 2017-07-03 00:00:00
 updated: 2018-06-27 00:36:03
 tags: [GoldenTreasury, C.Marlowe, 袁广达, 梁葆成]
 ---

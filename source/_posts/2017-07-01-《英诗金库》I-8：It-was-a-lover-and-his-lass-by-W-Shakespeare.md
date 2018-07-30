@@ -2,7 +2,7 @@
 title: '《英诗金库》I-8：It was a lover and his lass, by W. Shakespeare'
 urlname: it-was-a-lover-and-his-lass-by-w-shakespeare
 toc: true
-date: 2018-06-27 14:12:15
+date: 2017-07-01 00:00:00
 updated: 2018-06-27 14:12:15
 tags: [GoldenTreasury, W.Shakespeare, 朱生豪]
 ---

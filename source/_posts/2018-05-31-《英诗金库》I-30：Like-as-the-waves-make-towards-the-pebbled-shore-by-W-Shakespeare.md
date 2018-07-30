@@ -2,7 +2,7 @@
 title: '《英诗金库》I-30：Like as the waves make towards the pebbled shore, by W. Shakespeare'
 urlname: like-as-the-waves-make-towards-the-pebbled-shore-by-w-shakespeare
 toc: true
-date: 2018-06-28 00:31:04
+date: 2018-05-31 00:00:00
 updated: 2018-06-28 00:31:04
 tags: [GoldenTreasury, W.Shakespeare, 梁宗岱, Sonnet]
 ---

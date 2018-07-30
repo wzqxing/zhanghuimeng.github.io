@@ -2,7 +2,7 @@
 title: '《英诗金库》I-31：Farewell! thou art too dear for my possessing, by W. Shakespeare'
 urlname: farewell-thou-art-too-dear-for-my-possessing-by-w-shakespeare
 toc: true
-date: 2018-06-28 21:40:42
+date: 2018-05-31 00:00:00
 updated: 2018-06-28 21:40:42
 tags: [GoldenTreasury, W.Shakespeare, 屠岸, Sonnet]
 ---
