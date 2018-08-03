@@ -3,7 +3,7 @@ title: Leetcode 382. Linked List Random Node（水塘抽样）
 urlname: leetcode-382-linked-list-random-node
 toc: true
 date: 2018-08-02 01:13:08
-updated: 2018-08-02 01:13:08
+updated: 2018-08-03 21:14:00
 mathjax: true
 tags: [Leetcode]
 ---
