@@ -33,7 +33,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "LUX ET VERITAS."
+    slogan: "CARPE DIEM"
     theme_color: "#0097A7"
     theme_sub_color: "#00838F"
     hyperlink_color: "#00838F"
@@ -202,6 +202,8 @@ sidebar:
     pages:
         友情链接:
             link: "/links"
+        操作系统:
+            link: "/OS"
         英诗金库: #这应该是显示的名字
             link: "/GoldenTreasury" #这是链接
         标签云:

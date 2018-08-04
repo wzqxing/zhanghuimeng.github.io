@@ -3,11 +3,13 @@ title: OSTEP第03章总结：A Dialogue on Virtualization
 urlname: ostep-ch-03-summary-a-dialogue-on-virtualization
 toc: true
 date: 2018-07-03 01:46:29
-updated: 2018-07-03 01:46:29
+updated: 2018-08-04 19:37:00
 tags: [OSTEP, OS]
 ---
 
-本章课本见<http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-virtualization.pdf>。
+本章课本见[http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-virtualization.pdf](http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-virtualization.pdf)。
+
+---
 
 这篇对话是本书第一部分——虚拟化（Virtualization）——的开头，简单叙述了一下虚拟化的概念。
 

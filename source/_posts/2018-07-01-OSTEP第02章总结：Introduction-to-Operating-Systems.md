@@ -3,11 +3,13 @@ title: OSTEP第02章总结：Introduction to Operating Systems
 urlname: ostep-ch-02-summary-introduction-to-operating-systems
 toc: true
 date: 2018-07-01 16:09:21
-updated: 2018-07-01 16:09:21
+updated: 2018-08-04 19:37:00
 tags: [OSTEP, OS]
 ---
 
-本章课本见<http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf>。
+本章课本见[http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf](http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf)。
+
+---
 
 这一章对全书内容做了一些简单的概括：
 * 用三个程序概括了本书将讲到的三个基本概念（虚拟化、并发、持久化）

@@ -3,11 +3,13 @@ title: OSTEP第01章总结：A Dialogue on the Book
 urlname: ostep-ch-01-summary-a-dialogue-on-the-book
 toc: true
 date: 2018-07-01 16:03:36
-updated: 2018-07-01 16:03:36
+updated: 2018-08-04 19:37:00
 tags: [OSTEP, OS]
 ---
 
-本章课本见<http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-threeeasy.pdf>。
+本章课本见[http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-virtualization.pdf](http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-virtualization.pdf)。
+
+---
 
 这是全书开头的第一章，奠定了全书逗比的基调（雾）。这一章主要只是用来扯皮的，真正的介绍性内容在下一章。
 
