@@ -7,7 +7,7 @@ updated: 2018-08-05 10:50:53
 tags: [Leetcode]
 ---
 
-题目来源：[https://leetcode.com/problems/binary-search-tree-iterator/description/](https://leetcode.com/problems/binary-search-tree-iterator/description/)
+题目来源：[https://leetcode.com/problems/counting-bits/description/](https://leetcode.com/problems/counting-bits/description/)
 
 标记难度：Medium
 
