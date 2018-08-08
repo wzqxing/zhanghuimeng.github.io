@@ -23,3 +23,4 @@ date: 2018-06-26 11:56:04
 * [OSTEP第04章作业：Simulation: process-run.py](/post/ostep-ch-04-homework-simulation-process-run-py)
 * [OSTEP第05章总结：Interlude: Process API](/post/ostep-ch-05-summary-interlude-process-api)
 * [OSTEP第05章作业：Coding: Process APIs](/post/ostep-ch-05-homework-coding-process-apis)
+* [OSTEP第06章总结：Mechanism: Limited Direct Execution](/post/ostep-ch-06-summary-mechanism-limited-direct-execution)
