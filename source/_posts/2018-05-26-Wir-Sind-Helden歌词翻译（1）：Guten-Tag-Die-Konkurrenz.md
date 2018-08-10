@@ -101,7 +101,7 @@ tags: [Lyrics, Translation, WirSindHelden]
 | Ich tausch nicht mehr ich will mein Leben zurück (×3) | 我不要再交换了！我要回到原来的生活！ |
 | Guten Tag, ich will mein Leben zurück | 你好，我要回到原来的生活！ |
 | (Ich tausch nicht mehr)Guten Tag, guten Tag, ich will mein Leben zurück | 你好，你好，我要回到原来的生活！ |
-|(Ich tausch nicht mehr)Guten Tag, guten Tag, ich will mein Leben zurück | 你好，你好，我要回到原来的生活！ |
+| (Ich tausch nicht mehr)Guten Tag, guten Tag, ich will mein Leben zurück | 你好，你好，我要回到原来的生活！ |
 | Guten Tag ich gebe zu ich war am Anfang entzückt | 你好，我承认我开始时被吸引了 |
 | aber euer Leben zwickt und drückt nur dann nicht wenn man sich bückt - | 可这种扭曲的生活不断逼迫着我屈服于它！ |
 | Guten Tag | 你好 |
