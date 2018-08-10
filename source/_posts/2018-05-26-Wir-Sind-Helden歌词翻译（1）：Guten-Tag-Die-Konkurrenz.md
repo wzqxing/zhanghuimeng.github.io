@@ -3,7 +3,7 @@ title: Wir Sind Helden歌词翻译（1）：Guten Tag & Die Konkurrenz
 urlname: wir-sind-helden-song-translation-1-guten-tag-die-konkurrenz
 toc: true
 date: 2018-05-26 01:14:40
-updated: 2018-07-17 22:29:00
+updated: 2018-08-10 22:06:00
 tags: [Lyrics, Translation, WirSindHelden]
 ---
 
@@ -75,7 +75,7 @@ tags: [Lyrics, Translation, WirSindHelden]
 | --- | ---- |
 | Meine Stimme gegen Dein Mobiltelefon | 用我的声音换你们的移动电话 |
 | Meine Fäuste gegen Eure Nagelpflegelotion | 用我的拳头换你们的美甲乳液 |
-| Meine Zähne gegen die von Doktor Best und seinem Sohn | 用我的牙齿换你们的牙齿护理产品 |
+| Meine Zähne gegen die von Doktor Best und seinem Sohn | 用我的牙齿换贝斯特博士的牙齿护理产品 |
 | Meine Seele gegen Eure sanfte Epilation | 用我的灵魂换你们的无痛脱毛药水 |
 | Es war im Ausverkauf im Angebot die Sonderaktion | 当时所有的产品都在促销 |
 | Tausche blödes altes Leben gegen neue Version | 我把愚蠢的旧生活升级成了新版本 |
@@ -106,7 +106,7 @@ tags: [Lyrics, Translation, WirSindHelden]
 | aber euer Leben zwickt und drückt nur dann nicht wenn man sich bückt - | 可这种扭曲的生活不断逼迫着我屈服于它！ |
 | Guten Tag | 你好 |
 | Mobiltelefon | 移动电话 |
-| Von Doktor Best und seinem Sohn | 牙齿护理套装 |
+| Von Doktor Best und seinem Sohn | 贝斯特博士的牙齿护理套装 |
 | Sonderaktion | 促销 |
 | Das ist die Reklamation | 这是投诉！ |
 | Der ganzen Talkshownation | 充满脱口秀的国家 |
@@ -128,8 +128,8 @@ tags: [Lyrics, Translation, WirSindHelden]
 | Tag | 好 |
 
 一些说明：
-1. [Doktor Best und seinem Sohn](https://de.wikipedia.org/wiki/Dr._Best)似乎是德国一个有名的牙齿护理产品，现在下属于葛兰素史克。
-2. 我也不太清楚“Halleluja und Bohnen到底应该是什么意思。
+1. [Doktor Best und seinem Sohn](https://de.wikipedia.org/wiki/Dr._Best)似乎是德国一个有名的牙齿护理产品，现在下属于葛兰素史克。于是我翻译成“贝斯特博士”了。
+2. 我也不太清楚“Halleluja und Bohnen”到底应该是什么意思。可能和[这部电影](https://de.wikipedia.org/wiki/Blaue_Bohnen_f%C3%BCr_ein_Halleluja)有关。
 3. [zahme Revolution](https://www.amazon.com/Die-zahme-Revolution-davon-German/dp/3800036797)是一本书，作者是[Paulus Ebner](https://de.wikipedia.org/wiki/Paulus_Ebner)，但我不太明白这本书说的是什么，以及在这里引用它的意义……
 
 总的来说，这首歌的语气好像一个人在给某家“公司”打电话投诉，声称现代消费主义带来的生活虽然开始时令人眼花缭乱，但实质上是令人痛苦而迷茫的，因此他要求退货，换回到原来的旧生活。想到这首歌是2003年发布的，不由得有种恍如隔世之感。
