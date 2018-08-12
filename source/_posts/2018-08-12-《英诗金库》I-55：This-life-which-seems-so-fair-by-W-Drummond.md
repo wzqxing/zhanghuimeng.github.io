@@ -61,7 +61,7 @@ As swell'd from nothing, doth dissolve in nought.
 
 这首诗是《Poems, The Second Part》中的Madrigal I[^drummondpoem1]，显然是里面比较著名的一首诗。
 
-[^drummondpoem1]: [The poems of William Drummond of Hawthornden](https://archive.org/details/poemsofwilliamdr01drum) by Drummond, William, 1585-1649; Ward, W. C. (William C.)
+[^drummondpoem1]: [The poems of William Drummond of Hawthornden, Vol 1](https://archive.org/details/poemsofwilliamdr01drum) by Drummond, William, 1585-1649; Ward, W. C. (William C.)
 
 我对这首诗第7-8行的理解和译文有些不同。我认为，这句话用一般的语序表达出来应该是这样的：“(This life seems) to be fixed there and firm to hover in that empty height, like to an eye of gold.”也就是说，就像对于“eye of gold”那样，生命看起来仿佛定住了，在虚空中稳定地漂浮。我觉得“eye of gold”可能是一个习语，但是没有查到相关的解释；我猜测这里是稳定不变的意思。
 

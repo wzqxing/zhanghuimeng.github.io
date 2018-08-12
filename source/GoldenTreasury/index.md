@@ -25,7 +25,7 @@ date: 2018-06-26 11:56:04
 16. [《英诗金库》I-16：Rosalynde, by T. Lodge](/post/rosalynde-by-t-lodge)（TODO）
 17. [《英诗金库》I-17：Beauty sat bathing by a spring, by A. Munday](/post/beauty-sat-bathing-by-a-spring-by-a-munday)（TODO）
 18. [《英诗金库》I-18：Shall I compare thee to a summer''s day, by W. Shakespeare](/post/shall-i-compare-thee-to-a-summer-s-day-by-w-shakespeare)（TODO）
-19. [《英诗金库》I-19：When in the chronicle of wasted time, by W. Shakespeare](/post/ when-in-the-chronicle-of-wasted-time-by-w-shakespeare)（TODO）
+19. [《英诗金库》I-19：When in the chronicle of wasted time, by W. Shakespeare](/post/when-in-the-chronicle-of-wasted-time-by-w-shakespeare)（TODO）
 20. [《英诗金库》I-20：On a day, alack the day, by W. Shakespeare](/post/on-a-day-alack-the-day-by-w-shakespeare)（TODO）
 21. [《英诗金库》I-21：Forget not yet the tried intent, by T. Wyatt](/post/forget-not-yet-the-tried-intent-by-t-wyatt)
 22. [《英诗金库》I-22：To Aurora, by W. Alexander](/post/to-aurora-by-w-alexander)
