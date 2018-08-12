@@ -61,3 +61,4 @@ date: 2018-06-26 11:56:04
 52. [《英诗金库》I-52：Pack, clouds, away, and welcome day, by T. HeyWood](/post/ pack-clouds-away-and-welcome-day-by-t-heyWood)
 53. [《英诗金库》I-53：Prothalamion, by E. Spenser](/post/prothalamion-by-e-spenser)（TODO）
 54. [《英诗金库》I-54：Art thou poor, by T. Dekker](/post/art-thou-poor-by-t-dekker)
+55. [《英诗金库》I-55：This life, which seems so fair, by W. Drummond](/post/this-life-which-seems-so-fair-by-w-drummond)
