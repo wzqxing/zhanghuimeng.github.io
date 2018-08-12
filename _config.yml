@@ -79,3 +79,13 @@ math:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    breaks: true
+    linkify: true
+  plugins:
+    - markdown-it-footnote

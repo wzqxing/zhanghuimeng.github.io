@@ -18,6 +18,18 @@ tags: [GoldenTreasury, W.Drummond, 林天斗]
 
 <a href="#note1" id="note1ref"><sup>1</sup></a>
 
+Here is a footnote reference, [^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+Here is an inline note.^[Inlines notes are easier to write, since
+you don't have to pick an identifier and move down to type the
+note.] 
 
 ## 译文
 ### 戴镏龄 译
