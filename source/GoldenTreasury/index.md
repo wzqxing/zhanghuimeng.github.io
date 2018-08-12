@@ -58,7 +58,7 @@ date: 2018-06-26 11:56:04
 49. [《英诗金库》I-49：No longer mourn for me when I am dead, by W. Shakespeare](/post/no-longer-mourn-for-me-when-i-am-dead-by-w-shakespeare)
 50. [《英诗金库》I-50：Tell me where is fancy bred, by W. Shakespeare](/post/tell-me-where-is-fancy-bred-by-w-shakespeare)
 51. [《英诗金库》I-51：Cupid and Campaspe, by J. Lyly](/post/cupid-and-campaspe-by-j-lyly)
-52. [《英诗金库》I-52：Pack, clouds, away, and welcome day, by T. HeyWood](/post/ pack-clouds-away-and-welcome-day-by-t-heyWood)
+52. [《英诗金库》I-52：Pack, clouds, away, and welcome day, by T. HeyWood](/post/pack-clouds-away-and-welcome-day-by-t-heyWood)
 53. [《英诗金库》I-53：Prothalamion, by E. Spenser](/post/prothalamion-by-e-spenser)（TODO）
 54. [《英诗金库》I-54：Art thou poor, by T. Dekker](/post/art-thou-poor-by-t-dekker)
 55. [《英诗金库》I-55：This life, which seems so fair, by W. Drummond](/post/this-life-which-seems-so-fair-by-w-drummond)
