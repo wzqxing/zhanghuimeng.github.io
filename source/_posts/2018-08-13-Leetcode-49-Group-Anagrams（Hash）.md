@@ -37,6 +37,10 @@ tags: [Leetcode]
 
 不过我仍然觉得这是一种奇技淫巧，因为：这种做法显然只适用于字符串长度比较短的情况，否则hash值估计要爆，效率也会降低，应当进行取模；但是进行取模之后，又要考虑hash冲突问题，这样就和一般的HashMap区别不是很大了。
 
+### map+容器
+
+其实我之前完全没有想过，map的值可以是容器。事实上显然是可以的。以及，`std::sort`是可以给`std::string`排序的。（[Sorting Characters Of A C++ String](https://stackoverflow.com/questions/9107516/sorting-characters-of-a-c-string)）
+
 ## 代码
 
 ```cpp
