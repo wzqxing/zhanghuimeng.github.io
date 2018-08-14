@@ -4,7 +4,7 @@ urlname: leetcode-478-generate-random-point-in-a-circle
 toc: true
 mathjax: true
 date: 2018-08-14 17:20:01
-updated: 2018-08-14 21:54:01
+updated: 2018-08-14 22:17:01
 tags: [Leetcode]
 ---
 
@@ -82,6 +82,53 @@ $$CDF(r) = \frac{r^2}{R^2}$$
 $$PDF(r) = \frac{d}{dr} CDF(r) = \frac{2r}{R^2}$$
 
 以`[0, 1]`均匀分布对$CDF(r)$进行随机，则有$r = R \sqrt{rand()}$。
+
+### C++中的数学运算
+
+使用[std::uniform_real_distribution](http://en.cppreference.com/w/cpp/numeric/random/uniform_real_distribution)生成随机实数比直接用`rand()`好得多，至少[stackoverflow](https://stackoverflow.com/questions/686353/c-random-float-number-generation)上是这么说的。具体使用方法如下：
+
+```cpp
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <map>
+#include <random>
+
+int main()
+{
+    std::random_device rd;
+
+    //
+    // Engines
+    //
+    std::mt19937 e2(rd());
+    //std::knuth_b e2(rd());
+    //std::default_random_engine e2(rd()) ;
+
+    //
+    // Distribtuions
+    //
+    std::uniform_real_distribution<> dist(0, 10);
+    //std::normal_distribution<> dist(2, 2);
+    //std::student_t_distribution<> dist(5);
+    //std::poisson_distribution<> dist(2);
+    //std::extreme_value_distribution<> dist(0,2);
+
+    double rand = dist(e2));
+
+    return 0;
+}
+```
+
+目前C++中并没有提供什么特别高级的获得`PI`值的方法，仍然是用C中提供的`M_PI`宏：
+
+```cpp
+#define _USE_MATH_DEFINES  // 根据实际情况；参见https://stackoverflow.com/questions/1727881/how-to-use-the-pi-constant-in-c
+#include <math.h>
+M_PI
+```
+
+`std::cos`和`std::sin`函数使用的是弧度。好久不写，都忘光了。
 
 ## 代码
 
