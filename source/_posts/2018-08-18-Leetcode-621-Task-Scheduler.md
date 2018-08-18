@@ -50,7 +50,29 @@ A
 
 显然我们应该把`n`的界再缩小一些：假设实际任务的总数为`m`，则`n >= m - 1`时，实际执行状况都是这样的。不妨设A的时间片个数为`maxIntervals`，时间片数量与A相等的任务个数为`maxCount`，则所需时间片总量为`(maxIntervals - 1) * (n + 1) + maxCount`。
 
-当`n < m - 1`时，从上述直接贪心的方法，可以保证没有空闲时间（大概吧，我也不知道怎么证明），所以需要的时间片总量为全部任务时间片的总量。
+当`n < m - 1`时，我们只需先把前`n + 1`个任务安排好：
+
+```
+ABCDE
+ABCDE
+ABCDE
+ABCDE
+...
+ABC
+```
+
+然后把剩余的任务按顺序插进去，有多少个就插多少个：
+
+```
+ABCDEFGHI
+ABCDEFGH
+ABCDEFGH
+ABCDEFG
+...
+ABC
+```
+
+此时没有空闲时间片，所以需要的时间片总量为全部任务时间片的总量。
 
 特别地，当`n < m - 1`且`maxCount >= n - 1`时，我们不需要按照`n`的循环来安排任务，直接按照`m`来循环即可：
 
@@ -114,5 +136,22 @@ public:
 
 ### 直接贪心
 
-```
+```cpp
+class Solution {
+public:
+    int leastInterval(vector<char>& tasks, int n) {
+        int taskLeft[26];
+        memset(taskLeft, 0, sizeof(taskLeft));
+
+        for (char c: tasks)
+            taskLeft[c - 'A']++;
+
+        sort(taskLeft, taskLeft + 26);
+        int maxes = 0;
+        for (int i = 25; i >= 0 && taskLeft[i] == taskLeft[25]; i--)
+            maxes++;
+
+        return max((int) tasks.size(), (taskLeft[25] - 1) * (n + 1) + maxes);
+    }
+};
 ```
