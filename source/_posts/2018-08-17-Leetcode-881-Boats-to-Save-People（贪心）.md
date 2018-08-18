@@ -82,7 +82,7 @@ tags: [Leetcode]
 
 ### 在Leetcode上的英文回答
 
-[leetcode.com/problems/boats-to-save-people/discuss/156748/Python-short-2-pointer-solution-and-some-thoughts/166286](leetcode.com/problems/boats-to-save-people/discuss/156748/Python-short-2-pointer-solution-and-some-thoughts/166286)
+[https://leetcode.com/problems/boats-to-save-people/discuss/156748/Python-short-2-pointer-solution-and-some-thoughts/166286](https://leetcode.com/problems/boats-to-save-people/discuss/156748/Python-short-2-pointer-solution-and-some-thoughts/166286)
 
 In short: I think both "smallest" and "possibly maximum" methods are correct, and they are in some way equivalent.
 
