@@ -3,7 +3,7 @@ title: Leetcode 881. Boats to Save People（贪心）
 urlname: leetcode-881-boats-to-save-people
 toc: true
 date: 2018-08-17 09:55:41
-updated: 2018-08-18 17:25:00
+updated: 2018-08-18 18:32:00
 tags: [Leetcode]
 ---
 
@@ -79,6 +79,43 @@ tags: [Leetcode]
 ---
 
 我感觉我的证明能力不是很强。以后再遇到贪心问题的时候，我也会尝试去做一下问题的贪心性质和贪心算法的正确性这两种证明的。
+
+### 在Leetcode上的英文回答
+
+[leetcode.com/problems/boats-to-save-people/discuss/156748/Python-short-2-pointer-solution-and-some-thoughts/166286](leetcode.com/problems/boats-to-save-people/discuss/156748/Python-short-2-pointer-solution-and-some-thoughts/166286)
+
+In short: I think both "smallest" and "possibly maximum" methods are correct, and they are in some way equivalent.
+
+Another person has provided a formal proof for the "smallest" selection method. ([6 lines Java O(nlogn) code, sorting + greedy, with greedy algorithm proof. ](https://leetcode.com/problems/boats-to-save-people/discuss/156855/6-lines-Java-O%28nlogn%29-code-sorting-+-greedy-with-greedy-algorithm-proof.)) Of course, that method is correct, but this might not be immediately obvious. So I'd like to share my understanding of this problem with you. (So it's not a formal proof.)
+
+Let `mid = floor(limit/2)`, and divide those people into two groups: 'heavy' people, whose `weight > mid`; and 'light' people, whose `weight <= mid`. Minimizing the number of boats is equivalent to maximizing the number of boats with two people in them. It is obvious that, if a 'heavy' person wants to sit in a boat with another person, the other person must be a 'light' one; on the other hand, a 'light' person can certainly sit with another 'light' person, and maybe some of the 'heavy' people.
+
+Now, a solution is at hand: we first try to pair each 'heavy' person with a 'light' person, and put them in a boat; when a 'heavy' person can't find a pair, we put him alone in a boat; finally, if there are any 'light' person left, we can arbitrarily pair them together. The biggest question is, how can we maximize these 'heavy'-'light' pairs?
+
+Sort all the people in ascending order. Let `n = people.length`, and suppose there are altogether `m` heavy people, denoted by `people[n-m]`, `people[n-m+1]`, ... `people[n-1]`. After sorting, the 'light' people that a 'heavy' person can pair with will form a **interval**. Denote these intervals by `[0, r_{n-m})`, `[0, r_{n-m+1})`, ..., `[0, r_{n-1})`. (Intervals might be empty)
+
+Example: `limit = 8`, `people = [2, 3, 3, 5, 6, 7]`
+
+In this example, `heavy = [5, 6, 7]`, `light = `[2, 3, 3]`.
+
+* For `7`, the interval is `[0, 0)` (no one can sit with `7`);
+* For `6`, the interval is `[0, 1)` (`2` can sit with `6`);
+* For `5`, the interval is `[0, 3)` (`[2, 3, 3]` can all sit with `5`).
+
+And it is obvious that `r_{n-m} >= r_{n-m+1} >= ... >= r_{n-1} >= 0`. So these intervals are all overlapping, and the left endpoints are all zero.
+
+Now we can analyze the difference between "smallest" and "possibly maximum" methods. When we choose the "smallest" person, we are choosing the **leftmost** point of the interval (which hasn't be chosen yet); when we choose the "possibly maximum" person, we are choosing the **rightmost** point of the interval (which hasn't be chosen yet).
+
+Because all intervals has 0 as the left endpoint, when we start from the heaviest person, only when `r_k < k` (`k` is the number of 'heavy' people we have considered or is considering) can this 'heavy' person not find a 'light' person to pair. So, in these two methods, we find different 'light' people for the 'heavy' people to pair, but the set of 'heavy' people who cannot find a pair is the same.
+
+Example: `limit = 8`, `people = [1, 2, 2, 2, 3, 4, 5, 6, 7, 7]`
+
+| `people[i]` | `k` | interval | "smallest" pair | "possibly maximum" pair |
+| ----------- | --- | -------- | --------------- | ----------------------- |
+| `people[9] = 7` | 1 | `[0, 1)` | 1 | 1 |
+| `people[8] = 7` | 2 | `[0, 1)` | - | - |
+| `people[7] = 6` | 3 | `[0, 4)` | 2 | 2 |
+| `people[6] = 5` | 4 | `[0, 5)` | 2 | 3 |
 
 ## 代码
 
