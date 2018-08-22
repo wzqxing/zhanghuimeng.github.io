@@ -134,8 +134,8 @@ void calc (int charloc, int low, int high) {
             if (sol[charloc-1] == dict[j][charloc-1]) {
                 low=j;
                 // 问题在于，这个while是有可能越界的。j有可能会超出high的范围
-                // 但原作者没有进行判断，导致[low, high]范围内的字符串并不一定满足要求
-                // 可能会溢出。
+                // 但原作者没有进行判断，导致[low, high)范围内的字符串并不一定满足要求
+                // 所以可能会溢出。
                 // 测试样例：26678268463
                 while (sol[charloc-1] == dict[j][charloc-1])
                     j++;
