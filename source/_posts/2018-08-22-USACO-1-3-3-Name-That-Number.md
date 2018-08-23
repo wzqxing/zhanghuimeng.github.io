@@ -3,7 +3,7 @@ title: 'USACO 1.3.3: Name That Number'
 urlname: usaco-1-3-3-name-that-number
 toc: true
 date: 2018-08-22 23:35:24
-updated: 2018-08-22 00:24:00
+updated: 2018-08-23 00:24:00
 tags: [USACO]
 ---
 
@@ -87,7 +87,7 @@ int main() {
 
 >Here is Argentina competitor's Michel Mizrah's solution using the first method with a binary search. While it is blazingly fast, it does have the disadvantage of some fairly tricky coding in the binary search routine. A single off-by-one error would doom a program in a contest.
 
-具体见注释。我似乎找到了这份代码中的一个bug。
+具体见注释。事实上，我觉得这份代码体现的思想更类似于Trie，而不是二分——我真没看出来“二分”在哪。以及我似乎找到了这份代码中的一个bug。
 
 ```cpp
 #include <stdio.h>
