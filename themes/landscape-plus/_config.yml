@@ -13,7 +13,7 @@ mathjax: false
 sidebar: right
 widgets:
 - category
-- tag
+#- tag
 - tagcloud
 - archive
 - recent_posts
@@ -21,12 +21,10 @@ widgets:
 
 # Links
 links:
-  主题作者: http://arvinxiang.com
-  热前端: http://reqianduan.com
-  远程.work: http://yuancheng.work
+  wenj: https://wenj.github.io/
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-119345306-1
 favicon: /favicon.png
 twitter:
 google_plus:
@@ -34,7 +32,8 @@ fb_admins:
 fb_app_id:
 
 # Duoshuo
-duoshuo_shortname: reqianduan
+# duoshuo_shortname: reqianduan
+disqus_shortname: zhanghuimeng-blog
 
 # Baidu share
 baidushare: true
