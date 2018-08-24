@@ -51,6 +51,54 @@ tags: [W.Drummond]
     * **Sonnet 22**: Nymphs, sister nymphs, which haunt this crystal brook
     * **Madrigal 3**: Like the Idalian queen
     * **Sonnet 23**: Then is she gone? O fool and coward I!
+    * **Sonnet 24**: In mind's pure glass when I myself behold
+    * **Sonnet 25**: Dear quirister, who from those shadows sends
+    * **Sonnet 26**: Trust not, sweet soul, those curled waves of gold
+    * **Sonnet 27**: That I so slenderly set forth my mind
+    * **Sonnet 28**: Sound hoarse, sad lute, true witness of my woe
+    * **Sonnet 29**: You restless seas, appease your roaring waves
+    * **Sonnet 30**: What cruel star into this world me brought
+    * **Sonnet 31**: Dear eye, which deign'st on this sad monument
+    * **Sonnet 32**: If crost with all mishaps by my poor life
+    * **Sonnet 33**: Let fortune triumph now, and Iӧ sing
+    * **Sonnet 34**: O cruel beauty, meekness inhumane
+    * **Sonnet 35**: The Hyperborean hills, Ceraunus' snow
+    * **Song 2**: Phœbus, arise
+    * **Sonnet 36**: Who hath not seen into her saffron bed
+    * **Sonnet 37**: Of Cytherea's birds, that milk-white pair
+    * **Sonnet 38**: The sun is fair when he with crimson crown
+    * **Madrigal 4**: Whenas she smiles I find
+    * **Sonnet 39**: Slide soft, fair Forth, and make a crystal plain
+    * **Sonnet 40**: Ah! who can see those fruits of Paradise
+    * **Sonnet 41**: Is 't not enough, ay me! me thus to see
+    * **Madrigal 5**: Sweet rose, whence is this hue
+    * **Sonnet 42**: She whose fair flow'rs no autumn makes decay
+    * **Madrigal 6**: On this cold world of ours
+    * **Sonnet 43**: Dear wood, and you, sweet solitary place
+    * **Sextain 2**: Sith gone is my deligght and only pleasure
+    * **Sonnet 44**: Thou window, once which served for a sphere
+    * **Sonnet 45**: Are these the flow'ry banks, is this the mead
+    * **Sonnet 46**: Alexis, here she stay'd; among these pines
+    * **Sonnet 47**: O night, clear night, O dark and gloomy day!
+    * **Sonnet 48**: Hair, precious hair which Midas' hand did strain
+    * **Madrigal 7**: Unhappy light
+    * **Sonnet 49**: With grief in heart, and tears in swooning eyes
+    * **Madrigal 8**: I fear not henceforth death
+    * **Sonnet 50**: How many times night's silent queen her face
+    * **Sonnet 51**: So grievous is my pain, so painful life
+    * **Sonnet 52**: Fame, who with golden pens abroad dost range
+    * **Madrigal 9**: The ivory, coral, gold
+    * **Sonnet 53**: I curse the night, yet do from day me hide
+    * **Sonnet 54**: Of death some tell, some of the curel pain
+    * **Madrigal 10**: Tritons, which bounding dive
+    * **Sonnet 55**: Place me where angry Titan burns the Moor
+  * **The Second Part**
+    * **Sonnet 1**: Of mortal glory, O seen darken'd ray!
+    * **Sonnet 2**: Those eyes, those sparkling sapphires of delight
+    * **Sonnet 3**: O Fate! conspir'd to pour worst on me
+    * **Sonnet 4**: O woful life! Life? No, but living death
+    * **Sonnet 5**: Mine eyes, dissolve your globes in briny streams
+    * **Sonnet 6**: Sweet soul, which in the April of thy years
 
 ## 首句倒查列表
 
