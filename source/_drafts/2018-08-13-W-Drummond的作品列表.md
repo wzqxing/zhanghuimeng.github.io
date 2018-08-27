@@ -99,6 +99,29 @@ tags: [W.Drummond]
     * **Sonnet 4**: O woful life! Life? No, but living death
     * **Sonnet 5**: Mine eyes, dissolve your globes in briny streams
     * **Sonnet 6**: Sweet soul, which in the April of thy years
+    * **Madrigal 1**: This life, which seems so fair
+    * **Sonnet 7**: O! It is not to me, bright lamp of day
+    * **Song 1**: Sad Damon being come
+    * **Madrigal 2**: Dear night, the ease of care
+    * **Sonnet 8**: My lute, be as thou wast when thou didst grow
+    * **Sonnet 9**: Sweet Spring, thou turn'st with all thy goodly train
+    * **Sonnet 10**: What doth it serve to see Sun's burning face
+    * **Madrigal 3**: The beauty, and the life
+    * **Sonnet 11**: Ah! napkin, omnious present of my dear
+    * **Madrigal 4**: Poor turtle! thou bemoans
+    * **Sonnet 12**: As, in a dusky and tempestuous night
+    * **Sonnet 13**: Sith it hash pleas'd that First and only Fair
+    * **Madrigal 5**: My thoughts hold mortal strife
+    * **Song 2**: It autumn was, and on our hemisphere
+  * **To The Author**: The sister nymphs who hount the Thespian springs
+* **Urania, or Spiritual Poems**（以下诗歌没有原编号）
+  * **Sonnet 1**: Triumphing chariots, statues, crowns of bays
+  * **Sonnet 2**: Too long I follow'd have my fond desire
+  * **Sonnet 3**: To spread the azure canopy of heaven
+  * **Sonnet 4**: Come forth, come forth, ye blest triumphing bands
+  * **Madrigal 1**: Soul, which to hell wast thrall
+  * **Sonnet 5**: If with such passing beauty, choice delights
+  * **Madrigal 2**: Love which is here a care
 
 ## 首句倒查列表
 
