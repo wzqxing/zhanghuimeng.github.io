@@ -9,7 +9,7 @@ tags: [Leetcode, Tree, DFS]
 
 题目来源：[https://leetcode.com/problems/sum-root-to-leaf-numbers/description/](https://leetcode.com/problems/sum-root-to-leaf-numbers/description/)
 
-标记难度：Easy
+标记难度：Medium
 
 提交次数：1/1
 
@@ -21,7 +21,7 @@ tags: [Leetcode, Tree, DFS]
 
 ## 分析
 
-这个题和[Leetcode 112](/post/leetcode-112-path-sum)差不多，主要区别是没有剪枝的必要了，因为是求所有数字的和。题解区里也没看见什么特别惊人的做法。
+这个题和[Leetcode 112](/post/leetcode-112-path-sum)差不多（我很好奇，为啥那道题就是Easy，这道就变Medium了），主要区别是没有剪枝的必要了，因为是求所有数字的和。题解区里也没看见什么特别惊人的做法。
 
 ## 代码
 
