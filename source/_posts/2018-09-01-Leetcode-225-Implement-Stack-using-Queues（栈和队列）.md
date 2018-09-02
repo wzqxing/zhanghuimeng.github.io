@@ -4,7 +4,7 @@ urlname: leetcode-225-implement-stack-using-queues
 toc: true
 date: 2018-09-01 11:22:24
 updated: 2018-09-01 15:31:00
-tags: [Leetcode, Stack, Queue]
+tags: [Leetcode, alg:Stack, alg:Queue]
 ---
 
 题目来源：[https://leetcode.com/problems/binary-search-tree-iterator/description/](https://leetcode.com/problems/binary-search-tree-iterator/description/)

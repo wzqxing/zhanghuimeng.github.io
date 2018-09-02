@@ -4,7 +4,7 @@ urlname: leetcode-844-backspace-string-compare
 toc: true
 date: 2018-08-02 00:49:44
 updated: 2018-08-02 01:01:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Stack, alg:Two Pointers]
 ---
 
 题目来源：[https://leetcode.com/problems/backspace-string-compare/description/](https://leetcode.com/problems/backspace-string-compare/description/)

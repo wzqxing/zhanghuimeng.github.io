@@ -4,7 +4,7 @@ urlname: usaco-1-3-3-name-that-number
 toc: true
 date: 2018-08-22 23:35:24
 updated: 2018-08-23 00:24:00
-tags: [USACO]
+tags: [USACO, alg:Hash Table]
 ---
 
 ## 题意

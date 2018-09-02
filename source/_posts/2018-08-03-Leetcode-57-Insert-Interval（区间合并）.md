@@ -4,7 +4,7 @@ urlname: leetcode-57-insert-interval
 toc: true
 date: 2018-08-03 22:22:32
 updated: 2018-08-03 22:54:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Array]
 ---
 
 题目来源：[https://leetcode.com/problems/insert-interval/description/](https://leetcode.com/problems/insert-interval/description/)

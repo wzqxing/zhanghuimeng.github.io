@@ -4,7 +4,7 @@ urlname: leetcode-129-sum-root-to-leaf-numbers
 toc: true
 date: 2018-08-31 15:24:07
 updated: 2018-08-31 15:29:07
-tags: [Leetcode, Tree, DFS]
+tags: [Leetcode, Tree, Depth-first Search]
 ---
 
 题目来源：[https://leetcode.com/problems/sum-root-to-leaf-numbers/description/](https://leetcode.com/problems/sum-root-to-leaf-numbers/description/)

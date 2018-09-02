@@ -4,7 +4,7 @@ urlname: leetcode-884-uncommon-words-from-two-sentences-and-weekly-contest-97
 toc: true
 date: 2018-08-14 22:31:52
 updated: 2018-08-15 02:00:00
-tags: [Leetcode, LeetcodeContest]
+tags: [Leetcode, Leetcode Contest, alg:Hash Table, alg:String]
 ---
 
 题目来源：[https://leetcode.com/problems/uncommon-words-from-two-sentences/description/](https://leetcode.com/problems/uncommon-words-from-two-sentences/description/)

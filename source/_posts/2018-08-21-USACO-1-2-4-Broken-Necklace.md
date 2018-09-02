@@ -4,7 +4,7 @@ urlname: usaco-1-2-4-broken-necklace
 toc: true
 date: 2018-08-21 23:06:53
 updated: 2018-08-21 23:27:00
-tags: [USACO]
+tags: [USACO, alg:Dynamic Programming]
 ---
 
 ## 题意

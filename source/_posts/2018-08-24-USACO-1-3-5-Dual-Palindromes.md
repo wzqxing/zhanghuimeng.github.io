@@ -4,7 +4,7 @@ urlname: usaco-1-3-5-dual-palindromes
 toc: true
 date: 2018-08-24 00:22:43
 updated: 2018-08-24 00:29:43
-tags: [USACO]
+tags: [USACO, alg:Math]
 ---
 
 ## 题意

@@ -4,7 +4,7 @@ urlname: leetcode-14-longest-common-prefix
 toc: true
 date: 2018-08-05 15:40:19
 updated: 2018-08-05 15:40:19
-tags: [Leetcode]
+tags: [Leetcode, alg:String]
 ---
 
 题目来源：[https://leetcode.com/problems/longest-common-prefix/description/](https://leetcode.com/problems/longest-common-prefix/description/)

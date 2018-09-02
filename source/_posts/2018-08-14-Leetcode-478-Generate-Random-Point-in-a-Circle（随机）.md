@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-08-14 17:20:01
 updated: 2018-08-14 22:17:01
-tags: [Leetcode]
+tags: [Leetcode, alg:Math, alg:Random, alg:Rejection Sampling]
 ---
 
 题目来源：[https://leetcode.com/problems/generate-random-point-in-a-circle/description/](https://leetcode.com/problems/generate-random-point-in-a-circle/description/)

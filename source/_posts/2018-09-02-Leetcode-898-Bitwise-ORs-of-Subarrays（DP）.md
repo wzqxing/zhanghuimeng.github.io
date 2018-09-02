@@ -4,7 +4,7 @@ urlname: leetcode-898-bitwise-ors-of-subarrays
 toc: true
 date: 2018-09-02 15:32:33
 updated: 2018-09-02 16:19:00
-tags: [Leetcode, Leetcode Contest, Bitwise Operation, Dynamic Programming]
+tags: [Leetcode, Leetcode Contest, alg:Bit Manipulation, alg:Dynamic Programming]
 ---
 
 题目来源：[https://leetcode.com/problems/bitwise-ors-of-subarrays/description/](https://leetcode.com/problems/bitwise-ors-of-subarrays/description/)

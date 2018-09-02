@@ -4,7 +4,7 @@ urlname: leetcode-171-excel-sheet-column-number
 toc: true
 date: 2018-08-31 10:27:42
 updated: 2018-08-31 10:33:42
-tags: [Leetcode, Math, Radix]
+tags: [Leetcode, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/excel-sheet-column-number/description/](https://leetcode.com/problems/excel-sheet-column-number/description/)

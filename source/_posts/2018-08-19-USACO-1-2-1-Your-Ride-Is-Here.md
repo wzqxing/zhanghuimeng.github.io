@@ -4,7 +4,7 @@ urlname: usaco-1-2-1-your-ride-is-here
 toc: true
 date: 2018-08-19 01:20:22
 updated: 2018-08-19 01:27:22
-tags: [USACO]
+tags: [USACO, alg:String]
 ---
 
 额，我竟然开始重刷USACO了……希望这次能刷完，不要像高中时那样半途而废吧。USACO的题目对现在的我说不上多有用，但这可能是种情结。

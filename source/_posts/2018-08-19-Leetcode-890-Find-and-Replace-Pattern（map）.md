@@ -4,7 +4,7 @@ urlname: leetcode-890-find-and-replace-pattern
 toc: true
 date: 2018-08-19 17:36:49
 updated: 2018-08-19 17:45:00
-tags: [Leetcode, LeetcodeContest]
+tags: [Leetcode, Leetcode Contest, alg:Hash Table]
 ---
 
 题目来源：[https://leetcode.com/problems/find-and-replace-pattern/description/](https://leetcode.com/problems/find-and-replace-pattern/description/)

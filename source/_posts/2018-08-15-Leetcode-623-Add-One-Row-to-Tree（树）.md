@@ -4,7 +4,7 @@ urlname: leetcode-623-add-one-row-to-tree
 toc: true
 date: 2018-08-15 00:57:05
 updated: 2018-08-15 01:12:05
-tags: [Leetcode]
+tags: [Leetcode, alg:Tree]
 ---
 
 题目来源：[https://leetcode.com/problems/add-one-row-to-tree/description/](https://leetcode.com/problems/add-one-row-to-tree/description/)

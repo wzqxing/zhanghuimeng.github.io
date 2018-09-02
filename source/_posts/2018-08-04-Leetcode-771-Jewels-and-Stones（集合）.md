@@ -4,7 +4,7 @@ urlname: leetcode-771-jewels-and-stones
 toc: true
 date: 2018-08-04 16:44:33
 updated: 2018-08-04 16:54:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Hash Table]
 ---
 
 题目来源：[https://leetcode.com/problems/jewels-and-stones/description/](https://leetcode.com/problems/jewels-and-stones/description/)

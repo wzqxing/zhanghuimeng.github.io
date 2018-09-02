@@ -4,7 +4,7 @@ urlname: leetcode-112-path-sum
 toc: true
 date: 2018-08-31 14:33:54
 updated: 2018-08-31 14:46:00
-tags: [Leetcode, Tree, DFS]
+tags: [Leetcode, alg:Tree, alg:Depth-first Search]
 ---
 
 题目来源：[https://leetcode.com/problems/path-sum/description/](https://leetcode.com/problems/path-sum/description/)

@@ -4,7 +4,7 @@ urlname: leetcode-477-total-hamming-distance
 toc: true
 date: 2018-08-03 23:43:19
 updated: 2018-08-03 23:52:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Bit Manipulation]
 ---
 
 题目来源：[https://leetcode.com/problems/total-hamming-distance/description/](https://leetcode.com/problems/total-hamming-distance/description/)

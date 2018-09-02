@@ -4,7 +4,7 @@ urlname: leetcode-401-binary-watch
 toc: true
 date: 2018-08-25 09:05:03
 updated: 2018-08-25 10:05:03
-tags: [Leetcode]
+tags: [Leetcode, alg:Backtracking, alg:Bit Manipulation]
 ---
 
 题目来源：[https://leetcode.com/problems/binary-watch/description/](https://leetcode.com/problems/binary-watch/description/)

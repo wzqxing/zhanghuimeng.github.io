@@ -4,7 +4,7 @@ urlname: leetcode-347-top-k-frequent-elements
 toc: true
 date: 2018-08-12 01:02:31
 updated: 2018-08-12 01:02:31
-tags: [Leetcode]
+tags: [Leetcode, alg:Hash Table, alg:Heap]
 ---
 
 题目来源：[https://leetcode.com/problems/top-k-frequent-words/description/](https://leetcode.com/problems/top-k-frequent-words/description/)

@@ -4,7 +4,7 @@ urlname: leetcode-687-longest-univalue-path
 toc: true
 date: 2018-09-01 16:19:14
 updated: 2018-09-01 16:23:00
-tags: [Leetcode, Tree, Recursion]
+tags: [Leetcode, alg:Tree, alg:Recursion]
 ---
 
 题目来源：[https://leetcode.com/problems/longest-univalue-path/description/](https://leetcode.com/problems/longest-univalue-path/description/)

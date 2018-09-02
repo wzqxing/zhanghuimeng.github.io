@@ -4,7 +4,7 @@ urlname: leetcode-701-insert-into-a-binary-search-tree
 toc: true
 date: 2018-09-01 16:31:34
 updated: 2018-09-01 16:34:00
-tags: [Leetcode, BST]
+tags: [Leetcode, alg:Binary Search Tree]
 ---
 
 题目来源：[https://leetcode.com/problems/insert-into-a-binary-search-tree/description/](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/)

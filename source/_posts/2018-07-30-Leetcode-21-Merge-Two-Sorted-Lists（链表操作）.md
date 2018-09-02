@@ -4,7 +4,7 @@ urlname: leetcode-21-merge-two-sorted-lists
 toc: true
 date: 2018-07-30 22:58:58
 updated: 2018-07-30 22:58:58
-tags: [Leetcode]
+tags: [Leetcode, alg:Linked List]
 ---
 
 题目来源：[https://leetcode.com/problems/merge-two-sorted-lists/description/](https://leetcode.com/problems/merge-two-sorted-lists/description/)

@@ -4,7 +4,7 @@ urlname: leetcode-895-maximum-frequency-stack
 toc: true
 date: 2018-08-30 15:48:06
 updated: 2018-08-30 19:29:06
-tags: [Leetcode, LeetcodeContest]
+tags: [Leetcode, Leetcode Contest, alg:Hash Table, alg:Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/maximum-frequency-stack/description/](https://leetcode.com/problems/maximum-frequency-stack/description/)

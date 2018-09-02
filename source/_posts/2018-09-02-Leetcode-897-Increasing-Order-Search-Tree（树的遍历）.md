@@ -4,14 +4,14 @@ urlname: leetcode-897-increasing-order-search-tree
 toc: true
 date: 2018-09-02 14:28:25
 updated: 2018-09-02 15:27:00
-tags: [Leetcode, LeetcodeContest, Tree, Traverse]
+tags: [Leetcode, Leetcode Contest, alg:Tree, alg:In-Order Traversal]
 ---
 
 题目来源：[https://leetcode.com/problems/monotonic-array/description/](https://leetcode.com/problems/monotonic-array/description/)
 
 标记难度：Easy
 
-提交次数：1/1
+提交次数：3/6
 
 代码效率：
 

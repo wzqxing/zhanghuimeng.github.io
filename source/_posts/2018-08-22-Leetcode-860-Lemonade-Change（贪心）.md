@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-08-22 00:40:44
 updated: 2018-08-22 09:25:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Greedy]
 ---
 
 题目来源：[https://leetcode.com/problems/lemonade-change/description/](https://leetcode.com/problems/lemonade-change/description/)

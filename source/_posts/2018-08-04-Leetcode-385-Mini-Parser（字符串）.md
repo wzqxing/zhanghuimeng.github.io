@@ -4,7 +4,7 @@ urlname: leetcode-385-mini-parser
 toc: true
 date: 2018-08-04 17:09:42
 updated: 2018-08-04 17:47:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Stack, alg:String, alg:Recursion]
 ---
 
 题目来源：[https://leetcode.com/problems/mini-parser/description/](https://leetcode.com/problems/mini-parser/description/)

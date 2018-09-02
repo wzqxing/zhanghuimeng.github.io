@@ -3,8 +3,8 @@ title: Leetcode 331. Verify Preorder Serialization of a Binary Tree（先序遍�
 urlname: leetcode-331-verify-preorder-serialization-of-a-binary-tree
 toc: true
 date: 2018-08-24 15:30:05
-updated: 2018-08-24 17:32:05
-tags: [Leetcode]
+updated: 2018-09-02 17:18:00
+tags: [Leetcode, alg:Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/description/](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/description/)
@@ -30,6 +30,8 @@ tags: [Leetcode]
 做完之后我觉得这是一道非常有趣的题。我们都知道只用先序遍历是无法重建一棵树的，因为几乎完全无法确定树的形状；但把中间遍历过的空结点记录下来之后（这个说法不是很准确；我觉得准确的说法是，对于每个结点都无条件地访问它的左孩子和右孩子，如果访问到的结点为空，仍然按顺序记录到遍历序列中，但不会再去访问它的孩子，显然也没有），我们就可以把它重建出来了。我认为这些多出来的信息（空结点的位置）能够帮助我们确定树的形状，所以空结点实际上提供的信息量是很大的，这一点很有趣。
 
 或者也可以采取另一种看法：在这里空结点就是叶结点，相当于在树上新加了一层叶子；我们仍然做的是一次普通的先序遍历，但是在其中标记了哪些是叶结点。依靠这些叶结点作为定位信息，我们可以把树重建出来。
+
+2018.9.2 UPDATE：这不就是Leetcode输入数据里表示一棵树的方法……
 
 不过，如果把整棵树都真的重建出来，感觉像是过度利用已有的信息了，如果只需要验证这个序列的合法性，评论区给出了很多很妙的做法。
 

@@ -4,7 +4,7 @@ urlname: leetcode-90-subsets-ii
 toc: true
 date: 2018-08-19 03:29:38
 updated: 2018-08-19 04:22:38
-tags: [Leetcode]
+tags: [Leetcode, alg:Array, alg:Backtracking]
 ---
 
 题目来源：[https://leetcode.com/problems/subsets-ii/description/](https://leetcode.com/problems/subsets-ii/description/)

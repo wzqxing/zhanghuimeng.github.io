@@ -4,7 +4,7 @@ urlname: leetcode-887-projection-area-of-3d-shapes
 toc: true
 date: 2018-08-12 01:37:41
 updated: 2018-08-12 01:42:41
-tags: [Leetcode]
+tags: [Leetcode, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/projection-area-of-3d-shapes/description/](https://leetcode.com/problems/projection-area-of-3d-shapes/description/)

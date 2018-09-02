@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-08-27 19:22:43
 updated: 2018-08-27 20:46:43
-tags: [Leetcode]
+tags: [Leetcode, alg:Hash Table, alg:Trie]
 ---
 
 题目来源：[https://leetcode.com/problems/longest-word-in-dictionary/description/](https://leetcode.com/problems/longest-word-in-dictionary/description/)

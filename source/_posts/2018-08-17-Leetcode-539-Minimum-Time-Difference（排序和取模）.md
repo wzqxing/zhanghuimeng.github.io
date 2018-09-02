@@ -4,7 +4,7 @@ urlname: leetcode-539-minimum-time-difference
 toc: true
 date: 2018-08-17 10:38:34
 updated: 2018-08-17 15:01:00
-tags: [Leetcode]
+tags: [Leetcode, alg:String]
 ---
 
 题目来源：[https://leetcode.com/problems/minimum-time-difference/description/](https://leetcode.com/problems/minimum-time-difference/description/)

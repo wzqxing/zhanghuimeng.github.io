@@ -4,7 +4,7 @@ urlname: leetcode-881-boats-to-save-people
 toc: true
 date: 2018-08-17 09:55:41
 updated: 2018-08-18 18:32:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Greedy, alg:Two Pointers]
 ---
 
 题目来源：[https://leetcode.com/problems/boats-to-save-people/description/](https://leetcode.com/problems/boats-to-save-people/description/)

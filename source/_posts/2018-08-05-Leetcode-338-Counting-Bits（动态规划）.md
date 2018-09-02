@@ -4,7 +4,7 @@ urlname: leetcode-338-counting-bits
 toc: true
 date: 2018-08-05 10:50:53
 updated: 2018-08-05 10:50:53
-tags: [Leetcode]
+tags: [Leetcode, alg:Dynamic Programming, alg:Bit Manipulation]
 ---
 
 题目来源：[https://leetcode.com/problems/counting-bits/description/](https://leetcode.com/problems/counting-bits/description/)

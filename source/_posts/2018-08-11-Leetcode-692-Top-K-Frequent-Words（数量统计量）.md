@@ -4,7 +4,7 @@ urlname: leetcode-692-top-k-frequent-words
 toc: true
 date: 2018-08-11 23:10:23
 updated: 2018-08-12 00:03:23
-tags: [Leetcode]
+tags: [Leetcode, alg:Hash Table, alg:Heap]
 ---
 
 题目来源：[https://leetcode.com/problems/top-k-frequent-words/description/](https://leetcode.com/problems/top-k-frequent-words/description/)

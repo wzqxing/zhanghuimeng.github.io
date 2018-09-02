@@ -4,7 +4,7 @@ urlname: leetcode-896-monotonic-array-and-weekly-contest-100
 toc: true
 date: 2018-09-02 14:16:06
 updated: 2018-09-02 14:24:00
-tags: [Leetcode, LeetcodeContest, Array]
+tags: [Leetcode, Leetcode Contest, alg:Array]
 ---
 
 题目来源：[https://leetcode.com/problems/monotonic-array/description/](https://leetcode.com/problems/monotonic-array/description/)

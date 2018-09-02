@@ -5,7 +5,7 @@ toc: true
 date: 2018-08-01 12:26:27
 updated: 2018-08-01 18:43:00
 mathjax: true
-tags: [Leetcode]
+tags: [Leetcode, alg:Binary Search, alg:Greedy]
 ---
 
 

@@ -4,7 +4,7 @@ urlname: leetcode-710-random-pick-with-blacklist
 toc: true
 date: 2018-08-30 12:50:17
 updated: 2018-08-30 13:48:17
-tags: [Leetcode]
+tags: [Leetcode, alg:Hash Table, alg:Binary Search, alg:Random]
 ---
 
 题目来源：[https://leetcode.com/problems/random-pick-with-blacklist/description/](https://leetcode.com/problems/random-pick-with-blacklist/description/)

@@ -4,7 +4,7 @@ urlname: if-i-give-my-soul-by-johnny-cash-album-unearthed-lyric-translation
 toc: true
 date: 2018-09-01 14:00:10
 updated: 2018-09-01 15:01:10
-tags: [Lyric, Translation]
+tags: [Lyric, Translation, Johnny Cash]
 ---
 
 | 歌词 | 翻译 |

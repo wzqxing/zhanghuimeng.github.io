@@ -4,7 +4,7 @@ urlname: usaco-1-3-2-transformations
 toc: true
 date: 2018-08-22 18:39:37
 updated: 2018-08-22 19:02:00
-tags: [USACO]
+tags: [USACO, alg:Math]
 ---
 
 ## 题意

@@ -5,10 +5,10 @@ toc: true
 date: 2018-07-31 23:23:46
 updated: 2018-07-31 23:28:00
 mathjax: true
-tags: [Leetcode]
+tags: [Leetcode, alg:Math]
 ---
 
-题目来源：[https://leetcode.com/problems/count-binary-substrings/description/](https://leetcode.com/problems/count-binary-substrings/description/)
+题目来源：[https://leetcode.com/problems/count-numbers-with-unique-digits/description/](https://leetcode.com/problems/count-numbers-with-unique-digits/description/)
 
 标记难度：Easy
 

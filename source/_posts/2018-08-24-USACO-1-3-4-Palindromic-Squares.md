@@ -4,7 +4,7 @@ urlname: usaco-1-3-4-palindromic-squares
 toc: true
 date: 2018-08-24 00:04:19
 updated: 2018-08-24 00:10:19
-tags: [USACO]
+tags: [USACO, alg:Math]
 ---
 
 ## 题意

@@ -4,7 +4,7 @@ urlname: leetcode-49-group-anagrams
 toc: true
 date: 2018-08-13 20:12:31
 updated: 2018-08-13 20:31:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Hash Table, alg:String]
 ---
 
 题目来源：[https://leetcode.com/problems/group-anagrams/description/](https://leetcode.com/problems/group-anagrams/description/)

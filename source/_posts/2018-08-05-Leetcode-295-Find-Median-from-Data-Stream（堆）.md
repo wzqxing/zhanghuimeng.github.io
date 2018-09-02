@@ -4,10 +4,10 @@ urlname: leetcode-295-find-median-from-data-stream
 toc: true
 date: 2018-08-05 19:20:47
 updated: 2018-08-05 19:20:47
-tags: [Leetcode]
+tags: [Leetcode, alg:Heap]
 ---
 
-题目来源：[https://leetcode.com/problems/binary-search-tree-iterator/description/](https://leetcode.com/problems/binary-search-tree-iterator/description/)
+题目来源：[https://leetcode.com/problems/find-median-from-data-stream/description/](https://leetcode.com/problems/find-median-from-data-stream/description/)
 
 标记难度：Hard
 
@@ -26,7 +26,7 @@ tags: [Leetcode]
 
 我最开始的想法就是直接维护一个有序vector。这样做显然是可以的，但是每次插入的代价都是`O(N)`，看起来比较高。
 
-交上去之后，我立刻想到了一种优化方法：维护一个二叉搜索树，这样插入和查询的代价就基本上都是`O(log(N))`了。不过我并没有写这个方法，因为我在[题解](https://leetcode.com/problems/find-median-from-data-stream/discuss/74062/Short-simple-JavaC++Python-O%28log-n%29-+-O%281%29)里看到了一种很聪明的方法——维护两个堆。大根堆中存储较小的一半元素，小根堆中存储较大的一般元素，维护两个堆的大小大致相等，这样就可以直接通过这两个堆的堆顶计算中位数了。
+交上去之后，我立刻想到了一种优化方法：维护一个二叉搜索树，这样插入和查询的代价就基本上都是`O(log(N))`了。不过我并没有写这个方法，因为我在[题解](https://leetcode.com/problems/find-median-from-data-stream/discuss/74062/Short-simple-JavaC++Python-O%28log-n%29-+-O%281%29)里看到了一种很聪明的方法——维护两个堆。大根堆中存储较小的一半元素，小根堆中存储较大的一半元素，维护两个堆的大小大致相等，这样就可以直接通过这两个堆的堆顶计算中位数了。
 
 ## 代码
 

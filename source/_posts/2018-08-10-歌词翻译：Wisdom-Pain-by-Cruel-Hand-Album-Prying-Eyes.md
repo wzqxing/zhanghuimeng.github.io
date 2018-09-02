@@ -4,7 +4,7 @@ urlname: wisdom-pain-by-cruel-hand-album-prying-eyes-lyric-translation
 toc: true
 date: 2018-08-10 20:12:41
 updated: 2018-08-10 20:58:00
-tags: [Lyrics, Translation]
+tags: [Lyric, Translation, Cruel Hand]
 ---
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=27344440&auto=1&height=66"></iframe>

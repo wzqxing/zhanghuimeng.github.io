@@ -4,7 +4,7 @@ urlname: leetcode-207-course-schedule
 toc: true
 date: 2018-07-30 22:31:58
 updated: 2018-07-30 22:42:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Graph, alg:Topological Sort]
 ---
 
 题目来源：[https://leetcode.com/problems/course-schedule/description/](https://leetcode.com/problems/course-schedule/description/)

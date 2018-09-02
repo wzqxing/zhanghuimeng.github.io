@@ -4,7 +4,7 @@ urlname: leetcode-893-groups-of-special-equivalent-strings
 toc: true
 date: 2018-08-26 23:24:39
 updated: 2018-08-26 23:54:39
-tags: [Leetcode, LeetcodeContest]
+tags: [Leetcode, Leetcode Contest, alg:String, alg:Hash Table]
 ---
 
 题目来源：[https://leetcode.com/problems/groups-of-special-equivalent-strings/description/](https://leetcode.com/problems/groups-of-special-equivalent-strings/description/)

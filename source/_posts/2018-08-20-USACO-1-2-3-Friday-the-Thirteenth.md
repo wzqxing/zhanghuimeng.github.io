@@ -4,7 +4,7 @@ urlname: usaco-1-2-3-friday-the-thirteenth
 toc: true
 date: 2018-08-20 02:11:22
 updated: 2018-08-20 02:15:00
-tags: [USACO]
+tags: [USACO, alg:Brute Force]
 ---
 
 ## 题意

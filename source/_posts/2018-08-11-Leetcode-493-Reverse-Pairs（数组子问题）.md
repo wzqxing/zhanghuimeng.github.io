@@ -4,7 +4,7 @@ urlname: leetcode-493-reverse-pairs
 toc: true
 date: 2018-08-11 16:34:53
 updated: 2018-08-11 17:21:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Divide and Conquer, alg:Binary Search Tree, alg:Binary Indexed Tree]
 ---
 
 题目来源：[https://leetcode.com/problems/reverse-pairs/description/](https://leetcode.com/problems/reverse-pairs/description/)

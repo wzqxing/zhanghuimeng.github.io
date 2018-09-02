@@ -4,7 +4,7 @@ urlname: leetcode-892-surface-area-of-3d-shapes-and-weekly-contest-99
 toc: true
 date: 2018-08-26 17:41:41
 updated: 2018-08-26 19:19:00
-tags: [Leetcode, LeetcodeContest]
+tags: [Leetcode, Leetcode Contest, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/surface-area-of-3d-shapes/description/](https://leetcode.com/problems/surface-area-of-3d-shapes/description/)

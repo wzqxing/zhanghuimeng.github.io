@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-08-17 20:34:31
 updated: 2018-08-17 22:28:31
-tags: [Leetcode]
+tags: [Leetcode, alg:Hash Table, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/happy-number/description/](https://leetcode.com/problems/happy-number/description/)

@@ -4,7 +4,7 @@ urlname: leetcode-474-ones-and-zeroes
 toc: true
 date: 2018-08-17 04:50:09
 updated: 2018-08-17 05:01:09
-tags: [Leetcode]
+tags: [Leetcode, alg:Dynamic Programming]
 ---
 
 题目来源：[https://leetcode.com/problems/ones-and-zeroes/description/](https://leetcode.com/problems/ones-and-zeroes/description/)

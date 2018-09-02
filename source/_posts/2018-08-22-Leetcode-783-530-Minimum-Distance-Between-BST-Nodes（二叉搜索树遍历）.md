@@ -4,7 +4,7 @@ urlname: leetcode-783-530-minimum-distance-between-bst-nodes
 toc: true
 date: 2018-08-22 11:03:57
 updated: 2018-08-22 11:21:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Binary Search Tree]
 ---
 
 题目来源：[https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/](https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/)

@@ -4,7 +4,7 @@ urlname: leetcode-289-game-of-life
 toc: true
 date: 2018-07-31 20:34:30
 updated: 2018-07-31 21:52:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Array, alg:Automata]
 ---
 
 题目来源：[https://leetcode.com/problems/game-of-life/description/](https://leetcode.com/problems/game-of-life/description/)

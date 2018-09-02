@@ -5,7 +5,7 @@ toc: true
 date: 2018-08-03 21:16:11
 updated: 2018-08-03 21:45:00
 mathjax: true
-tags: [Leetcode]
+tags: [Leetcode, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/)
@@ -41,7 +41,7 @@ private:
     }
 
 public:
-    int minMoves2(vector<int>& nums) {        
+    int minMoves2(vector<int>& nums) {
         if (nums.size() == 0)
             return 0;
 

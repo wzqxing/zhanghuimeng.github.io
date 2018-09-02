@@ -4,7 +4,7 @@ urlname: leetcode-829-consecutive-numbers-sum
 toc: true
 date: 2018-08-05 18:43:29
 updated: 2018-08-05 18:43:29
-tags: [Leetcode]
+tags: [Leetcode, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/consecutive-numbers-sum/description/](https://leetcode.com/problems/consecutive-numbers-sum/description/)

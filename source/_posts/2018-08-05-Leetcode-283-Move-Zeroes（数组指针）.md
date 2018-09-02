@@ -4,7 +4,7 @@ urlname: leetcode-283-move-zeroes
 toc: true
 date: 2018-08-05 11:19:59
 updated: 2018-08-05 11:43:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Array, alg:Two Pointers]
 ---
 
 题目来源：[https://leetcode.com/problems/move-zeroes/description/](https://leetcode.com/problems/move-zeroes/description/)

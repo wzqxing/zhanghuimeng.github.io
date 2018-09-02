@@ -5,7 +5,7 @@ toc: true
 date: 2018-07-31 22:08:02
 updated: 2018-07-31 22:39:00
 mathjax: true
-tags: [Leetcode]
+tags: [Leetcode, alg:String]
 ---
 
 题目来源：[https://leetcode.com/problems/count-binary-substrings/description/](https://leetcode.com/problems/count-binary-substrings/description/)

@@ -4,7 +4,7 @@ urlname: leetcode-700-search-in-a-binary-search-tree
 toc: true
 date: 2018-09-01 16:25:39
 updated: 2018-09-01 16:29:00
-tags: [Leetcode, BST]
+tags: [Leetcode, alg:Binary Search Tree]
 ---
 
 题目来源：[https://leetcode.com/problems/search-in-a-binary-search-tree/description/](https://leetcode.com/problems/search-in-a-binary-search-tree/description/)

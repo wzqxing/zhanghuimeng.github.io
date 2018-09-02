@@ -4,7 +4,7 @@ urlname: leetcode-173-binary-search-tree-iterator
 toc: true
 date: 2018-07-31 00:19:34
 updated: 2018-07-31 00:53:00
-tags: [Leetcode, Tree, BST, Traverse]
+tags: [Leetcode, alg:Tree, alg:Binary Search Tree, alg:In-Order Traversal]
 ---
 
 题目来源：[https://leetcode.com/problems/binary-search-tree-iterator/description/](https://leetcode.com/problems/binary-search-tree-iterator/description/)

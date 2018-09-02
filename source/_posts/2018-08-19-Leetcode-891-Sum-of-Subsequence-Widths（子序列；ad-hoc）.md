@@ -4,7 +4,7 @@ urlname: leetcode-891-sum-of-subsequence-widths
 toc: true
 date: 2018-08-19 17:55:20
 updated: 2018-08-19 20:02:00
-tags: [Leetcode, LeetcodeContest]
+tags: [Leetcode, Leetcode Contest, alg:Math, alg:Array]
 ---
 
 题目来源：[https://leetcode.com/problems/sum-of-subsequence-widths/description/](https://leetcode.com/problems/sum-of-subsequence-widths/description/)

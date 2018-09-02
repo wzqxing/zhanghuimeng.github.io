@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-08-31 09:37:52
 updated: 2018-08-31 10:08:52
-tags: [Leetcode, LeetcodeContest, Tree, Recursion]
+tags: [Leetcode, Leetcode Contest, alg:Tree, alg:Recursion]
 ---
 
 题目来源：[https://leetcode.com/problems/maximum-frequency-stack/description/](https://leetcode.com/problems/maximum-frequency-stack/description/)

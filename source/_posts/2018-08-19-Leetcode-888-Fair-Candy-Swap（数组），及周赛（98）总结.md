@@ -4,7 +4,7 @@ urlname: leetcode-888-fair-candy-swap-and-weekly-contest-98
 toc: true
 date: 2018-08-19 15:24:34
 updated: 2018-08-19 16:28:34
-tags: [Leetcode, LeetcodeContest]
+tags: [Leetcode, Leetcode Contest, alg:Hash Table]
 ---
 
 题目来源：[https://leetcode.com/problems/fair-candy-swap/description/](https://leetcode.com/problems/fair-candy-swap/description/)

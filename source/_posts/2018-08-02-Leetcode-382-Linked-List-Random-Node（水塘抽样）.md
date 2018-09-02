@@ -5,7 +5,7 @@ toc: true
 date: 2018-08-02 01:13:08
 updated: 2018-08-03 21:14:00
 mathjax: true
-tags: [Leetcode]
+tags: [Leetcode, alg:Math, alg:Random, alg:Reservoir Sampling]
 ---
 
 题目来源：[https://leetcode.com/problems/linked-list-random-node/description/](https://leetcode.com/problems/linked-list-random-node/description/)

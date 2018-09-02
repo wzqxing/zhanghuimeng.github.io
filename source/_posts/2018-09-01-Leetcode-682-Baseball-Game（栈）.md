@@ -4,7 +4,7 @@ urlname: leetcode-682-baseball-game
 toc: true
 date: 2018-09-01 17:49:24
 updated: 2018-09-01 19:49:00
-tags: [Leetcode, Stack]
+tags: [Leetcode, alg:Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/baseball-game/description/](https://leetcode.com/problems/baseball-game/description/)

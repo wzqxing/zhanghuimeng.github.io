@@ -4,7 +4,7 @@ urlname: leetcode-124-binary-tree-maximum-path-sum
 toc: true
 date: 2018-08-31 18:56:09
 updated: 2018-08-31 19:18:09
-tags: [Leetcode, Tree, Recursion]
+tags: [Leetcode, alg:Tree, alg:Recursion]
 ---
 
 题目来源：[https://leetcode.com/problems/binary-tree-maximum-path-sum/description/](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/)

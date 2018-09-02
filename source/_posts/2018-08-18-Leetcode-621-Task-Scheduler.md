@@ -4,7 +4,7 @@ urlname: leetcode-621-task-scheduler
 toc: true
 date: 2018-08-18 20:45:05
 updated: 2018-08-18 21:48:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Greedy]
 ---
 
 题目来源：[https://leetcode.com/problems/task-scheduler/description/](https://leetcode.com/problems/task-scheduler/description/)

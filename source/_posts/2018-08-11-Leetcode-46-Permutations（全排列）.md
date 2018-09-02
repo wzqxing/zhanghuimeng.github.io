@@ -4,7 +4,7 @@ urlname: leetcode-46-permutations
 toc: true
 date: 2018-08-11 17:32:30
 updated: 2018-08-11 18:17:30
-tags: [Leetcode]
+tags: [Leetcode, alg:Backtracking]
 ---
 
 题目来源：[https://leetcode.com/problems/permutations/description/](https://leetcode.com/problems/permutations/description/)
@@ -16,7 +16,7 @@ tags: [Leetcode]
 代码效率：
 
 * `next_permutation`版本：99.91%
-* DFS版本：99.92%
+* 回溯法：99.92%
 * Heap算法：99.92%
 * Steinhaus–Johnson–Trotter算法：……懒得写了
 
@@ -30,9 +30,9 @@ tags: [Leetcode]
 
 直接用STL中提供的[next_permutation](http://www.cplusplus.com/reference/algorithm/next_permutation/)可能是最简单的一种方式了。但是，值得注意的是，在开始使用这个函数之前，需要把数组排序。
 
-### DFS版本
+### 回溯法版本
 
-用DFS直接做也是一种思路，而且并不太难。
+用回溯法直接做也是一种思路，而且并不太难。
 
 显然我基本已经把我的C++忘光了（或者说我就没有好好学过STL和模板）。C++ vector的`push_back`函数使用的是相应的[拷贝构造函数](https://stackoverflow.com/questions/6717821/is-vectorpush-back-making-a-shallow-copy-how-to-solve-this)，所以不需要再单独复制一次vector。
 
@@ -63,7 +63,7 @@ public:
 };
 ```
 
-### DFS版本
+### 回溯法版本
 
 ```cpp
 class Solution {

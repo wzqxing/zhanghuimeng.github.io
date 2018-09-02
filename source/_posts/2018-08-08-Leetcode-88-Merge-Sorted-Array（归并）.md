@@ -4,7 +4,7 @@ urlname: leetcode-88-merge-sorted-array
 toc: true
 date: 2018-08-08 20:16:07
 updated: 2018-08-08 20:24:00
-tags: [Leetcode]
+tags: [Leetcode, alg:Array, alg:Two Pointers]
 ---
 
 题目来源：[https://leetcode.com/problems/merge-sorted-array/description/](https://leetcode.com/problems/merge-sorted-array/description/)

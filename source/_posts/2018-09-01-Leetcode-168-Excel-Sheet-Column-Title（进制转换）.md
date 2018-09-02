@@ -4,7 +4,7 @@ urlname: leetcode-168-excel-sheet-column-title
 toc: true
 date: 2018-09-01 10:30:59
 updated: 2018-09-01 10:40:00
-tags: [Leetcode, Math, Radix]
+tags: [Leetcode, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/excel-sheet-column-title/description/](https://leetcode.com/problems/excel-sheet-column-title/description/)

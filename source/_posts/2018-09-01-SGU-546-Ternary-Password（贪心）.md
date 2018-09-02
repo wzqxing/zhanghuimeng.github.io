@@ -4,7 +4,7 @@ urlname: sgu-546-ternary-password
 toc: true
 date: 2018-09-01 23:58:38
 updated: 2018-09-02 00:20:00
-tags: [SGU, Greedy]
+tags: [SGU, alg:Greedy]
 ---
 
 题目来源：[http://codeforces.com/problemsets/acmsguru/problem/99999/546](http://codeforces.com/problemsets/acmsguru/problem/99999/546)

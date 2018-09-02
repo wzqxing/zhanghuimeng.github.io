@@ -4,7 +4,7 @@ urlname: usaco-1-3-1-milking-cows
 toc: true
 date: 2018-08-22 00:20:00
 updated: 2018-08-22 00:28:00
-tags: [USACO]
+tags: [USACO, alg:Array]
 ---
 
 ## 题意
