@@ -3,7 +3,7 @@ title: Leetcode 429. N-ary Tree Level Order Traversal（BFS）
 urlname: leetcode-429-n-ary-tree-level-order-traversal
 toc: true
 date: 2018-09-04 18:49:53
-updated: 2018-09-04 19:13:00
+updated: 2018-09-04 19:46:00
 tags: [Leetcode, Breadth-firth Search, Depth-first Search]
 ---
 
@@ -17,6 +17,7 @@ tags: [Leetcode, Breadth-firth Search, Depth-first Search]
 
 * 未优化的BFS：5.07%
 * DFS：36.95%
+* 不同的DFS写法：10.52%
 
 ## 题意
 
@@ -31,6 +32,8 @@ tags: [Leetcode, Breadth-firth Search, Depth-first Search]
 另一种相对比较神奇的做法是用DFS。此时的核心问题是不同的子结点返回的层次遍历结果的合并：显然，子结点的层次遍历结果总是比当前结点正好低一层。令`r = levelOrder(root->child)`，`ret`表示当前结点的层次遍历结果。显然，`r[0]`应该与`ret[1]`合并，`r[1]`应该与`ret[2]`合并，以此类推。[^dfs]
 
 [^dfs]: [Easy to understand, recursive solution based on DFS (44 ms, beats 98.67%)](https://leetcode.com/problems/n-ary-tree-level-order-traversal/discuss/157521/C++-Easy-to-understand-recursive-solution-based-on-DFS-%2844-ms-beats-98.67%29)
+
+看了[Java Solution using DFS](https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/33445/Java-Solution-using-DFS)之后，我重写了一份看起来会跑得更快的DFS，但事实上并没有。
 
 以及，从上述代码里我学习了把一个`vector`里的内容（而不是整个`vector`）插入到别的`vector`里的正确方法[^insert]：
 
@@ -124,6 +127,45 @@ public:
             }
         }
         return level;
+    }
+};
+```
+
+### 另一种DFS写法
+
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val = NULL;
+    vector<Node*> children;
+
+    Node() {}
+
+    Node(int _val, vector<Node*> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+*/
+class Solution {
+private:
+    void dfs(Node* root, int depth, vector<vector<int>>& levels) {
+        if (root == NULL) return;
+        if (depth < levels.size())
+            levels[depth].push_back(root->val);
+        else
+            levels.push_back({root->val});
+        for (Node* ch: root->children)
+            dfs(ch, depth+1, levels);
+    }
+
+public:
+    vector<vector<int>> levelOrder(Node* root) {
+        vector<vector<int>> levels;
+        dfs(root, 0, levels);
+        return levels;
     }
 };
 ```
