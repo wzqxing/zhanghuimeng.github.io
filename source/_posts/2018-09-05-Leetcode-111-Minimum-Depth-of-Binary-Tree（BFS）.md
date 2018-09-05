@@ -11,7 +11,7 @@ tags: [Leetcode, alg:Breadth-first Search, alg:Depth-first Search]
 
 标记难度：Easy
 
-提交次数：1/1
+提交次数：2/2
 
 代码效率：
 
