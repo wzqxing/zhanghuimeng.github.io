@@ -21,7 +21,7 @@ tags: [Leetcode, alg:Tree, alg:Breadth-first Search, alg:Depth-first Search]
 
 ## 分析
 
-这道题看起来像是[Leetcode 513](/post/leetcode-199-binary-tree-right-side-view)的反过来的超简化版，因为只需要最底层的最左边的结点。我是用BFS直接做的——逐层访问，记录每层最左侧的结点，最后找到最底层最左侧的结点——不过这个思路可以再简化一些：对于每一层都从右往左访问，这样我们就不需要记录每层最左侧的结点，只需要返回最后一个访问的结点就可以了。[^stefan]
+这道题看起来像是[Leetcode 199](/post/leetcode-199-binary-tree-right-side-view)的反过来的超简化版，因为只需要最底层的最左边的结点。我是用BFS直接做的——逐层访问，记录每层最左侧的结点，最后找到最底层最左侧的结点——不过这个思路可以再简化一些：对于每一层都从右往左访问，这样我们就不需要记录每层最左侧的结点，只需要返回最后一个访问的结点就可以了。[^stefan]
 
 [^stefan]: [Right-to-Left BFS (Python + Java)](https://leetcode.com/problems/find-bottom-left-tree-value/discuss/98779/Right-to-Left-BFS-%28Python-+-Java%29)
 
@@ -36,7 +36,7 @@ public:
         q.push(root);
         while (!q.empty()) {
             TreeNode* left = nullptr;
-            // 这个代码实际上复用了Leetcode 513的BFS
+            // 这个代码实际上复用了Leetcode 199的BFS代码
             // 同理，仍然可以不新开一个queue的
             queue<TreeNode*> q2;
             while (!q.empty()) {
