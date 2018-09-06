@@ -4,7 +4,7 @@ urlname: leetcode-429-n-ary-tree-level-order-traversal
 toc: true
 date: 2018-09-04 18:49:53
 updated: 2018-09-04 19:46:00
-tags: [Leetcode, Breadth-firth Search, Depth-first Search]
+tags: [Leetcode, alg:Breadth-firth Search, alg:Depth-first Search]
 ---
 
 题目来源：[https://leetcode.com/problems/n-ary-tree-level-order-traversal/description/](https://leetcode.com/problems/n-ary-tree-level-order-traversal/description/)
