@@ -3,7 +3,7 @@ title: '歌词翻译：If I Give My Soul, by Johnny Cash (Album: Unearthed)'
 urlname: if-i-give-my-soul-by-johnny-cash-album-unearthed-lyric-translation
 toc: true
 date: 2018-09-01 14:00:10
-updated: 2018-09-01 15:01:10
+updated: 2018-09-06 19:12:00
 tags: [Lyric, Translation, Johnny Cash]
 ---
 
@@ -13,27 +13,27 @@ tags: [Lyric, Translation, Johnny Cash]
 | Down a dangerous road, I have come to where I'm standing | 走过一条危险的道路，我终于来到此地 |
 | With a heavy heart and my hat clutched in my hand | 心情沉重，脱下帽子攥在手里 |
 | Such a foolish man, God ain't known no greater sinner | 上帝定未见过比我更加罪孽深重的愚蠢之人 |
-| I have come in search of Jesus, hoping He will understand | 我前来寻找耶稣，希望他愿意谅解我 |
-| If I give my soul, will He clean these clothes I'm wearin? | 如果我献出灵魂，他愿洗净我身穿的衣服吗？ |
-| If I give my soul, will He put new boots on my feet? | 如果我献出灵魂，他愿为我换上新的靴子吗？ |
+| I have come in search of Jesus, hoping He will understand | 我前来寻找耶稣，希望祂愿意谅解我 |
+| If I give my soul, will He clean these clothes I'm wearin? | 如果我献出灵魂，祂愿洗净我身穿的衣服吗？ |
+| If I give my soul, will He put new boots on my feet? | 如果我献出灵魂，祂愿为我换上新的靴子吗？ |
 | If I bow my head and beg God for His forgiveness | 如果我低下头颅，向上帝祈求原谅 |
-| Will He breathe new life within me and bring her back to me? | 他愿在我体内注入新的生命，把她还给我吗？ |
-| I had a woman once, she was kind and she was gentle | 我曾拥有过一个女人，她善良而温柔 |
-| Had a child by me, who grew up to be a man | 和我生下了一个孩子，他已经长大成人 |
+| Will He breathe new life within me and bring her back to me? | 祂愿在我体内注入新的生命，把她还给我吗？ |
+| I had a woman once, she was kind and she was gentle | 我曾拥有一个女人，她又善良又温柔 |
+| Had a child by me, who grew up to be a man | 和我生下一个孩子，他已经长大成人 |
 | I had a steady job, 'til I started into drinking | 我曾有一份稳定的工作，直到我染上酒瘾 |
 | Then I started making music travelin' with the devil's band | 然后我开始创作音乐，和魔鬼的乐队四处旅行 |
-| Oh the years went by like a mighty rush of eagles | 时光如疾冲的老鹰一般飞逝 |
+| Oh the years went by like a mighty rush of eagles | 时光流逝，如老鹰俯冲般飞快 |
 | Our dreams and plans were all scattered in the wind | 我们的梦想和计划都散落在风中 |
 | And it's a lonesome life, when you lose the ones you live for | 当你失去那些最重要的人，生命变得如此孤独 |
 | If I make my peace with Jesus will they take me back again? | 如果我与耶稣和好，他们愿重新接受我吗？ |
-| If I give my soul, will he stop my hands from shaking? | 如果我献出灵魂，他愿让我的双手不再发颤吗？ |
+| If I give my soul, will he stop my hands from shaking? | 如果我献出灵魂，祂愿让我的双手不再发颤吗？ |
 | If I give my soul, will my son love me again? | 如果我献出灵魂，我的儿子愿意重新爱我吗？ |
 | If I give my soul, and she knows I really mean it? | 如果我献出灵魂，她也明白我已幡然悔悟？ |
 | If I give my soul to Jesus will she take me back again? | 如果我把灵魂献给耶稣，她愿意重新接受我吗？ |
-| If I give my soul, will He clean these clothes I'm wearin? | 如果我献出灵魂，他愿洗净我身穿的衣服吗？ |
-| If I give my soul, will He put new boots on my feet? | 如果我献出灵魂，他愿为我换上新的靴子吗？ |
+| If I give my soul, will He clean these clothes I'm wearin? | 如果我献出灵魂，祂愿洗净我身穿的衣服吗？ |
+| If I give my soul, will He put new boots on my feet? | 如果我献出灵魂，祂愿为我换上新的靴子吗？ |
 | If I bow my head and beg God for His forgiveness | 如果我低下头颅，向上帝祈求原谅 |
-| Will He breathe new breath within me and bring her back to me? | 他愿在我体内注入新的生命，把她还给我吗？ |
+| Will He breathe new breath within me and bring her back to me? | 祂愿在我体内注入新的生命，把她还给我吗？ |
 
 一些问题：
 
@@ -47,5 +47,7 @@ tags: [Lyric, Translation, Johnny Cash]
     * 方便分辨人称。
     * 看起来很厉害。
 3. 不知道“devil's band”里的“devil”是语气词（见鬼的乐队）还是形容词（魔鬼的乐队）。另一个问题是，歌里的主人公到底在多大程度上是卡什自己。查了查他的生平之后，我感觉，这个人和卡什很像，但并不就是他。
+
+2018.9.6：我最后还是决定翻译成“祂”了。然后我把歌词重新修改了一下，并上传到了网易云上。
 
 [^he]: [聖經中的「祂」和「他」](http://www.bstwn.org/bmag/bmag21/He%20and%20he%20in%20the%20Bible.htm)
