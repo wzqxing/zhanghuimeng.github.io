@@ -7,7 +7,7 @@ updated: 2018-09-07 21:40:32
 tags: [Codeforces, Codeforces Contest, alg:Greedy]
 ---
 
-题目来源：[http://codeforces.com/contest/1040/problem/A](http://codeforces.com/contest/1040/problem/A)
+题目来源：[http://codeforces.com/contest/1038/problem/A](http://codeforces.com/contest/1038/problem/A)
 
 提交次数：1/1
 
