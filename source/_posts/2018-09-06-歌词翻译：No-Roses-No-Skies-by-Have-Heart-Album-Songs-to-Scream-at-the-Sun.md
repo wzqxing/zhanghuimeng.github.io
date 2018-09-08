@@ -3,7 +3,7 @@ title: '歌词翻译：No Roses No Skies, by Have Heart (Album: Songs to Scream 
 urlname: no-roses-no-skies-by-have-heart-album-songs-to-scream-at-the-sun-lyric-translation
 toc: true
 date: 2018-09-06 19:26:35
-updated: 2018-09-06 21:13:00
+updated: 2018-09-09 14:22:00
 tags: [Lyric, Translation, Have Heart]
 ---
 
@@ -25,9 +25,9 @@ tags: [Lyric, Translation, Have Heart]
 | Scream at you like the dogs of hell | 像地狱犬一样向你咆哮 |
 | Advertising and advising you to be | 推销给你，推荐你变成 |
 | Anyone, anyone but your-beautiful-self | 任何人，任何人，只除了美丽的你自己 |
-| Prince charming never brought you flowers | 从没有迷人的王子给你带来花束 |
+| Prince charming never brought you flowers | 从没有白马王子给你带来花束 |
 | Just a loveless lifetime all alone | 只有独自一人的无爱人生 |
-| No roses for you, just unknocked doors | 没有献给你的玫瑰，只有未被敲响的门 |
+| No roses for you, just unknocked doors | 没有一朵玫瑰献给你，只有未被敲响的门 |
 | And the deafening silence of your phone | 和电话震耳欲聋的寂静 |
 | So block your ears, close your eyes | 那就堵住耳朵，闭上眼睛 |
 | Remember that you’re a golden soul fallen from the | 记住，你有一颗金子般的灵魂 |
@@ -84,5 +84,9 @@ tags: [Lyric, Translation, Have Heart]
 ---
 
 有人说这首歌是Patrick Flynn写给自己的姐妹的。我也不知道这是不是真的。[^gig]
+
+2018.9.8 UPDATE：把“Prince charming”的翻译修正成了“白马王子”。以及，我是有意把“No roses for you”翻译成“没有一朵玫瑰献给你”的，这句话让我想起*A Rose For Emily*（《献给爱米丽的一朵玫瑰花》）以及其中的故事。这个题目大概的意思是这样的：福克纳说，他怜悯经历了一场巨大的悲剧的爱米丽小姐，这朵玫瑰是他向她的致意。[^emily]
+
+[^emily]: [A Rose for Emily](https://en.wikipedia.org/wiki/A_Rose_for_Emily)
 
 [^gig]: [General Comment](https://songmeanings.com/songs/view/3530822107858727933/)
