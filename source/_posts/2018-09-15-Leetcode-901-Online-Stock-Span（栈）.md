@@ -79,6 +79,8 @@ Element 4                         +
 
 PS. 这道题和[Leetcode 739](/post/leetcode-739-daily-temperatures)基本上是一样的，看来我还是见得少了。
 
+2018.9.16 UPDATE：通过今天的比赛题[Leetcode 907](/post/leetcode-907-sum-of-subarray-minimums)，我意识到了一个问题，这个算法比我想象得要更强一些。对于被某个数从栈中弹出的数而言，它右侧第一个比它大的数就是这个数。所以一个方向的一次使用栈的操作可以同时解决两侧的问题。
+
 ## 代码
 
 只实现了在线算法（显然只能这样）。
