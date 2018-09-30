@@ -9,7 +9,7 @@ tags: [Leetcode, Leetcode Contest, alg:Array]
 
 题目来源：[https://leetcode.com/problems/partition-array-into-disjoint-intervals/description/](https://leetcode.com/problems/partition-array-into-disjoint-intervals/description/)
 
-标记难度：Easy
+标记难度：Medium
 
 提交次数：2/3
 
