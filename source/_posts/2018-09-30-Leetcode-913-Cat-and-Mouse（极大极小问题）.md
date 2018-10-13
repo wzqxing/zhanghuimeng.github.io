@@ -1,6 +1,6 @@
 ---
 title: 2018-09-30-Leetcode 913. Cat and Mouse（极大极小问题）
-urlname: 2018-09-30-Leetcode 913. Cat and Mouse（极大极小问题）
+urlname: leetcode-913-cat-and-mouse
 toc: true
 date: 2018-09-30 23:20:43
 updated: 2018-10-01 21:45:00
