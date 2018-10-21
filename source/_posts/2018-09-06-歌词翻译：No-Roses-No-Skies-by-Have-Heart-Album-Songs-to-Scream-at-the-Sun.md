@@ -4,7 +4,7 @@ urlname: no-roses-no-skies-by-have-heart-album-songs-to-scream-at-the-sun-lyric-
 toc: true
 date: 2018-09-06 19:26:35
 updated: 2018-09-09 14:22:00
-tags: [Lyric, Translation, Have Heart]
+tags: [Lyric, Translation, artist:Have Heart]
 ---
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2707582&auto=1&height=66"></iframe>

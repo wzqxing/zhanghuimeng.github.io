@@ -4,7 +4,7 @@ urlname: throwing-copper-by-touche-amore-album-to-the-beat-of-a-dead-horse-lyric
 toc: true
 date: 2018-08-09 22:34:56
 updated: 2018-08-09 22:34:56
-tags: [Lyric, Translation, Touche Amore]
+tags: [Lyric, Translation, artist:Touche Amore]
 ---
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28136271&auto=1&height=66"></iframe>

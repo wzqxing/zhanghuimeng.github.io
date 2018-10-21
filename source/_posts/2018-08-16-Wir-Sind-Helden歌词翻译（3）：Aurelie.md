@@ -4,7 +4,7 @@ urlname: wir-sind-helden-song-translation-3-aurelie
 toc: true
 date: 2018-08-16 19:35:31
 updated: 2018-08-16 21:34:00
-tags: [Lyric, Translation, Wir Sind Helden]
+tags: [Lyric, Translation, artist:Wir Sind Helden]
 ---
 
 ## 歌词和翻译

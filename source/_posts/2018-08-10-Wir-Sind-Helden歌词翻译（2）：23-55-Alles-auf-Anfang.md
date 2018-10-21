@@ -4,7 +4,7 @@ urlname: wir-sind-helden-song-translation-2-23-55-alles-auf-anfang
 toc: true
 date: 2018-08-10 22:18:55
 updated: 2018-08-10 22:18:55
-tags: [Lyric, Translation, Wir Sind Helden]
+tags: [Lyric, Translation, artist:Wir Sind Helden]
 ---
 
 [https://music.163.com/#/song?id=19824349](https://music.163.com/#/song?id=19824349)
