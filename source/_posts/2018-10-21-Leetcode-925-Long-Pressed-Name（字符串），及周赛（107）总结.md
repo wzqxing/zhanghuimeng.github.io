@@ -4,19 +4,19 @@ urlname: leetcode-925-long-pressed-name-and-weekly-contest-107
 toc: true
 date: 2018-10-21 14:48:23
 updated: 2018-10-21 15:15:23
-tags: [Leetcode, Leetcode Contest, Alg:String]
+tags: [Leetcode, Leetcode Contest, alg:String]
 ---
 
 题目来源：[https://leetcode.com/problems/long-pressed-name/description/](https://leetcode.com/problems/long-pressed-name/description/)
 
 标记难度：Easy
 
-提交次数：3/3
+提交次数：2/2
 
 代码效率：
 
 * 暴力的做法：4ms
-* 不太暴力的做法
+* 不太暴力的做法：0ms
 
 ## 题意
 
