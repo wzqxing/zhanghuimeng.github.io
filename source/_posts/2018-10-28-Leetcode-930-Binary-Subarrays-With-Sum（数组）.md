@@ -1,6 +1,6 @@
 ---
 title: Leetcode 930. Binary Subarrays With Sum（数组）
-urlname: 2018-10-28-930. Binary Subarrays With Sum（数组）
+urlname: leetcode-930-binary-subarrays-with-sum
 toc: true
 date: 2018-10-28 15:03:17
 updated: 2018-10-28 15:41:00
