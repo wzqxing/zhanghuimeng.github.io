@@ -1,5 +1,5 @@
 ---
-title: 2018-10-28-Leetcode 258. Add Digits（数学）
+title: Leetcode 258. Add Digits（数学）
 urlname: leetcode-258-add-digits
 toc: true
 mathjax: true
