@@ -1,5 +1,5 @@
 ---
-title: 2018-11-04-Leetcode 935. Knight Dialer（DP）
+title: Leetcode 935. Knight Dialer（DP）
 urlname: 2018-11-04-Leetcode 935. Knight Dialer（DP）
 toc: true
 date: 2018-11-04 14:39:53
