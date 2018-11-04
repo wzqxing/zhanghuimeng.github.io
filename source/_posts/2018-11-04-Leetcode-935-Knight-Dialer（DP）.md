@@ -1,6 +1,6 @@
 ---
 title: Leetcode 935. Knight Dialer（DP）
-urlname: 2018-11-04-Leetcode 935. Knight Dialer（DP）
+urlname: leetcode-935-knight-dialer
 toc: true
 date: 2018-11-04 14:39:53
 updated: 2018-11-04 15:44:53
