@@ -4,7 +4,7 @@ urlname: 2018-11-04-Leetcode 935. Knight Dialer（DP）
 toc: true
 date: 2018-11-04 14:39:53
 updated: 2018-11-04 15:44:53
-tags: [Leetcode, Leetcode Contest, alg:Dynamic Programming]
+tags: [Leetcode, Leetcode Contest, alg:Dynamic Programming, alg:Math]
 ---
 
 题目来源：[https://leetcode.com/problems/knight-dialer/description/](https://leetcode.com/problems/knight-dialer/description/)

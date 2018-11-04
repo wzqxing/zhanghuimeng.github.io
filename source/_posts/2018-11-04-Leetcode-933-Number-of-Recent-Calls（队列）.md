@@ -4,7 +4,7 @@ urlname: leetcode-933-number-of-recent-calls-and-weekly-contest-108
 toc: true
 date: 2018-11-04 11:18:53
 updated: 2018-11-04 14:29:00
-tags: [Leetcode, Leetcode Contest, alg:queue]
+tags: [Leetcode, Leetcode Contest, alg:Queue]
 ---
 
 题目来源：[https://leetcode.com/problems/number-of-recent-calls/description/](https://leetcode.com/problems/number-of-recent-calls/description/)
