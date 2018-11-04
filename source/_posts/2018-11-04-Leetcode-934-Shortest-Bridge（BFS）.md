@@ -9,9 +9,9 @@ tags: [Leetcode, Leetcode Contest, alg:Breadth-first Search, alg:Depth-first Sea
 
 题目来源：[https://leetcode.com/problems/number-of-recent-calls/description/](https://leetcode.com/problems/number-of-recent-calls/description/)
 
-标记难度：Easy
+标记难度：Medium
 
-提交次数：1/1
+提交次数：3/6
 
 代码效率：
 
