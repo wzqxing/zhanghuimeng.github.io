@@ -30,7 +30,7 @@ tags: [NLP, MT, QE, Paper, Reading Report]
 
 因此可以假定训练数据实际上是$(\mathbf{s}, \mathbf{m}, \mathbf{t}, h, \mathbf{y})$，其中$h$是HTER，$\mathbf{y}$是OK/BAD标签。QE任务即训练回归模型$p(h | \mathbf{s}, \mathbf{m})$和sequence labeling模型$p(\mathbf{y} | \mathbf{s}, \mathbf{m})$。
 
-（这项工作看起来仍然是遵循了predictor-estimator的架构，不过用了不同的方法来实现。）
+（这项工作的架构类似于predictor-estimator的架构，但是两边是共同训练的，因此效果得到提升。）
 
 ## Conditional Language/Feature Extration Model: Bilingual Expert Model
 
