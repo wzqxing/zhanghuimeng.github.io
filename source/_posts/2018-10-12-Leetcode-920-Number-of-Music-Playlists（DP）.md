@@ -4,7 +4,7 @@ urlname: leetcode-920-number-of-music-playlists
 toc: true
 date: 2018-10-12 11:02:39
 updated: 2018-10-14 02:59:00
-tags: [Leetcode, Leetcode Contest, Alg:Dynamic Programming]
+tags: [Leetcode, Leetcode Contest, alg:Dynamic Programming]
 ---
 
 题目来源：[https://leetcode.com/problems/number-of-music-playlists/description/](https://leetcode.com/problems/number-of-music-playlists/description/)

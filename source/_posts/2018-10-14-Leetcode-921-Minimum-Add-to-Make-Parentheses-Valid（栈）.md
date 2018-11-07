@@ -4,7 +4,7 @@ urlname: leetcode-921-minimum-add-to-make-parentheses-valid-and-weekly-contest-1
 toc: true
 date: 2018-10-14 15:23:44
 updated: 2018-10-14 16:00:00
-tags: [Leetcode, Leetcode Contest, Alg:Stack]
+tags: [Leetcode, Leetcode Contest, alg:Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/)
