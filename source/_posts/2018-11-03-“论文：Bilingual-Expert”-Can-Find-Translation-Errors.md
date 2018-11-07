@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-11-03 20:09:55
 updated: 2018-11-03 20:09:55
-tags: [NLP, MT, QE, Paper, Reading Report]
+tags: [Natural Language Processing, Machine Translation, Quality Estimation, Paper, Reading Report]
 ---
 
 论文地址：[https://arxiv.org/pdf/1807.09433.pdf](https://arxiv.org/pdf/1807.09433.pdf)

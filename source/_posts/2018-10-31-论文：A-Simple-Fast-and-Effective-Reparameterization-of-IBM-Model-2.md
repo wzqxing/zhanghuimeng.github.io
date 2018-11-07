@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-10-31 15:21:04
 updated: 2018-11-1 21:12:00
-tags: [NLP, MT, Paper, Reading Report]
+tags: [Natural Language Processing, Machine Translation, Paper, Reading Report]
 ---
 
 论文地址：[http://www.aclweb.org/anthology/N13-1073](http://www.aclweb.org/anthology/N13-1073)

@@ -4,7 +4,7 @@ urlname: bleu-a-method-for-automatic-evaluation-of-machine-translation-acl2002
 toc: true
 date: 2018-10-02 13:50:54
 updated: 2018-10-02 13:50:54
-tags: [NLP, MT, Paper, Reading Report]
+tags: [Natural Language Processing, Machine Translation, Paper, Reading Report]
 ---
 
 论文地址：[https://www.aclweb.org/anthology/P02-1040.pdf](https://www.aclweb.org/anthology/P02-1040.pdf)

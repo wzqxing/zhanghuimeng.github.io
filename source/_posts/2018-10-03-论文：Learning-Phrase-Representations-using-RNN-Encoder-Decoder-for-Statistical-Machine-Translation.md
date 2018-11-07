@@ -5,12 +5,14 @@ toc: true
 mathjax: true
 date: 2018-10-03 14:15:32
 updated: 2018-10-03 14:15:32
-tags: [NLP, MT, Paper, Reading Report]
+tags: [Natural Language Processing, Machine Learning, Paper, Reading Report]
 ---
 
 论文地址：[https://arxiv.org/abs/1406.1078](https://arxiv.org/abs/1406.1078)
 
-有趣的一点是，这篇文章的题目里带了“SMT”这个词，说明它并不是一种纯NMT的方法——事实上论文里用它替代了现存的方法里给短语打分的部分。当然这种方法也是可以直接用于整句翻译的（[On the Properties of Neural Machine Translation: Encoder-Decoder Approaches](https://arxiv.org/abs/1409.1259)），但由于RNN的特性，使得在长句上表现不太好，最后又改进出了[Attention方法](https://arxiv.org/abs/1409.0473)。目前我还不知道这篇文章和Seq2Seq具体是什么关系。
+这篇文章提出了RNN Encoder-Decoder架构，使得RNN能够处理序列数据的输入输出：先把序列数据encode成一个定长vector，再把它decode成另一个序列。有趣的一点是，这篇文章的题目里带了“SMT”这个词，说明它并不是一种纯NMT的方法——事实上论文里用它替代了现存的方法里给短语打分的部分。当然这种方法也是可以直接用于整句翻译的（[On the Properties of Neural Machine Translation: Encoder-Decoder Approaches](https://arxiv.org/abs/1409.1259)），但由于RNN的特性，使得在长句上表现不太好，最后又改进出了[Attention方法](https://arxiv.org/abs/1409.0473)。<del>目前我还不知道这篇文章和Seq2Seq具体是什么关系。</del>
+
+2018.10.11 UPDATE：Seq2Seq和这篇文章提出的架构很类似，但是提高了长句翻译的表现（通过把句子倒过来的trick），一般说Seq2Seq架构的时候应该指的是那篇文章（至少我认为是这样）。本文的另一个重要贡献是LSTM的简化版，[GRU单元](https://www.tensorflow.org/api_docs/python/tf/nn/rnn_cell/GRUCell)。
 
 ## 简介
 
@@ -80,11 +82,13 @@ $$\max_{\mathbf{\theta}} \frac{1}{N} \sum_{n=1}^N \log{p_{\mathbf{\theta}}(\math
 
 >这个计算方法是否说明，是很多个隐藏单元一起更新和训练……但是为什么输入是个向量呢？大概是因为1-K表示法和Embedding？
 
+2018.10.11 UPDATE：用一般的术语来说，下列内容实际上说明的是“一个GRU cell中的一个unit的计算过程”，因此$r_j$、$z_j$和$h_j^{\langle t \rangle}$都是标量。在本文中，layer=cell。
+
 $r_j$通过下式计算：
 
 $$r_j = \sigma([\mathbf{W}_r\mathbf{x}]_j + [\mathbf{U}\_r \mathbf{h}\_{\langle t-1 \rangle}]\_j)$$
 
-其中$\sigma$是Logistic Sigmoid函数，$[.]_j$是向量的第$j$个元素，$\mathbf{x}$是输入，$\mathbf{h}\_{\langle t-1 \rangle}$是上一个隐状态，$\mathbf{W}_r$和$\mathbf{U}\_r$是学习到的权重矩阵。
+其中$\sigma$是[Logistic Sigmoid](https://en.wikipedia.org/wiki/Logistic_function)函数，$[.]_j$是向量的第$j$个元素，$\mathbf{x}$是输入，$\mathbf{h}\_{\langle t-1 \rangle}$是上一个隐状态，$\mathbf{W}_r$和$\mathbf{U}\_r$是学习到的权重矩阵。
 
 $z_j$类似地通过下式计算：
 
@@ -98,7 +102,13 @@ $$h_j^{\langle t \rangle} = z_j h_j^{\langle t-1 \rangle} + (1 - z_j) \tilde{h}_
 
 $$\tilde{h}_j^{\langle t \rangle} = \phi([\mathbf{W}\mathbf{x}]\_j + [\mathbf{U}(\mathbf{r} \odot \mathbf{h}\_{\langle t-1 \rangle})]\_j)$$
 
-（虽然我看不懂这个式子是怎么使用$r_j$的，以及它对激活状态有什么影响……）
+<del>（虽然我看不懂这个式子是怎么使用$r_j$的，以及它对激活状态有什么影响……）</del>reset gate通过与$\mathbf{h}\_{\langle t-1 \rangle})$点乘对$\tilde{h}_j^{\langle t \rangle}$产生影响。
+
+---
+
+### 另一种对GRU的描述方式
+
+
 
 ## SMT模型和RNN Encoder-Decoder的结合
 
@@ -146,7 +156,7 @@ RNN Encoder-Decoder的权重初值都是通过对一个各向同性的均值为�
 
 ### Encoder
 
-源短语的每个词都被embed成了500维：$e(\mathbf{x}_i) \in \mathrm{R}^500$。
+源短语的每个词都被embed成了500维：$e(\mathbf{x}_i) \in \mathbb{R}^{500}$。
 
 encoder的隐状态由1000个隐藏单元组成，其中每一个单元在$t$时刻的状态由下式计算：
 

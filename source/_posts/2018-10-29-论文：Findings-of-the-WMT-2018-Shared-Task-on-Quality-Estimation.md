@@ -5,7 +5,7 @@ toc: true
 mathjax: true
 date: 2018-10-29 16:24:23
 updated: 2018-11-02 22:52:00
-tags: [NLP, MT, QE, Paper, Reading Report]
+tags: [Natural Language Processing, Machine Translation, Quality Estimation, Paper, Reading Report]
 ---
 
 论文地址：[Findings of the WMT 2018 Shared Task on Quality Estimation](https://fredblain.org/papers/pdf/specia_et_al_findings_of_the_wmt_2018_shared_task_on_quality_estimation.pdf)
