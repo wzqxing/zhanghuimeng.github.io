@@ -103,4 +103,6 @@ $$J(\theta) = \frac{1}{N} \sum{n=1}^{N} |QE_{score}(x^{(n)}, y^{(n)}, \theta) - 
 1. RNNsearch还是不够好，应该尝试直接用Transformer的翻译输出作为feature进行预测，然后再将结果和QEBrain进行比较
 2. MT系统内部训练时计算loss的方式（应该是cross entropy吧）和HTER打分是有差异的，因此需要额外的训练，使得它不止可以输出正确的翻译，还可以对翻译的实际得分有更好的估计
 
+至于模型本身的结构，作者似乎没有像QEBrain那样考虑不同的estimator结构对结果的影响，如果尝试不同的结构（如LSTM、Bi-LSTM等）是否效果会更好？
+
 以及一个问题：HTER是对翻译质量的最好的度量方式吗？如果直接换成人类打分（像Task3和Task4那样）会怎样？
