@@ -102,7 +102,7 @@ with tf.Session() as sess:
 
 ### Variable变量
 
-这一节又讲了一下变量（虽然例子2里已经讲过了）。有趣的一点是这里赋值操作也作为一个operator被保存下来了。如果直接只令`counter = counter + one`然后`sess.run(counter)`并不能让它算上三次。我猜测这种写法会导致后两次run的时候，TensorFlow认为`counter`已经算完了，所以需要run赋值操作本身才能让它真的+1。
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/2-4-variable/)又讲了一下变量（虽然例子2里已经讲过了）。有趣的一点是这里赋值操作也作为一个operator被保存下来了。如果直接只令`counter = counter + one`然后`sess.run(counter)`并不能让它算上三次。我猜测这种写法会导致后两次run的时候，TensorFlow认为`counter`已经算完了，所以需要run赋值操作本身才能让它真的+1。
 
 ```py
 import tensorflow as tf
@@ -119,4 +119,19 @@ with tf.Session() as sess:
     for _ in range(3):
         sess.run(op)
         print(sess.run(counter))
+```
+
+### Placeholder传入值
+
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/2-5-placeholde/)讲了和Variable相对应的另一种结构，Placeholder，用来传入值。然后在这里看起来默认它的shape是None，意思大概是这是一个一维的Tensor，但是长度不定；所以你可以给它传个标量进去。（应该是这样的。）也可以给它传一个长度为1的一维Tensor，两种方法好像都能work；当然打印出来的也会从标量变成Tensor。
+
+```py
+import tensorflow as tf
+
+x = tf.placeholder(tf.float32)
+y = tf.placeholder(tf.float32)
+product = tf.multiply(x, y)
+
+with tf.Session() as sess:
+    print(sess.run(product, feed_dict={x: 4, y: 5}))
 ```
