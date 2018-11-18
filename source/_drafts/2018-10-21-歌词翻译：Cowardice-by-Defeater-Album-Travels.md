@@ -16,8 +16,7 @@ tags: [Lyric, Translation, artist:Defeater]
 | "Regret runs through me | “我内心充满悔恨 |
 | I am no one, I am nothing, I am a man of defeat | 我谁都不是，我什么都不是，我是一个失败者 |
 | "What's left for me? What's left for me?" | “我还剩下些什么？我还剩下些什么？” |
-
-Thought of those open roads, his mother praying all alone
+| Thought of those open roads, his mother praying all alone | 他想到
 That vagrant anthem and the field sung hymns
 The cowardice forever following him
 
