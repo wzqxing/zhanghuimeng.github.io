@@ -13,7 +13,10 @@ tags: [Leetcode, Leetcode Contest, alg:Array]
 
 提交次数：2/4
 
-代码效率：40ms
+代码效率：
+
+* two-pass：40ms
+* one-pass：24ms
 
 ## 题意
 
@@ -34,7 +37,9 @@ tags: [Leetcode, Leetcode Contest, alg:Array]
 
 比赛的时候我整了一个比较复杂的做法：用`increasing[i]`数组表示是否满足`A[0] < A[1] < ... < A[i-1] < A[i]`，`decreasing[i]`数组表示是否满足`A[i] > A[i + 1] > ... > A[A.length - 1]`，然后寻找是否有同时满足两个条件的`i`。
 
-上述做法显然太复杂了。实际上直接找到最大的满足`A[0] < A[1] < ... < A[i-1] < A[i]`的`i`然后判断`A[i] > A[i + 1] > ... > A[A.length - 1]`是否成立即可。
+上述做法显然太复杂了。实际上直接找到最大的满足`A[0] < A[1] < ... < A[i-1] < A[i]`的`i`然后判断`A[i] > A[i + 1] > ... > A[A.length - 1]`是否成立即可。题解中也是这种做法。[^solution]
+
+[^solution]: [Leetcode official solution for 941. Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/solution/)
 
 ## 代码
 
