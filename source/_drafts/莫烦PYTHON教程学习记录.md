@@ -135,3 +135,29 @@ product = tf.multiply(x, y)
 with tf.Session() as sess:
     print(sess.run(product, feed_dict={x: 4, y: 5}))
 ```
+
+### 什么是激励函数（Activation Function）
+
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/2-6-A-activation-function/)非常简短地介绍了一下什么是激励函数。简单来说，激励函数就是把线性方程变成非线性方程。常见的激励函数包括relu、sigmoid和tanh，其中：
+
+* 普通的神经网络：用啥都行
+* 卷积神经网络：一般用relu
+* 循环神经网络：一般用relu/tanh
+
+### 激励函数（Activation Function）
+
+这一节讲了TensorFlow中有哪些激活函数（有些我都不知道它算是激活函数）。在例子中，relu层放在第二个线性层之后，dropout层之前。[TensorFlow文档中Activation Function](https://www.tensorflow.org/api_guides/python/nn#Activation_Functions)这一节说明了现在有哪些激活函数：
+
+* relu
+* relu6
+* crelu
+* elu
+* selu
+* softplus
+* softsign
+* dropout
+* bias_add
+* sigmoid
+* tanh
+
+其中显然有些常用，有些不常用，有些（比如dropout）我都不知道它是激活函数，有些听都没听说过。
