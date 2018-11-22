@@ -316,7 +316,9 @@ plt.show()
 
 ## 可视化 - Tensorboard
 
-这件事还挺有趣的。核心是用`writer = tf.summary.FileWriter('logs/', sess.graph)`把计算流图打出来。
+### 可视化 - Tensorboard - 1
+
+[这件事](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-1-tensorboard1/)还挺有趣的。核心是用`writer = tf.summary.FileWriter('logs/', sess.graph)`把计算流图打出来。
 
 第一个问题是`tf.variable_scope()`和`tf.name_scope()`有什么差别。我之前已经（手贱地）用了variable_scope，知道它可以共享Variable的权重，名称一样的variable_scope里面名称一样的Variable的值是一样的。那name_scope又是个啥呢。参考了stackoverflow的问答[^scopes]之后，我得出了这样的结论：
 
@@ -340,3 +342,24 @@ plt.show()
 然后再想想，其实gradient是算梯度的过程，GradientDescent是将梯度下降应用到参数的过程，这两个不如都叫train算了。
 
 ![最后的图](tensorboard-test-3.png)
+
+### 可视化 - Tensorboard - 2
+
+这一部分讲了如何打印内容到TensorBoard上GRAPH之外的section。`tf.summary`下的类型好像不多，这次用到的就是scalar和histogram。这两者的主要区别是：
+
+* histogram会输出到TensorBoard上DISTRIBUTIONS和HISTOGRAMS两个section，其中DISTRIBUTIONS里显示的是数据（变量）的分布随训练的变化，HISTOGRAMS显示的是数据本身随训练的变化
+* scalar会输出到SCALARS这个section，给出一个数据（变量）随训练变化的折线图（毕竟是标量）
+
+使用方法是`tf.summary.histogram(name, var)`或者`tf.summary.scalar(name, var)`。不过并没有那么简单，它们不会像graph一样自动打印出来，需要手动调用`tf.summary.merge_all()`函数得到一个summary结点（不过讲道理，给了一个自动merge所有summary的函数，不需要什么时候都自己手动merge[^merge-summary]，已经很方便了），然后在每若干次训练的时候用`session.run`一下这个结点，把它的值（和对应的step）插入到FileWriter中。
+
+[^merge-summary]: [stackoverflow - How to merge not all summaries in tensorflow?](https://stackoverflow.com/questions/46655921/how-to-merge-not-all-summaries-in-tensorflow)
+
+我的下一个问题是，tf.summary好像用的都是step，如果想要对时间而不是step进行可视化的话，需要做什么改变吗？（还没有找到这个问题的答案。）
+
+![SCALARS](tensorboard-scalars.png)
+
+![DISTRIBUTIONS](tensorboard-distributions.png)
+
+![HISTOGRAMS](tensorboard-histograms.png)
+
+可以看出变量命名出现了一些小问题：我猜想对于现在的TensorFlow，在TensorBoard中打印出来的变量名应该和程序中的前缀是一样的了（也就是说name_scope和variable_scope应该都有效，不需要再多加东西了）。
