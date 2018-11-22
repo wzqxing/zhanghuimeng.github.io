@@ -161,3 +161,182 @@ with tf.Session() as sess:
 * tanh
 
 其中显然有些常用，有些不常用，有些（比如dropout）我都不知道它是激活函数，有些听都没听说过。
+
+## 建造第一个神经网络
+
+### 添加层和建造神经网络
+
+这两节（[add_layer](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/3-1-add-layer/)和[建造神经网络](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/3-2-create-NN/)）相对比较复杂，因为它描述了一个建造完整的的神经网络的过程。
+
+```py
+import tensorflow as tf
+import numpy as np
+from matplotlib import pyplot as plt
+
+
+def add_layer(scope, inputs, in_size, out_size, activation_function=None):
+    '''Add a linear activation layer.
+    :param inputs: The input data.
+    :param in_size: The size of the input data.
+    :param out_size: The size of the output data.
+    :param activation_function: Activation function applied to the linear output.
+    :return: Output data.
+    '''
+    # 注意这是个矩阵
+    with tf.variable_scope(scope, reuse=False):
+        weights = tf.get_variable('weights', [in_size, out_size], initializer=tf.random_normal_initializer(0.1))
+        bias = tf.get_variable('bias', [1, out_size], initializer=tf.constant_initializer(0.05))
+        outputs = tf.matmul(inputs, weights) + bias
+        if not activation_function is None:
+            outputs = activation_function(outputs)
+        return outputs
+```
+
+在`add_layer`这个函数里，dimension（对我来说）很值得注意。事实上它输入的input的大小是batch_size \* in_size，weight矩阵的大小是in_size \* out_size，bias的大小是1 \* out_size，因此input \* weight + bias得到的矩阵大小是batch_size \* out_size（bias在相加的时候使用了[broadcasting](https://cs231n.github.io/python-numpy-tutorial/#numpy-broadcasting)技术）。
+
+而且实际上这个函数描述的是从一层神经元输入值到另一层神经元输出值的过程——也就是说，它并不是（容易引起误解的）一层神经元，而是一层连接。
+
+![weight实际上是线上的权重](dense-layer.png)
+
+另一个问题是，在创建tf.Variable时到底应该使用tf.Variable()还是tf.get_variable()。两者的一个显然的差别是，tf.Variable()创建时接收的是initial-value，而tf.get_variable()接收的是initializer。我感觉initializer更加方便。以及get_variable()可以通过和variable_scope配合使用实现共享变量（在多GPU场景下很有用）。[^variable]但是这样就需要保证不同variable的名字不同（防止意外共享变量），所以需要variable_scope的名字也不同。
+
+[^variable]: [stackoverflow - Difference between Variable and get_variable in TensorFlow](https://stackoverflow.com/questions/37098546/difference-between-variable-and-get-variable-in-tensorflow)
+
+```py
+x_data = np.random.uniform(-3, 3, [300, 1])
+noise = np.random.normal(0, 0.1, [300, 1])
+y_data = np.square(x_data) + 0.5 + noise
+```
+
+这一段我也写了很久，问题在于：
+
+* numpy的API太多，记不住（面向文档的编程……）
+* x_data应有的形状是竖着的（或者说是? \* batch_size * 1）……
+
+写完之后我发现原来的代码是在\[-1, 1\]上均匀取了300个点[^linspace]，而不是像我这样直接随机取……算了，也罢了（实际效果好像也差不多）：
+
+```py
+x_data = np.linspace(-1,1,300, dtype=np.float32)[:, np.newaxis]
+noise = np.random.normal(0, 0.05, x_data.shape).astype(np.float32)
+y_data = np.square(x_data) - 0.5 + noise
+```
+
+[^linspace]: [numpy.linspace](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.linspace.html)
+
+其中另一种值得注意的写法是`[:, np.newaxis]`。`np.newaxis`相当于常量`None`，它的作用是给数组增加一个新的维度，常用于将数组转换成行向量或列向量的时候。这么说可能仍然太抽象了……简单来说，`[:, np.newaxis]`会把数组变成列向量，`[:, np.newaxis]`会把数组变成行向量，如下图[^newaxis]：
+
+![np.newaxis的作用](np-newaxis.png)
+
+[^newaxis]: [stackoverflow - How does numpy.newaxis work and when to use it?](https://stackoverflow.com/questions/29241056/how-does-numpy-newaxis-work-and-when-to-use-it)
+
+另一个事实是，如果`x_data`是均匀取的，则按照我原来随便写的参数（x分布在\[-3, 3\]上，noise的均值为0，标准差为0.1，y=x^2+0.5+noise，learning rate=0.1），则很容易训到爆炸，loss变成nan，需要把learning rate调整成0.05；换成练习里给的参数（x分布在\[-1, 1\]上，noise的均值为0，标准差为0.05，y=x^2-0.5+noise，learning rate=0.1）则不容易爆炸。这大概就是机器学习相关的内容了，我决定暂且不管这些，一律调整成教程里的参数。
+
+```py
+# Create graph
+# x和y的每个数据都只有1维，所以第二维是1
+x_placeholder = tf.placeholder(tf.float32, [None, 1], 'x')
+y_placeholder = tf.placeholder(tf.float32, [None, 1], 'y')
+
+layer1_output = add_layer('layer_1', x_placeholder, 1, 10, tf.nn.relu)
+y_output = add_layer('layer_2', layer1_output, 10, 1, None)
+loss = tf.reduce_mean(tf.square(y_output - y_placeholder))  # (R)MSE
+# learning rate is usually < 1
+train_op = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(loss)
+init = tf.global_variables_initializer()
+```
+
+这里面大部分内容之前都已经讲过了，我感觉唯一值得注意的是`loss`的写法。`tf.reduce_mean`可以直接求出Tensor沿某个轴（或者所有元素）的平均值，所以对差值的平方作`reduce_mean`就可以直接得到MSE了。再开个根号就可以得到RMSE，不过对于loss本身来说，这么做没有什么价值。（除非需要RMSE具体的值。）[^rmse-func]
+
+[^rmse-func]: [stackoverflow - how to set rmse cost function in tensorflow](https://stackoverflow.com/questions/33846069/how-to-set-rmse-cost-function-in-tensorflow)
+
+然而教程里是这么写的：
+
+```py
+loss = tf.reduce_mean(tf.reduce_sum(tf.square(ys - prediction), reduction_indices=[1]))
+```
+
+看起来有点怪，不过我想这应该是一种更通用（假如y的每一行有多维）的写法。当然现在`reduction_indices`这个写法已经deprecated了，换成axis比较好。
+
+```py
+# Training
+with tf.Session() as sess:
+    sess.run(init)
+    for i in range(0, 500):
+        _, loss_val = sess.run([train_op, loss], feed_dict={x_placeholder: x_data, y_placeholder: y_data})
+        if i % 20 == 0:
+            print("Step %d, loss = %f" % (i, loss_val))
+
+    y_prediction = sess.run(y_output, feed_dict={x_placeholder: x_data})
+```
+
+这部分用的是真·SGD（而不是minibatch SGD），就很有趣。输出结果如下（在没爆炸的情况下）：
+
+```
+Step 0, loss = 0.199861
+Step 20, loss = 0.062161
+Step 40, loss = 0.026100
+Step 60, loss = 0.014150
+Step 80, loss = 0.010338
+...
+Step 460, loss = 0.004383
+Step 480, loss = 0.004270
+```
+
+最后也是通过`sess.run`函数来输出最终的prediction。
+
+```py
+plt.figure()
+plt.title("x and y")
+plt.ylabel('y')
+plt.xlabel('x')
+plt.scatter(x_data, y_data, color='blue')
+plt.scatter(x_data, y_prediction, color='red')
+plt.show()
+```
+
+然后我还手贱直接画了一个散点图（没想到后一节的可视化不是Tensorboard而是matplotlib……）：
+
+![红点是预测值，蓝点是真实值](random-plot.png)
+
+似乎能从图上看出relu函数的形状……
+
+### 更多的结果可视化
+
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/3-3-visualize-result/)的核心内容是通过画线的方式展示训练过程中拟合的变化……反正还是matplotlib，而且我听说PyCharm会出一点问题，所以也不想画了。至少我从中学到了，画散点图应该用`plt.scatter`，画折线图应该用`plt.plot`这一点。
+
+### 加速神经网络训练（Speed Up Training）
+
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/3-4-A-speed-up-learning/)没有代码，主要就是（非常不详细地）介绍了几种常见的更新方法。（反映到代码里，也不过就是把GradientDescentOptimizer换成AdamOptimizer罢了；所以还是原理比较有趣。）
+
+啊，我现在在读[An overview of gradient descent optimization algorithms](http://ruder.io/optimizing-gradient-descent/)这篇文章，但我感觉一时半会读不完了。
+
+### 优化器（Optimizer）
+
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/3-4-optimizer/)的内容看起来和上一节差不多。暂时没什么好说的了……除了他推荐了一篇[和训练神经网络相关](https://cs231n.github.io/neural-networks-3/)的文章之外。
+
+## 可视化 - Tensorboard
+
+这件事还挺有趣的。核心是用`writer = tf.summary.FileWriter('logs/', sess.graph)`把计算流图打出来。
+
+第一个问题是`tf.variable_scope()`和`tf.name_scope()`有什么差别。我之前已经（手贱地）用了variable_scope，知道它可以共享Variable的权重，名称一样的variable_scope里面名称一样的Variable的值是一样的。那name_scope又是个啥呢。参考了stackoverflow的问答[^scopes]之后，我得出了这样的结论：
+
+* variable_scope会为其中创建的所有Variable（无论是用get_variable还是直接创建）、Op和Constant的名称添加前缀，但只会为用get_variable方式创建的Variable共享权重（直接创建的话，每次都会创建一个新的Variable）
+* name_scope不会为其中用get_variable方式创建的Variable的名称添加前缀（因为它默认你知道这个Variable应该在哪个variable_scope中共享权重）
+
+[^scopes]: [stackoverflow - What's the difference of name scope and a variable scope in tensorflow?](https://stackoverflow.com/questions/35919020/whats-the-difference-of-name-scope-and-a-variable-scope-in-tensorflow)
+
+反正这听起来还是很麻烦啊（不是那么的符合直觉）。
+
+总之，我基本没改任何东西，直接把原图打出来了，得到了一个这样的东西：
+
+![普通的图](tensorboard-test-1.png)
+
+嗯，首先，gradients和GradientDescent这两个结点都不是我写的，所以把它们都丢到外面去了，不显示那么多乱七八糟的连接线（我终于明白外面的init和莫名其妙的结点都是干啥的了！）。
+
+然后我也明白为什么把x和y放到同一个name_scope（input）下比较好了，因为这其实是很自然的（不然x和y就是散落在外面的两个小点）。layer_1和layer_2因为定义了variable_scope倒是比较好看，打开之后，发现了一堆MatMul，add和Relu之类的运算结点……（不过我觉得这还挺合理的，没必要给中间结果再包一层）。不过计算loss的过程也变成了一堆sub、square和mean之类的结点，这就不那么合理了，外面包一层叫loss比较好。
+
+![进行了包装的图](tensorboard-test-2.png)
+
+然后再想想，其实gradient是算梯度的过程，GradientDescent是将梯度下降应用到参数的过程，这两个不如都叫train算了。
+
+![最后的图](tensorboard-test-3.png)
