@@ -3,7 +3,7 @@ title: Leetcode 940. Distinct Subsequences II（DP）
 urlname: leetcode-940-distinct-subsequences-ii
 toc: true
 date: 2018-11-12 01:05:23
-updated: 2018-11-12 01:05:23
+updated: 2018-11-25 18:17:00
 tags: [Leetcode, Leetcode Contest, alg:Dynamic Programming]
 ---
 
@@ -19,13 +19,15 @@ tags: [Leetcode, Leetcode Contest, alg:Dynamic Programming]
 
 ## 题意
 
+给定字符串`S`，返回`S`的不重不漏的非空子序列的总数。
+
 ## 分析
 
 这些做法使我感到，这种计数DP是在非常有限的信息下做到不重不漏地统计的过程，所以保留哪些信息是十分关键的。
 
 ### 按序列可能的结尾位置进行递推
 
-这是题解给出的做法，看起来还不错。[^solution]用一个数组`dp[k]`表示`S[0:k]`中不重复的sequence的数量。在不考虑重复的情况下，`dp[k] = 2 * dp[k-1] + 1`。问题是如何从中去掉那些重复的sequence。显然那些被重复的原有的sequence的结尾字母必然是`S[k]`。（想不出来为什么了。。）
+这是题解给出的做法，看起来还不错。[^solution]用一个数组`dp[k]`表示`S[0:k]`中不重复的sequence的数量。在不考虑重复的情况下，`dp[k] = 2 * dp[k-1] + 1`。问题是如何从中去掉那些重复的sequence。显然那些被重复的原有的sequence的结尾字母必然是`S[k]`。（想不出来为什么了。。）令`last[S[k]]`表示`S[k]`上次出现的位置，则所有会被重复的sequence必然可以用`last[S[k]]-1`位置的sequence再加上`S[k]`来组成。（我都不知道我在说什么，还是算了吧。）
 
 [^solution]: [Leetcode Official Solution for 940](https://leetcode.com/problems/distinct-subsequences-ii/solution/)
 
