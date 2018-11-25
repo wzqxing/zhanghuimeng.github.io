@@ -1,5 +1,5 @@
 ---
-title: 2018-11-25-Leetcode 162. Find Peak Element（二分查找）
+title: Leetcode 162. Find Peak Element（二分查找）
 urlname: leetcode-162-find-peak-element
 toc: true
 date: 2018-11-25 10:20:02
