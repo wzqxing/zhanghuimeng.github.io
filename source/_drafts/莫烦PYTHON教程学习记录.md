@@ -2,6 +2,7 @@
 title: 莫烦PYTHON教程学习记录
 urlname: learning-morvanzhou-s-tensorflow-tutorial
 toc: true
+mathjax: true
 date: 2018-11-17 15:41:29
 updated: 2018-11-17 15:41:29
 tags: [TensorFlow]
@@ -363,3 +364,129 @@ plt.show()
 ![HISTOGRAMS](tensorboard-histograms.png)
 
 可以看出变量命名出现了一些小问题：我猜想对于现在的TensorFlow，在TensorBoard中打印出来的变量名应该和程序中的前缀是一样的了（也就是说name_scope和variable_scope应该都有效，不需要再多加东西了）。
+
+## 高阶内容
+
+### 分类学习（Classification）
+
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-01-classifier/)我写了很久，不过最终发现了很多有趣的问题，我甚至打算再多写一篇文章（关于数值稳定性的）。
+
+简单来说这一节讲的就是一个经典问题，MNIST。采用的网络结构是一层（是的，只有一层）前馈网络+softmax，损失函数是交叉熵。
+
+#### 交叉熵在分类问题中的优点
+
+第一个问题是，为什么分类问题的损失函数要用交叉熵而不是RMSE之类的？它们看起来也很合理啊。作为一个不学无术的人我先列一下交叉熵的表达式……[^wiki]
+
+对于多分类问题：
+
+$l_{CE} = -\sum_{i=1}^{C} p_i \log{q_i}$
+
+其中$p$是一个长度为$C$的one-hot形式的向量，表示样本的真实分类；$q$是一个和为1的长度为$C$的向量，是模型输出的各分类的概率。
+
+对于二分类问题，上式可以简化为：
+
+$l_{CE} = -y\log{\hat{y}} - (1-y)\log{(1-\hat{y})}$
+
+[^wiki]: [Wikipedia - Cross entropy](https://en.wikipedia.org/wiki/Cross_entropy)
+
+然后我们可以举一个例子来比较不同的损失函数的效果。[^mccaffrey]
+
+[^mccaffrey]: [James D. McCaffrey - Why You Should Use Cross-Entropy Error Instead Of Classification Error Or Mean Squared Error For Neural Network Classifier Training](https://jamesmccaffrey.wordpress.com/2013/11/05/why-you-should-use-cross-entropy-error-instead-of-classification-error-or-mean-squared-error-for-neural-network-classifier-training/)
+
+神经网络1的输出：
+
+| 输出1 | 目标 | 是否正确？ |
+| ---- |--- | --- |
+| 0.3 0.3 0.4 | 0 0 1 | yes |
+| 0.3 0.4 0.3 | 0 1 0 | yes |
+| 0.1 0.2 0.7 | 1 0 0 | no |
+
+神经网络2的输出：
+
+| 输出2 | 目标 | 是否正确？ |
+| ---- |--- | --- |
+| 0.1 0.2 0.7 | 0 0 1 | yes |
+| 0.1 0.7 0.2 | 0 1 0 | yes |
+| 0.3 0.4 0.3 | 1 0 0 | no |
+
+虽然这两个神经网络的错误率都是相同的（1/3=0.33），但显然第二个神经网络更好一些，因为它更能区分正确和错误。交叉熵可以做到这一点。MSE虽然看起来好像可以做到这一点，但它可能太重视错误的例子了。
+
+```
+CE1 = (-ln(0.4)*1 - ln(0.4)*1 - ln(0.3)*1) / 3 = 1.38
+CE2 = (-ln(0.7)*1 - ln(0.7)*1 - ln(0.3)*1) / 3 = 0.64
+MSE1 = ((0.3-0)^2 + (0.3-0)^2 + (0.4-1)^2 + ... ) / 3 = 0.81
+MSE2 = ((0.1-0)^2 + (0.2-0)^2 + (0.7-1)^2 + ... ) / 3 = 0.34
+```
+
+| 神经网络 | 错误率 | 交叉熵 | MSE |
+| --- | --- | --- | --- |
+| 1 | 0.33 | 1.38 | 0.81 |
+| 2 | 0.33 | 0.64 | 0.34 |
+
+好像另一个重要的问题是交叉熵和MSE的梯度（导数）。（但是我现在不想思考这个问题了，可以看这篇文章[^zhihu]……）
+
+[^zhihu]: [知乎 - Softmax函数与交叉熵](https://zhuanlan.zhihu.com/p/27223959)
+
+#### 如何实现分类问题
+
+TensorFlow中曾经有很多读MNIST的方法，比如示例代码中用的`tensorflow.examples.tutorials.mnist.input_data`，但它们基本全都deprecated掉了（这个也因为网络原因需要自己从[http://yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist/)下载数据集）；一个没deprecated的方法是用[tf.keras.datasets.mnist.load_data](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist/load_data)，但这个方法也因为网络原因没法用，最后我干脆也直接从[https://s3.amazonaws.com/img-datasets/mnist.npz](https://s3.amazonaws.com/img-datasets/mnist.npz)下载npz了，其中包含`x_train`，`y_train`，`x_test`和`y_test`四个array，其中图片的形状是`[None, 28, 28]`，label没有one-hot，数据类型全都是`uint8`……
+
+当然，首先需要转换一下np数组的类型，可以利用`astype`方法……然后下一个问题是怎么batch。于是我发现只有np数组可以接收list作为下标寻址[^np-index]。于是我决定不把数据转成tensor。
+
+[^np-index]: [stackoverflow - Passing a list of indices to another list in Python. Correct syntax?](https://stackoverflow.com/questions/25431850/passing-a-list-of-indices-to-another-list-in-python-correct-syntax)
+
+然后就可以开始定义placeholder和数据流图了。我遇到的两个主要问题是：
+
+1. 怎么算loss？
+2. test的时候可以和train的时候混用（一部分）数据流图吗？
+
+我感觉第二个问题的答案应该是可以，因为那就是张图，但是可以有不同的用法。（虽然如果分开写会更清楚？）但第一个问题困扰了我好久……
+
+需要注意的第一点是，TensorFlow里提供的几种cross entropy API前面都带着softmax或者sigmoid的前缀，意思是，你传进去的是logits（没有进行处理的神经网络输出的概率），它在算cross entropy之前会帮你算一次softmax或sigmoid，所以传进去之前不！要！自！己！多！算！一！次！softmax！（我想这就是我自己开始时无论怎么调参正确率都只能到0.4左右的原因，算了两次softmax居然还能训练，已经很神奇了。）
+
+那算完了softmax，自己再算一次cross entropy是否可取呢？看起来是可取的（[示例](https://github.com/MorvanZhou/tutorials/blob/master/tensorflowTUT/tf16_classification/full_code.py)里也是这么做的，看起来似乎没什么问题），但事实证明，换了一个数据集（就是我自己的数据集之后），这么做就不可取了。或者说这么做本来就不可取。
+
+如果手算cross entropy，在我找的数据集上基本必然会得到`loss=nan`的效果，在原始数据集上偶尔会得到`loss=nan`的效果。这是因为手算的数值不稳定——比如它没有处理`log(0)`这种边界情况。换成TensorFlow的API之后，一切就都正常了。这说明，在这个问题上，千万不要自己造轮子。
+
+下面是（看起来比较正常的输出）（但为什么准确率波动那么大？）：
+
+```
+step 50: loss=19296.697266
+step 50: acc on eval set=0.811400
+step 100: loss=11443.701172
+step 100: acc on eval set=0.872900
+step 150: loss=5943.838867
+step 150: acc on eval set=0.838900
+step 200: loss=8638.837891
+step 200: acc on eval set=0.869200
+step 250: loss=12599.865234
+step 250: acc on eval set=0.812700
+step 300: loss=6333.552734
+step 300: acc on eval set=0.885300
+step 350: loss=6557.052734
+step 350: acc on eval set=0.878700
+step 400: loss=2990.178467
+step 400: acc on eval set=0.868300
+step 450: loss=8121.486328
+step 450: acc on eval set=0.819700
+step 500: loss=6352.314941
+step 500: acc on eval set=0.879100
+step 550: loss=6118.964844
+step 550: acc on eval set=0.850300
+step 600: loss=5958.951172
+step 600: acc on eval set=0.878000
+step 650: loss=2806.342285
+step 650: acc on eval set=0.897000
+step 700: loss=3389.978027
+step 700: acc on eval set=0.842800
+step 750: loss=3163.475098
+step 750: acc on eval set=0.900800
+step 800: loss=4724.095703
+step 800: acc on eval set=0.894200
+step 850: loss=3702.073730
+step 850: acc on eval set=0.882200
+step 900: loss=4021.374268
+step 900: acc on eval set=0.887000
+step 950: loss=7927.149414
+step 950: acc on eval set=0.838600
+```
