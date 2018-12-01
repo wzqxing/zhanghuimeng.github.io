@@ -369,7 +369,7 @@ plt.show()
 
 ### 分类学习（Classification）
 
-[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-01-classifier/)我写了很久，不过最终发现了很多有趣的问题，我甚至打算再多写一篇文章（关于数值稳定性的）。
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-01-classifier/)我写了很久，不过最终发现了很多有趣的问题。
 
 简单来说这一节讲的就是一个经典问题，MNIST。采用的网络结构是一层（是的，只有一层）前馈网络+softmax，损失函数是交叉熵。
 
@@ -490,3 +490,39 @@ step 900: acc on eval set=0.887000
 step 950: loss=7927.149414
 step 950: acc on eval set=0.838600
 ```
+
+#### 交叉熵计算的数值稳定性
+
+TODO
+
+### 什么是过拟合（Overfitting）
+
+[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-02-A-overfitting/)没有代码。讲了一下什么是过拟合，以及$L_1$和$L_2$正则化，对dropout做了一个预告。下面从一篇文章[^regularization]中摘抄一点对正则化的解释：
+
+[^regularization]: [CSDN - 正则化方法：L1和L2 regularization、数据集扩增、dropout](https://blog.csdn.net/u012162613/article/details/44261657)
+
+L2正则化就是在代价函数后面加上一个正则化项：
+
+$$C = C_0 + \frac{\lambda}{2n} \sum_{\omega} \omega^2$$
+
+正则化项是所有参数的平方的和的平均值，系数是$\lambda / 2$（方便求导）。
+
+在不使用L2正则化时，$\omega$的梯度更新为：
+
+$$\omega = \omega - \eta\frac{\partial C_0}{\partial\omega}$$
+
+使用L2正则化后，$\omega$的梯度更新为：
+
+$$\omega = \left(1 - \frac{\eta\lambda}{n}\right)\omega - \eta\frac{\partial C_0}{\partial\omega}$$
+
+结果是参数$\omega$本身被衰减了。（这是我之前没有预料到的）一般来说，约束参数的范数可以减小过拟合。
+
+L1正则化的形式类似：
+
+$$C = C_0 + \frac{\lambda}{n} \sum_{\omega} |\omega|$$
+
+使用L1正则化后，$\omega$的梯度更新为：
+
+$$\omega = \omega - \frac{\eta\lambda}{n}\text{sgn}(\omega) - \eta\frac{\partial C_0}{\partial\omega}$$
+
+结果是参数$\omega$向0靠近了。
