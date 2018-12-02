@@ -1,6 +1,6 @@
 ---
 title: Leetcode 951. Flip Equivalent Binary Trees（树）
-urlname: leetcode-951-flip-equivalent Binary Trees
+urlname: leetcode-951-flip-equivalent-binary-trees
 toc: true
 date: 2018-12-02 13:19:02
 updated: 2018-12-02 14:44:00
