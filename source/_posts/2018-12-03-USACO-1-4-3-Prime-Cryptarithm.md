@@ -1,5 +1,5 @@
 ---
-title: USACO 1.4.3: Prime Cryptarithm
+title: 'USACO 1.4.3: Prime Cryptarithm（暴力）'
 urlname: usaco-1-4-3-prime-cryptarithm
 toc: true
 date: 2018-12-03 11:03:04
