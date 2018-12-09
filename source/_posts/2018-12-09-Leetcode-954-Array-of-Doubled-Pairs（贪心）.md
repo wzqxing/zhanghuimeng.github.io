@@ -9,7 +9,7 @@ tags: [Leetcode, Leetcode Contest, alg:Greedy]
 
 题目来源：[https://leetcode.com/problems/verifying-an-alien-dictionary/description/](https://leetcode.com/problems/verifying-an-alien-dictionary/description/)
 
-标记难度：Easy
+标记难度：Medium
 
 提交次数：1/2
 
