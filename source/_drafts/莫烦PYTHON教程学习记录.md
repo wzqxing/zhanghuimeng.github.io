@@ -319,7 +319,10 @@ plt.show()
 
 ### 可视化 - Tensorboard - 1
 
-[这件事](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-1-tensorboard1/)还挺有趣的。核心是用`writer = tf.summary.FileWriter('logs/', sess.graph)`把计算流图打出来。
+* [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-1-tensorboard1/)
+* [我的代码地址](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/tensorboard-nn.py)
+
+这件事还挺有趣的。核心是用`writer = tf.summary.FileWriter('logs/', sess.graph)`把计算流图打出来。
 
 第一个问题是`tf.variable_scope()`和`tf.name_scope()`有什么差别。我之前已经（手贱地）用了variable_scope，知道它可以共享Variable的权重，名称一样的variable_scope里面名称一样的Variable的值是一样的。那name_scope又是个啥呢。参考了stackoverflow的问答[^scopes]之后，我得出了这样的结论：
 
@@ -346,6 +349,9 @@ plt.show()
 
 ### 可视化 - Tensorboard - 2
 
+* [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-2-tensorboard2/)
+* [我的代码地址](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/tensorboard-histogram.py)
+
 这一部分讲了如何打印内容到TensorBoard上GRAPH之外的section。`tf.summary`下的类型好像不多，这次用到的就是scalar和histogram。这两者的主要区别是：
 
 * histogram会输出到TensorBoard上DISTRIBUTIONS和HISTOGRAMS两个section，其中DISTRIBUTIONS里显示的是数据（变量）的分布随训练的变化，HISTOGRAMS显示的是数据本身随训练的变化
@@ -369,7 +375,10 @@ plt.show()
 
 ### 分类学习（Classification）
 
-[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-01-classifier/)我写了很久，不过最终发现了很多有趣的问题。
+* [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-01-classifier/)
+* [我的代码地址](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/classification-mnist-my-data.py)
+
+这一节我写了很久，不过最终发现了很多有趣的问题。
 
 简单来说这一节讲的就是一个经典问题，MNIST。采用的网络结构是一层（是的，只有一层）前馈网络+softmax，损失函数是交叉熵。
 
@@ -491,13 +500,18 @@ step 950: loss=7927.149414
 step 950: acc on eval set=0.838600
 ```
 
+2018.12.7 UPDATE：之前写代码时不小心，忘了在预测的时候加`softmax`，结果加上之后准确率和波动的程度都没有什么变化。想想也是，都到了取`argmax`一步了，加不加`softmax`根本就没有什么区别……
+
 #### 交叉熵计算的数值稳定性
 
-TODO
+我真的写了篇文章……
 
 ### 什么是过拟合（Overfitting）
 
-[这一节](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-02-A-overfitting/)没有代码。讲了一下什么是过拟合，以及$L_1$和$L_2$正则化，对dropout做了一个预告。下面从一篇文章[^regularization]中摘抄一点对正则化的解释：
+* [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-02-A-overfitting/)
+* 我的代码地址：没有代码
+
+这一节没有代码。讲了一下什么是过拟合，以及$L_1$和$L_2$正则化，对dropout做了一个预告。下面从一篇文章[^regularization]中摘抄一点对正则化的解释：
 
 [^regularization]: [CSDN - 正则化方法：L1和L2 regularization、数据集扩增、dropout](https://blog.csdn.net/u012162613/article/details/44261657)
 
@@ -526,3 +540,159 @@ $$C = C_0 + \frac{\lambda}{n} \sum_{\omega} |\omega|$$
 $$\omega = \omega - \frac{\eta\lambda}{n}\text{sgn}(\omega) - \eta\frac{\partial C_0}{\partial\omega}$$
 
 结果是参数$\omega$向0靠近了。
+
+### Dropout解决Overfitting
+
+* [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-02-dropout/)
+* [我的代码地址](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/dropout.py)
+
+在完成这一节的时候遇到了茫茫多的问题，以至于我花了好几天才解决……
+
+第一个问题是数据集。教程里用的是`sklearn.datasets.load_digits`，但是（连我自己都忘了到底是为什么了）我不想用`sklearn`，遂决定直接用分类学习那一节里我自己搞的MNIST数据集。所以接下来解决dropout问题的结果肯定和示例不太相同，连造出dropout问题的方式都不太相同。
+
+第二个问题是TensorBoard的显示问题。我最开始尝试打印到TensorBoard的时候，发现，不仅延迟非常严重，而且延迟还非常随机，而且还经常丢掉训练接近结束时的一些数据点；有时候干脆什么数据点都打不出来。查阅文档发现，如果希望确保训练过程中能及时看到数据变化，需要每次`add_summary`时候都进行[flush](https://www.tensorflow.org/api_docs/python/tf/summary/FileWriter#flush)，而且最后要把`FileWriter`关闭，防止数据点丢失。
+
+第三个问题是同一数据流图的重复利用和`tf.summary`的`merge`问题。在同一个数据流图里，我做了以下事情：
+
+1. 用`placeholder`存储图片和label，以及dropout的keep_prob
+2. 将图片经过一个线性层，得到输出`output`
+3. 通过`output`和label算出`loss`，将它加入scalar summary中
+4. 通过Optimizer和`loss`得到`train_op`
+5. 对`output`执行softmax，得到归一化后的概率后执行argmax，得到预测的类别`prediction`
+6. 将`prediction`和label进行比较，得到预测准确度`accuracy`，将它加入scalar summary中
+
+![计算流图](dropout-graph.jpg)
+
+显然这个数据流图做的是两件事情，只是可以并行来做：
+
+* 1、2、3、4步进行的是训练：实际调用`sess.run(train_op)`可以实现
+* 1、2、5、6步进行的是测试：实际调用`sess.run(accuracy)`可以实现
+
+虽然示例代码里分成了两张数据流图，但是我感觉自己做的并没有什么问题。不过，实践中遇到了这样的问题：`summary`怎么办？首先，`summary`和真实值是需要分开跑的。接受了这一点之后，在测试时不能把所有`summary`都`merge`起来就成了一个问题。训练时我们除了打印`accuracy`之外，还希望打印训练过程中的`loss`以及线性层的`weight`和`bias`，但是测试时并不需要；更重要的问题是，如果测试时也打印`loss`、`weight`和`bias`的`summary`，会不会导致不小心把测试数据也给训练了？仔细看了看图（或者说看了看代码），我感觉单纯打印这些东西不会导致实际发生训练（意思是`train_op`没有被执行），但是确实没什么意义，所以就使用了`tf.summary.merge`这个API（而不是直接全都`tf.summary.merge_all()`）。这个API的使用方法是，把每次执行`tf.summary.histogram/scalar`时的返回值记录下来，然后放在一个`list`里面去`merge`。
+
+这个API本身没有什么大毛病，但我开始调试它的时候还没有意识到`FileWriter.flush()`的重要性，所以输出总是一会好一会不好……所以花了很久。
+
+以及，其中我开始时忘了执行softmax就执行argmax了，但实际效果没有什么差别，想一下softmax的原理，好像这是件显然的事……不过为了连续性起见，我最后还是做了一遍softmax。
+
+既然要看dropout，肯定得把数据分成训练集和测试集，然后每隔几步分别测试模型在**整个**训练集上和测试集上各自的准确度。我最开始没想明白这一点，直接测了minibatch-SGD中一个batch的训练数据上的准确度，结果折线图简直好像在空中蹦跳……然后我思考了一下，基于以下两种原因，干脆把SGD改成了GD：
+
+* [示例代码](https://github.com/MorvanZhou/tutorials/blob/37de6e0d0e9291085d0876971baefb7bab00ace2/tensorflowTUT/tf17_dropout/full_code.py#L68)里用的就是GD而不是SGD
+* 从直觉上来讲，SGD每次只算一个小批量的样本的梯度，这本质上是不容易造成模型在整体训练样本上的过拟合的，可能需要训练很多步才能观察出来
+
+到这里我基本上把能解决的bug都解决了。但是这个时候训练集和测试集上的accuracy随训练步数变化的曲线看起来仍然十分离谱：
+
+![按照教程里说的，使用GradientDescentOptimizer，lr=0.5的结果](dropout-learning-rate-0-5.png)
+
+可以看出上图训练了十万次，但是丝毫没有要收敛的迹象，更别提过拟合了。于是我尝试了0.1的lr，结果并没有什么改善：
+
+![lr=0.1，训练500次的结果](dropout-learning-rate-0-1.png)
+
+（因为当时还没有解决summary flush的问题，所以是用Excel画的图）
+
+既然数据差异很大，最后我也不想跟GD死磕了，干脆直接换成AdamOptimizer，效果惊人的好：
+
+![AdamOptimizer训练500步，lr=0.001，橙色是训练集，蓝色是测试集](smooth-adam.png)
+
+不过大概因为lr设置得太小了，看起来没收敛。所以我逐渐调整lr：
+
+![AdamOptimizer训练500步，lr=0.005，橙色是训练集，蓝色是测试集](adam-0.005.png)
+
+![AdamOptimizer训练500步，lr=0.01，橙色是训练集，蓝色是测试集](adam-0.01.png)
+
+可以看出，lr=0.01的时候，训练集基本上已经收敛了，而且还出现了一点点过拟合的迹象。于是改成训练1000次：
+
+![AdamOptimizer训练1000步，lr=0.01，橙色是训练集，蓝色是测试集](adam-0.01-step1000-overfit.png)
+
+出现了非常明显的过拟合。接下来加上dropout：
+
+![AdamOptimizer训练1000步，lr=0.01，keep_prob=0.5，橙色是训练集，蓝色是测试集](adam-0.01-1000steps-with-dropout.png)
+
+可以发现dropout的效果包括：
+
+* 降低了收敛时的准确度：这是为什么呢？
+* 降低了过拟合的程度：这是我们所期望的
+* 增加了抖动：因为每次丢弃是随机的，所以这是可以理解的
+
+不过，事实上，我觉得我还没有那么理解dropout。为什么dropout是加在线性层输出后，激活函数前面？为什么训练时`keep_prob=0.5`，测试时`keep_prob=1`？关于后一个问题，显然有人和我抱有相同的疑问。简单来说，dropout的机制是让那些被丢弃的神经元以为自己的预测是错误的，因此减少对前一层的输出的依赖。而在测试（validate和test）时不dropout的理由是这样的[^dropout]：
+
+* dropout是故意让一些神经元输出错误的结果。
+* dropout是随机的，所以测试的结果也会变得随机，这是不可取的。
+
+[^dropout]: [stackoverflow - Why disable dropout during validation and testing?](https://stackoverflow.com/questions/44223585/why-disable-dropout-during-validation-and-testing)
+
+## 附录：在Windows上用PyCharm运行TensorFlow
+
+想在Windows上进行真正的深度学习训练的人都是很有勇气的。我没有那么多的勇气，不过为了不成天背着两台电脑跑来跑去，我在12月中旬的时候还是决定在自己的电脑上搞一个能用的TensorFlow环境，只是为了学习TensorFlow并做一些小的验证。以后要是能在我的电脑上写代码，然后实时同步到服务器上，在服务器上跑，然后在这边还能看到跑的结果，甚至还能看到TensorBoard的结果，那就很不错了。
+
+首先安装PyCharm Pro版本（使用学生许可证）。这一步很容易。然后设置一下背景颜色、字体什么的。
+
+然后把自己的代码clone下来，用PyCharm打开，这时候它用的是系统默认的Python3.5。为了统一化环境，直接新建一个virtualenv环境，然后安装对应的requirements。然后问题就来了，安装失败，pip版本太低。直接
+
+```bash
+python -m pip install --upgrade pip
+```
+
+不work，会报一堆错：
+
+```
+Installing collected packages: pip
+  Found existing installation: pip 10.0.1
+    Uninstalling pip-10.0.1:
+      Successfully uninstalled pip-10.0.1
+  Rolling back uninstall of pip
+Exception:
+Traceback (most recent call last):
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_internal\basecommand.py", line 228, in main
+    status = self.run(options, args)
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_internal\commands\install.py", line 335, in run
+    use_user_site=options.use_user_site,
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_internal\req\__init__.py", line 49, in install_given_reqs
+    **kwargs
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_internal\req\req_install.py", line 748, in install
+    use_user_site=use_user_site, pycompile=pycompile,
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_internal\req\req_install.py", line 961, in move_wheel_files
+    warn_script_location=warn_script_location,
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_internal\wheel.py", line 431, in move_wheel_files
+    generated.extend(maker.make(spec))
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_vendor\distlib\scripts.py", line 403, in make
+    self._make_script(entry, filenames, options=options)
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_vendor\distlib\scripts.py", line 307, in _make_script
+    self._write_script(scriptnames, shebang, script, filenames, ext)
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_vendor\distlib\scripts.py", line 243, in _write_script
+    launcher = self._get_launcher('t')
+  File "mypath\myproject\venv\lib\site-packages\pip-10.0.1-py3.5.egg\
+pip\_vendor\distlib\scripts.py", line 382, in _get_launcher
+    result = finder(distlib_package).find(name).bytes
+AttributeError: 'NoneType' object has no attribute 'bytes'
+```
+
+据说发生这个问题的原因是，PyCharm把pip当成一个egg包给装上去了，但是pip不支持egg安装的升级。解决方法是[^pycharmpip]
+
+```bash
+python -m pip install -U --force-reinstall pip
+```
+
+[^pycharmpip]: [pip - issues - pip 18.0 install fails with AttributeError: 'NoneType' object has no attribute 'bytes'](https://github.com/pypa/pip/issues/5820)
+
+解决完这个问题，下一个问题是pip从官方的源下载太慢了。所以我直接在`pip install`的时候指定了源的地址：
+
+```bash
+pip  install  -i  https://pypi.doubanio.com/simple/  --trusted-host pypi.doubanio.com  tensorflow
+```
+
+或者也可以在本机和virtualenv里做永久配置，不多讲了。[^douban]说起来，那为什么Ubuntu上install requirements那么快，不都是蓝灯+校园网的配置吗……
+
+[^douban]: [Python部落 - 豆瓣的pip源真的很快!](https://python.freelycode.com/contribution/detail/4)
+
+最后一个问题出现在TensorBoard上。简单来说就是在Windows上，`--logdir`需要给定绝对路径，而不是执行命令目录下的相对路径。
+
+最后，我这台电脑还是不行，跑个线性层花了十几分钟，快烧了……
