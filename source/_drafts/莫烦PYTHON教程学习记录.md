@@ -620,6 +620,78 @@ $$\omega = \omega - \frac{\eta\lambda}{n}\text{sgn}(\omega) - \eta\frac{\partial
 
 [^dropout]: [stackoverflow - Why disable dropout during validation and testing?](https://stackoverflow.com/questions/44223585/why-disable-dropout-during-validation-and-testing)
 
+### 卷积神经网络CNN（Convolutional Neural Network）
+
+* [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-05-CNN3/)
+* [我的代码地址](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/cnn-mnist.py)
+
+CNN的基本原理大概是这样的：把一个有长宽和若干个color channel的图片逐渐压扁和在纵向上拉长，最后把拉长得到的一个柱状的东西再经过一些Feed Forward Network。当然这么说很不严谨。稍微科学地说一下，CNN中有两类很典型的网络层：
+
+* 卷积层：用若干个长宽比较小，高（channel数）与输入（图片）相等的filter以一定stride给图片做卷积，输出的长宽取决于原来图片的长宽、stride大小和padding方式（但一般不会超过原来图片大小），高度等于filter数量（相当于把每个filter的结果摞起来了）
+* 池化层：从输入的每一层（channel）中的每块取一个最大值，输出的长宽取决于块的大小，高度和原来相同
+
+据说需要池化层的主要原因是，如果卷积的stride太大，会丢失信息，不如卷积时使用小stride，然后再利用池化层减小长宽。
+
+上述内容说得还是不太科学，毫不严谨，不过就这样吧。
+
+我的第一个问题（也是之前本来应该出现，但是因为网络结构还不太复杂被我忽略了的问题）是，既然TensorFlow已经给我们提供了[tf.layers.conv2d](https://www.tensorflow.org/api_docs/python/tf/layers/conv2d)和[tf.layers.max_pooling2d](https://www.tensorflow.org/api_docs/python/tf/layers/max_pooling2d)这两个高层API，那为啥还要用[tf.nn.conv2d](https://www.tensorflow.org/api_docs/python/tf/nn/conv2d)和[tf.nn.max_pool](ttps://www.tensorflow.org/api_docs/python/tf/nn/max_pool)呢？
+
+这两类API的差异很简单。后一类是Op，它的功能只是做卷积/池化，没有别的了。前一类则是一整个层，它会自己帮你定义`weight`和`bias`，除了做卷积/池化以外，还会自动把`bias`给加上去（虽然池化层没有`bias`），以及其他的功能[^stackoverflow-conv2d]。我以后要是需要写代码的话，肯定尽量用高级API（[这里](https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/3_NeuralNetworks/convolutional_network.py)是一个用较高级API写的CNN代码，很显然它写起来比较简单，有些输入输出大小都不用指定，所以我就不写了）；但是自己定义`weight`和`bias`至少有一个好处，就是我意识到了真正做卷积的时候还有个`bias`在那，这是一般的介绍里都不会提到的……
+
+[^stackoverflow-conv2d]: [stackoverflow - difference between convolution2d and conv2d in tensorflow in terms of ussage](https://stackoverflow.com/questions/43587083/difference-between-convolution2d-and-conv2d-in-tensorflow-in-terms-of-ussage)
+
+以及，[tf.nn.conv2d](https://www.tensorflow.org/api_docs/python/tf/nn/conv2d)和[tf.nn.max_pool](ttps://www.tensorflow.org/api_docs/python/tf/nn/max_pool)里有几个不是很直观的参数：
+
+* `strides`：要求是长度为4的一维Tensor，且`stride[0] = stride[3] = 1`；在一般情况下，这个参数设置为`[1, stride, stride, 1]`
+* `ksize`：要求是长度为4的一维Tensor，为各个维度上窗口的大小；在一般情况下也设置为`[1, size, size, 1]`
+
+下一个问题是，既然必须自己指定输入输出大小，那么就必须搞明白每一步的Tensor和Variable的大小，不然显然是定义不出来的。
+
+* 输入Tensor
+  * `x = [batch_size, 28, 28, 1]`：图片大小为`28*28`，只有一个channel
+  * `y = [batch_size]`：标签
+* 卷积层1
+  * `weight = [5, 5, 1, 32]`：单个filter大小为`5*5*1`，对应图片的一个channel；一共有32个filter
+  * `bias = [32]`：每个filter对应一个（标量）bias
+  * `output = [batch_size, 28, 28, 32]`：卷积方式为`same`，图片大小不变；channel的数量等于filter的数量
+* 池化层1
+  * `output = [batch_size, 14, 14, 32]`：池化大小为`2*2`，相当于图片长和宽各缩小到原来的一半，高不变
+* 卷积层2
+  * `weight = [5, 5, 32, 64]`：单个filter大小为`5*5*32`，对应图片的32个channel；一共有64个filter
+  * `bias = [64]`：每个filter对应一个（标量）bias
+  * `output = [batch_size, 14, 14, 64]`：卷积方式为`same`，图片大小不变；channel的数量等于filter的数量
+* 池化层2
+  * `output = [batch_size, 7, 7, 64]`：池化大小为`2*2`，相当于图片长和宽各缩小到原来的一半，高不变
+* 前馈层1
+  * `input = [batch_size, 7*7*64]`：用reshape拉平，作为输入
+  * `weight = [7*7*64, 1024]`：输入长度*输出长度（反着定义然后反着做乘法也可以……）
+  * `bias = [1024]`：输出长度
+  * `output = [batch_size, 1024]`
+* 前馈层2
+  * `weight = [1024, 10]`：输入长度*输出长度
+  * `bias = [10]`：输出长度
+  * `output = [batch_size, 10]`
+
+还有一些杂七杂八的内容。比如CNN常用的激活函数是ReLU，一般卷积层和前馈层后面都会加一层（最后一层除外，是加softmax然后得到分类结果）。比如在TensorFlow中`*`运算符对矩阵做的是element-wise乘法，普通乘法应该用`tf.matmul`。
+
+我按照示例代码里给的参数（AdamOptimizer，lr=1e-4）训练了一下（没写dropout），发现这个lr可能还是太低了：
+
+![lr=1e-4时的训练loss](cnn-loss-1.png)
+
+![lr=1e-4时测试集上的准确率](cnn-acc-1.png)
+
+准确度最高才0.8477，而且没有收敛。以及，训练中发现，再一次测完模型在训练集上的准确度会爆内存（不知道为什么，对单层可以这么做，但对CNN就不能这么做），所以干脆就不测了，反正训到测试集上收敛都有点难度。而且CNN训起来比较慢，这500步训了两三个小时。
+
+于是我换成lr=1e-3：
+
+![lr=1e-3时的训练loss](cnn-loss-2.png)
+
+![lr=1e-3时测试集上的准确率](cnn-acc-2.png)
+
+现在准确率到了0.955，虽然还不能说是特别高，不过我觉得也还可以了。以及，显然调高lr之后loss的波动变大了。
+
+### Saver保存读取
+
 ## 附录：在Windows上用PyCharm运行TensorFlow
 
 想在Windows上进行真正的深度学习训练的人都是很有勇气的。我没有那么多的勇气，不过为了不成天背着两台电脑跑来跑去，我在12月中旬的时候还是决定在自己的电脑上搞一个能用的TensorFlow环境，只是为了学习TensorFlow并做一些小的验证。以后要是能在我的电脑上写代码，然后实时同步到服务器上，在服务器上跑，然后在这边还能看到跑的结果，甚至还能看到TensorBoard的结果，那就很不错了。
