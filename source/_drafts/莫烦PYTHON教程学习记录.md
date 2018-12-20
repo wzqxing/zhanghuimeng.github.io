@@ -692,6 +692,30 @@ CNN的基本原理大概是这样的：把一个有长宽和若干个color chann
 
 ### Saver保存读取
 
+* [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-06-save/)
+* [我的代码地址](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/saver.py)
+
+
+这次的教程讲得十分简单，但是我觉得在实际应用中可能会遇到各种问题，比如`variable_scope`和`name_scope`怎么办。我们需要的大概是相同的两张图。
+
+而且我们这次学的其实只是变量的保存和读取（需要事先创建好同一个图），而不是模型的保存和读取（不需要事先知道图的样子）。不过暂时先不管这些。TensorFlow实际上提供了比较完备的保存变量和保存模型的方法指南，如果以后需要再去看好了。[^saver-tensorflow]
+
+[^saver-tensorflow]: [TensorFlow指南 - 保存和恢复](https://www.tensorflow.org/guide/saved_model?hl=zh-cn)
+
+为了表现（图中）变量的保存和读取，我这回第一次用到了非默认图。用法非常简单，用`tf.Graph()`创建一张新图，然后用`with graph.as_default()`就可以在这张图中创建变量了。[^multi-graph]首先在第一张图里创建一些Variable。这也是我第一次用常量作为Variable的`initializer`，结果一直报错：
+
+[^multi-graph]: [TensorFlow指南 - 使用多个图进行编程](https://www.tensorflow.org/guide/graphs?hl=zh-cn#programming_with_multiple_graphs)
+
+```
+ValueError: If initializer is a constant, do not specify shape
+```
+
+后来我发现，不止不要给`shape`赋值，`dtype`也不要。虽然这很合理，但是报错信息不够明确。
+
+创建好变量之后，在这个图里开一个`tf.Session()`，运行`global_variables_initializer`之后，调用`tf.train.Saver()`创建一个Saver，直接把这个Session里的所有变量保存起来。经过尝试发现，在Windows上只需要相对路径（和TensorBoard log形成了一定的对比）。声明保存的是`.ckpt`文件，实际上得到的是一堆文件，包括`checkpoint`、`.ckpt.data-00000-of-00001`、`.ckpt.index`和`.ckpt.meta`。这到底都是什么就不去细究好了……
+
+读入的时候再开一张图，定义好相应的变量的`shape`和`dtype`，重新开一个Session，调用`saver.restore()`恢复刚才保存的变量，在restore之前不需要初始化。
+
 ## 附录：在Windows上用PyCharm运行TensorFlow
 
 想在Windows上进行真正的深度学习训练的人都是很有勇气的。我没有那么多的勇气，不过为了不成天背着两台电脑跑来跑去，我在12月中旬的时候还是决定在自己的电脑上搞一个能用的TensorFlow环境，只是为了学习TensorFlow并做一些小的验证。以后要是能在我的电脑上写代码，然后实时同步到服务器上，在服务器上跑，然后在这边还能看到跑的结果，甚至还能看到TensorBoard的结果，那就很不错了。
