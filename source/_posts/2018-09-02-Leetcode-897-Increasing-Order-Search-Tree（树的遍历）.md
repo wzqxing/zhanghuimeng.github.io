@@ -7,7 +7,7 @@ updated: 2018-09-02 15:27:00
 tags: [Leetcode, Leetcode Contest, alg:Tree, alg:In-Order Traversal]
 ---
 
-题目来源：[https://leetcode.com/problems/monotonic-array/description/](https://leetcode.com/problems/monotonic-array/description/)
+题目来源：[https://leetcode.com/problems/increasing-order-search-tree/description/](https://leetcode.com/problems/increasing-order-search-tree/description/)
 
 标记难度：Easy
 
