@@ -3,7 +3,7 @@ title: Leetcode 963. Minimum Area Rectangle II
 urlname: leetcode-963-minimum-area-rectangle-ii
 toc: true
 date: 2018-12-23 19:17:41
-updated: 2018-12-24 03:14:00
+updated: 2018-12-27 03:20:00
 tags: [Leetcode, Leetcode Contest, alg:Math, alg:Geometry]
 ---
 
@@ -11,12 +11,13 @@ tags: [Leetcode, Leetcode Contest, alg:Math, alg:Geometry]
 
 标记难度：Medium
 
-提交次数：1/1
+提交次数：3/7
 
 代码效率：
 
 * hash向量：120ms
 * 枚举三个点：32ms
+* 枚举圆心和半径：24ms（87.12%）
 
 ## 题意
 
@@ -38,6 +39,8 @@ tags: [Leetcode, Leetcode Contest, alg:Math, alg:Geometry]
 这种方法是`O(N^3)`的。
 
 另一种时间复杂度更小的方法是，枚举每两个点连线中点和长度，然后检查所有中点和长度相同的点对能否组成矩形。据说每种点对的数量是`O(log(N))`的，所以我感觉这种方法的复杂度应该是`O(N^2*log(N)^2)`？也可能我想错了。
+
+这个方法调了我几个小时，核心在于两点，一是我居然把`Point`的构造函数写成`int`的了然后忘掉了，以为自己用的是`double`；二是傻逼了，忘记矩形的对角线不垂直了……（你在想什么）
 
 也是好久没正经写过计算几何的题了……（说得就好像你正经写过一样）
 
@@ -177,6 +180,89 @@ public:
                 }
             }
         return ans == -1 ? 0 : ans;
+    }
+};
+```
+
+### 枚举圆心和半径
+
+```cpp
+class Solution {
+private:
+    struct Point {
+        double x, y;
+        
+        Point(double _x, double _y) {
+            x = _x;
+            y = _y;
+        }
+        
+        friend bool operator < (const Point& p1, const Point& p2) {
+            if (abs(p1.x - p2.x) > 1e-6) return p1.x < p2.x;
+            return p1.y < p2.y;
+        }
+        
+        friend bool operator == (const Point& p1, const Point& p2) {
+            return abs(p1.x - p2.x) <= 1e-6 && abs(p1.y - p2.y) <= 1e-6;
+        }
+        
+        friend Point operator + (const Point& p1, const Point& p2) {
+            return Point(p1.x + p2.x, p1.y + p2.y);
+        }
+        
+        friend Point operator - (const Point& p1, const Point& p2) {
+            return Point(p1.x - p2.x, p1.y - p2.y);
+        }
+        
+        friend Point operator / (const Point& p1, const double& a) {
+            return Point(p1.x / a, p1.y / a);
+        }
+        
+        friend double cross(const Point& p1, const Point& p2) {
+            return p1.x * p2.y - p2.x * p1.y;
+        }
+        
+        friend double dot(const Point& p1, const Point& p2) {
+            return p1.x * p2.x + p1.y * p2.y;
+        }
+        
+        double length2() {
+            return x * x + y * y;
+        }
+        
+        void print() {
+            cout << '(' << x << ',' << y << ')';
+        }
+    };
+    
+    typedef Point Vector;
+    
+public:
+    double minAreaFreeRect(vector<vector<int>>& points) {
+        map<pair<Point, int>, vector<int>> mmap;
+        vector<Point> p;
+        int N = points.size();
+        for (int i = 0; i < N; i++)
+            p.emplace_back(points[i][0], points[i][1]);
+        sort(p.begin(), p.end());
+        for (int i = 0; i < N; i++)
+            for (int j = i + 1; j < N; j++) {
+                Vector v = p[j] - p[i];
+                mmap[make_pair((p[i] + p[j]) / 2, v.length2())].push_back(i);
+            }
+        double ans = -1;
+        for (const auto& pa: mmap) {
+            Point center = pa.first.first;
+            for (int i = 0; i < pa.second.size(); i++) {
+                // cout << pa.second[i] << ' ';
+                for (int j = i + 1; j < pa.second.size(); j++) {
+                    int i1 = pa.second[i], j1 = pa.second[j]; 
+                    double area = 2 * abs(cross(p[i1] - center, p[j1] - center));
+                    ans = ans < 0 ? area : min(ans, area);
+                }
+            }
+        }
+        return max(ans, 0.0);
     }
 };
 ```
