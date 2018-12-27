@@ -8,7 +8,7 @@ updated: 2018-12-27 21:24:00
 tags: [Leetcode, Leetcode Contest, alg:Math, alg:Dynamic Programming]
 ---
 
-题目来源：
+题目来源：[https://leetcode.com/problems/least-operators-to-express-number/](https://leetcode.com/problems/least-operators-to-express-number/)
 
 标记难度：Hard
 
