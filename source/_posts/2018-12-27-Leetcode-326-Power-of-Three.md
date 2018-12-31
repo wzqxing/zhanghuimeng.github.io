@@ -11,7 +11,7 @@ tags: [Leetcode, alg:Math]
 
 标记难度：Easy
 
-提交次数：1/3
+提交次数：4/4
 
 代码效率：
 
