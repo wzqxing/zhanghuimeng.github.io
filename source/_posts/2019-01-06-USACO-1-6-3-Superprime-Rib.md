@@ -3,7 +3,7 @@ title: 'USACO 1.6.3: Superprime Rib'
 urlname: usaco-1-6-3-superprime-rib
 toc: true
 date: 2019-01-06 20:27:39
-updated: 2019-01-06 20:37:39
+updated: 2019-01-06 20:51:39
 tags: [USACO, alg:Math]
 ---
 
@@ -18,6 +18,10 @@ tags: [USACO, alg:Math]
 这其实是一道搜索题。先搜索出长度为`N-1`的所有super prime，然后在这些数后面分别加上1，3，7，9（去掉2和5的倍数），判断得到的数是否为质数，然后就得到了长度为`N`的super prime。super prime的总数并不多，所以直接这样搜就可以了，也没有更多需要剪枝的。
 
 题解的方法比我还暴力。我先打了个1-10000的质数表；题解根本没管这个，直接DFS搜索树，然后对每个数暴力枚举2, 3, 5, 7, 9...是否是它的因子……
+
+查了一下，这个数列是有正式定义的（只不过正式定义并不叫super prime，[super-prime](https://en.wikipedia.org/wiki/Super-prime)是别的东西），叫做Right-truncatable primes，在OEIS上的编号为[A024770](https://oeis.org/A024770)。好像没有什么特别有趣的性质。[^oeis]
+
+[^oeis]: [OEIS - A024770 Right-truncatable primes: every prefix is prime.](https://oeis.org/A024770)
 
 ## 代码
 
