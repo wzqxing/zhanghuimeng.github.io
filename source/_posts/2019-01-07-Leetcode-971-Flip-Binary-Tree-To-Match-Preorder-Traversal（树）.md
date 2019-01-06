@@ -1,5 +1,5 @@
 ---
-title: -Leetcode 971. Flip Binary Tree To Match Preorder Traversal（树）
+title: Leetcode 971. Flip Binary Tree To Match Preorder Traversal（树）
 urlname: leetcode-971-flip-binary-tree-to-match-preorder-traversal
 toc: true
 date: 2019-01-07 00:41:33
