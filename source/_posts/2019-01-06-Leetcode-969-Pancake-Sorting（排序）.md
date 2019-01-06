@@ -58,7 +58,7 @@ tags: [Leetcode, Leetcode Contest, alg:Sort, alg:Array]
 
 ## 代码
 
-```
+```cpp
 class Solution {
 private:
     vector<int> ans;
