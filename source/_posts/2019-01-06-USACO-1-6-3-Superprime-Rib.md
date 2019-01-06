@@ -9,7 +9,7 @@ tags: [USACO, alg:Math]
 
 ## 题意
 
-见[洛谷 P3650](https://www.luogu.org/problemnew/show/P1218)。
+见[洛谷 P1218 \[USACO1.5\]特殊的质数肋骨 Superprime Rib](https://www.luogu.org/problemnew/show/P1218)。
 
 定义super prime为每个前缀都是质数的数。例：7，73，733，7331都是质数，所以7331是super prime。给定`N`，问在所有长度为`N`的数里，有哪些数是super prime？
 
