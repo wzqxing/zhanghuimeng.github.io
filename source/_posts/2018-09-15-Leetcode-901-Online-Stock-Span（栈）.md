@@ -4,7 +4,7 @@ urlname: leetcode-901-online-stock-span
 toc: true
 date: 2018-09-15 16:51:36
 updated: 2018-09-15 20:57:00
-tags: [Leetcode, Leetcode Contest, alg:Stack]
+tags: [Leetcode, Leetcode Contest, alg:Stack, alg:Monotonic Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/online-stock-span/description/](https://leetcode.com/problems/online-stock-span/description/)

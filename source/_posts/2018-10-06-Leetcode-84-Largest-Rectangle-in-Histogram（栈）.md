@@ -4,7 +4,7 @@ urlname: leetcode-84-largest-rectangle-in-histogram
 toc: true
 date: 2018-10-06 01:36:34
 updated: 2018-10-06 01:36:34
-tags: [Leetcode, alg:Stack]
+tags: [Leetcode, alg:Stack, alg:Monotonic Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/largest-rectangle-in-histogram/description/](https://leetcode.com/problems/largest-rectangle-in-histogram/description/)
