@@ -2,7 +2,6 @@
 title: Codeforces 1102A. Integer Sequence Dividing，及比赛（Codeforces Round #531 (Div. 3)）总结
 urlname: codeforces-1102a-integer-sequence-dividing-and-contest-531-div-3-summary
 toc: true
-mathjax: true
 date: 2019-01-10 00:56:36
 updated: 2019-01-17 16:03:00
 tags: [Codeforces, Codeforces Contest, alg:Math]
