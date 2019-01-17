@@ -4,7 +4,7 @@ urlname: leetcode-907-sum-of-subarray-minimums
 toc: true
 date: 2018-09-16 16:35:21
 updated: 2018-09-16 18:11:00
-tags: [Leetcode, Leetcode Contest, alg:Stack]
+tags: [Leetcode, Leetcode Contest, alg:Stack, alg:Monotonic Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/sum-of-subarray-minimums/description/](https://leetcode.com/problems/sum-of-subarray-minimums/description/)

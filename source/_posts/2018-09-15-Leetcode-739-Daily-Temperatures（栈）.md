@@ -4,7 +4,7 @@ urlname: leetcode-739-daily-temperatures
 toc: true
 date: 2018-09-15 20:09:27
 updated: 2018-09-17 02:09:00
-tags: [Leetcode, alg:Stack]
+tags: [Leetcode, alg:Stack, alg:Monotonic Stack]
 ---
 
 题目来源：[https://leetcode.com/problems/daily-temperatures/description/](https://leetcode.com/problems/daily-temperatures/description/)
