@@ -695,7 +695,6 @@ CNN的基本原理大概是这样的：把一个有长宽和若干个color chann
 * [教程地址](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-06-save/)
 * [我的代码地址](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/saver.py)
 
-
 这次的教程讲得十分简单，但是我觉得在实际应用中可能会遇到各种问题，比如`variable_scope`和`name_scope`怎么办。我们需要的大概是相同的两张图。
 
 而且我们这次学的其实只是变量的保存和读取（需要事先创建好同一个图），而不是模型的保存和读取（不需要事先知道图的样子）。不过暂时先不管这些。TensorFlow实际上提供了比较完备的保存变量和保存模型的方法指南，如果以后需要再去看好了。[^saver-tensorflow]
@@ -715,6 +714,98 @@ ValueError: If initializer is a constant, do not specify shape
 创建好变量之后，在这个图里开一个`tf.Session()`，运行`global_variables_initializer`之后，调用`tf.train.Saver()`创建一个Saver，直接把这个Session里的所有变量保存起来。经过尝试发现，在Windows上只需要相对路径（和TensorBoard log形成了一定的对比）。声明保存的是`.ckpt`文件，实际上得到的是一堆文件，包括`checkpoint`、`.ckpt.data-00000-of-00001`、`.ckpt.index`和`.ckpt.meta`。这到底都是什么就不去细究好了……
 
 读入的时候再开一张图，定义好相应的变量的`shape`和`dtype`，重新开一个Session，调用`saver.restore()`恢复刚才保存的变量，在restore之前不需要初始化。
+
+### RNN和LSTM简介
+
+教程：
+
+* [什么是循环神经网络RNN](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-07-A-RNN/)
+* [什么是 LSTM 循环神经网络](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-07-B-LSTM/)
+* [RNN 循环神经网络](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-07-RNN1/)
+
+反正就是一堆对RNN和LSTM的简介。我觉得我还是需要拿一点比较正式的数学和形式描述出来比较好。或者说TensorFlow中这些是怎么实现的。而且搞清楚dimensionality非常重要。
+
+在TensorFlow的实现中，LSTMCell中有两种`state`，分别是`c_state`和`m_state`。
+
+对于第$t$个输入，LSTM会以$\mathbf{x}_t, \, \mathbf{h}_{t-1}, \, \mathbf{c}_{t-1}$作为输入，并输出$\mathbf{h}_t, \, \mathbf{c}_t$：
+
+$$
+\begin{aligned}
+\mathbf{i}_t &= \sigma(W_i\mathbf{x}_t + U_i\mathbf{h}_{t-1} + \mathbf{b}_i)\\
+\mathbf{f}_t &= 
+\end{aligned}
+$$
+
+### RNN LSTM 循环神经网络（分类例子）
+
+* 教程地址：[RNN LSTM 循环神经网络 (分类例子)](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-08-RNN2/)
+* 代码地址：[https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/rnn-mnist.py](https://github.com/zhanghuimeng/learnTensorFlow/blob/master/morvan/rnn-mnist.py)
+
+这次的教程主要描述了这样一个用RNN进行图片分类的过程：
+
+* 将每张图按行分成28个输入向量，每个向量长度为28，即输入形状为`[batch_size, time_step, input_size]`，其中`time_step=input_size=28`
+* 创建一个输入隐藏层，将输入变换为`[batch_size, time_step, hidden_size]`的维度，其中`hidden_size`即LSTM单个输入的维度
+* 创建batch中例子的`initial_state`，维度为`[batch_size, state_size]`，其中`state_size`即LSTM内部状态的维度（输入维度不必与内部状态维度相等）
+* 将输入数据放入LSTM中，得到输出`(outputs, state)`，其中`outputs`是各个时间步对应的输出，维度为`[batch_size, time_step, state_size]`；`state=[batch_size, (c_state, m_state)]`是最后一步后的隐状态，维度均为`state_size`
+* 将LSTM隐状态中的`m_state`作为预测输出（维度为`[batch_size, state_size]`），创建一个输出线性层，将它变换为`[batch_size, 10]`的形状
+* 将输出做softmax后计算cross entropy loss，进行训练
+
+听起来通俗易懂简单明了（虽然事实上可能并不是，因为变量有点多），写的时候遇到了一万个问题。其中大部分和RNN、LSTM内部实现和维度大小的问题已经放到之前去讲了，这里就不多说。
+
+第一个问题是[tf.matmul](https://www.tensorflow.org/api_docs/python/tf/linalg/matmul)不支持广播。虽然它现在已经支持在rank>=3，除了最后两维外的维度相同，且最后两维能做乘法的情况下做矩阵乘法了，但这不是广播，我希望的是前面的维度不匹配的情况下也能广播，比如`[batch_size, time_step, input_size] * [input_size, hidden_size]`这样。结果我就只能先把前一个Tensor变换成二维的，乘完之后再变换回原来的维度。所以我还需要判断Tensor是不是二维的，变换之前还得把原来的维度记下来。这挺烦的。
+
+第二个问题来自于`sess.run()`里的`feed_dict`。这次我把模型写成了一个类，因此在不同的函数中用了很多名字相同的Tensor，比如`x`。于是当我尝试写出类似于`feed_dict={x: x}`这样的语句的时候，TensorFlow开始报错：
+
+```
+TypeError: unhashable type: 'numpy.ndarray'
+```
+
+事实上这么写出奇的愚蠢，因为这两个`x`显然都会是你定义的数据`x`（也就是期望中的后一个`x`）。[^ndarray-feed]于是我直接把数据`x`改成了`dx`。前一个错误消失了，但我却发现模型代码里所有叫`x`的Tensor都被换成了`dx`。
+
+[^ndarray-feed]: [stackoverflow - unhashable type: 'numpy.ndarray' error in tensorflow](https://stackoverflow.com/questions/43081403/unhashable-type-numpy-ndarray-error-in-tensorflow)
+
+事实上这的确是标准行为，只不过我之前的代码里没有出现过Tensor名称和placeholder重复的情况。文档里是这么说的：
+
+>If the key is a tf.Tensor, the value may be a Python scalar, string, list, or numpy ndarray that can be converted to the same dtype as that tensor. Additionally, if the key is a tf.placeholder, the shape of the value will be checked for compatibility with the placeholder.[^tf-sess-run]
+
+[^tf-sess-run]: [TensorFlow Docs - tf.Session().run()](https://www.tensorflow.org/versions/r1.2/api_docs/python/tf/Session#run)
+
+所以我把变量名直接换成`model.x_placeholder`和`model.y_placeholder`了，然后就好了。
+
+还有一个比较愚蠢的问题。我之前算loss用的一直是[tf.losses.sparse_softmax_cross_entropy](https://www.tensorflow.org/api_docs/python/tf/losses/sparse_softmax_cross_entropy)，这次一时脑抽，换成了[tf.nn.sparse_softmax_cross_entropy_with_logits](https://www.tensorflow.org/api_docs/python/tf/nn/sparse_softmax_cross_entropy_with_logits)，遂发现dimension都不太对。事实上后一种计算的是每个例子的loss，前一种只是利用后一种计算的平均loss……啊，这些API真是难记。
+
+最后一个问题是和运行RNN紧密相关的。我感觉在开始写RNN相关的代码时，就可能会开始遇到各种各样的问题……总之，在开始运行`tf.nn.dynamic_rnn`之前，通常的操作是新建一个`state`（或者说是一个batch的state），而新建`state`的时候需要提供`batch_size`：`tf.nn.rnn_cell.LSTMCell().zero_state(batch_size, dtype)`。说实话我不是很理解为什么这么设计，我感觉平时各个layer的设计都力图让我们忘掉这是一个batch，不过既然是这样，那就需要获得`batch_size`的值：既可以把它作为一个placeholder传进来，也可以用`tf.shape(x)[0]`之类的方法动态获取。[^variable-batch-dimension]
+
+[^variable-batch-dimension]: [stackoverflow - get the size of a variable batch dimension](https://stackoverflow.com/questions/38236175/get-the-size-of-a-variable-batch-dimension)
+
+然后就可以训练了。在尝试打印各种`Variable`的时候，我感觉也可以尝试把LSTM的`weight`之类的东西打印出来。据说[tf.nn.rnn_cell.LSTMCell.variables](https://www.tensorflow.org/api_docs/python/tf/nn/rnn_cell/LSTMCell#variables)里包含了这些内容，但是事实上只有一个`bias`，一个`kernel`，也不太明白到底是LSTM里的什么部位。[^visualize-lstm]
+
+[^visualize-lstm]: [stackoverflow - Tensorboard - visualize weights of LSTM](https://stackoverflow.com/questions/47640455/tensorboard-visualize-weights-of-lstm)
+
+![LSTM的bias和kernel](lstm-bias-kernel.png)
+
+训练参数是，隐藏层大小128，LSTM内部状态大小128，lr=1e-3，loss和acc如下图：
+
+![loss](rnn-mnist-loss.png)
+
+![accuracy](rnn-mnist-test.png)
+
+感觉波动得相当厉害，而且最后效果也不算很好，准确率最大只有0.8840；可能是我调参水平有限，或者RNN并没有那么适合这个任务。
+
+### RNN LSTM（回归例子）
+
+* 教程地址：[RNN LSTM (回归例子)](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/5-09-RNN3/)
+* 代码地址：
+
+我感觉作者教程里用的例子有点奇怪。所以我打算直接用另一篇教程中的seq2seq数据[^seq2seq-zhihu]（英文单词和字母经过排序的英文单词），以及seq2seq的网络结构来尝试进行训练。
+
+结果写死我了。。。。。。。
+
+来，文章在这里：
+
+### 
+
+[^seq2seq-zhihu]: [从Encoder到Decoder实现Seq2Seq模型](https://zhuanlan.zhihu.com/p/27608348)
 
 ## 附录：在Windows上用PyCharm运行TensorFlow
 

@@ -1,6 +1,6 @@
 ---
 title: '歌词翻译：Coma, by Guns N'' Roses (Album: Use Your Illution I)'
-urlname: coma-by-guns-n-roses-album-use-your-illution-i
+urlname: coma-by-guns-n-roses-album-use-your-illution-i-lyric-translation
 toc: true
 date: 2018-10-16 09:05:33
 updated: 2018-10-16 09:05:33
@@ -19,7 +19,7 @@ tags: [Lyric, Translation, artist:Guns N' Roses]
 | Kinda like it in a coma | 我倒是挺喜欢昏迷的 |
 | 'Cause no one's ever gonna | 因为绝不会有人 |
 | Oh, make me come back to this world again | 再逼我回到这世界上来了 |
-| Now, I feel as if I'm floating away | 现在我感到自己仿佛正飘向远方 |
+| Now, I feel as if I'm floating away | 现在我感到自己仿佛正漂向远方 |
 | I can't feel all the pressure, and I like it this way | 我感觉不到丝毫压力，我喜欢这样 |
 | But my body's calling | 可我的身体在呼唤我 |
 | My body's calling: | 我的身体在呼唤： |
