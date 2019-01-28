@@ -1,5 +1,5 @@
 ---
-title: 2018-09-02-Leetcode 898. Bitwise ORs of Subarrays（DP）
+title: Leetcode 898. Bitwise ORs of Subarrays（DP）
 urlname: leetcode-898-bitwise-ors-of-subarrays
 toc: true
 date: 2018-09-02 15:32:33

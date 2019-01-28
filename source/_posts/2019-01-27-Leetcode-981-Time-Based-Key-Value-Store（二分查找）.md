@@ -7,7 +7,7 @@ updated: 2019-01-28 00:21:00
 tags: [Leetcode, Leetcode Contest, alg:Binray Search, alg:Hash Table]
 ---
 
-题目来源：[https://leetcode.com/problems/time-based-key-value-store/description/](https://leetcode.com/problems/time-based-key-value-store/description//)
+题目来源：[https://leetcode.com/problems/time-based-key-value-store/description/](https://leetcode.com/problems/time-based-key-value-store/description/)
 
 标记难度：Medium
 
