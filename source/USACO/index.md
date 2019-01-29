@@ -58,9 +58,9 @@ USACO的题解和文章翻译合集。
 
 ### Section 2.1
 
-* TEXT: Graph Theory
-* TEXT: Flood Fill Algorithms
-* PROB: The Castle
+* TEXT: Graph Theory（翻译：[翻译：图论（USACO）](/post/graph-theory-usaco-translation)）
+* TEXT: Flood Fill Algorithms（翻译：[翻译：洪水填充算法（USACO）](/post/flood-fill-algorithms-usaco-translation)）
+* PROB: The Castle（题解：[USACO 2.1.1: The Castle](/post/usaco-2-1-1-the-castle)）
 * PROB: Ordered Fractions
 * PROB: Sorting A Three-Valued Sequence
 * PROB: Healthy Holsteins
@@ -68,11 +68,20 @@ USACO的题解和文章翻译合集。
 
 ### Section 2.2: Data Structures, Dynamic Prog.
 
-还没做
+* TEXT: Data Structures
+* TEXT: Dynamic Programming
+* PROB: Preface Numbering
+* PROB: Subset Sums
+* PROB: Runaround Numbers
+* PROB: Party Lamps
 
 ### Section 2.3 (All Tasks)
 
-还没做
+* PROB: The Longest Prefix
+* PROB: Cow Pedigrees
+* PROB: Zero Sum
+* PROB: Money Systems
+* PROB: Controlling Companies
 
 ### Section 2.4: Shortest Paths
 
