@@ -17,6 +17,8 @@ tags: [USACO, alg:Greedy]
 
 这个好像是之前的[翻译：贪心算法（USACO）](/post/greedy-algorithm-usaco-translation)的原题……所以做法也没什么好说的了。首先找出一次交换可以解决的“错位”二元组的数量，然后再找出需要两次交换才能解决的“错位”三元组的数量即可。只要仔细一想就可以发现，每种二元组和三元组的数量是固定的，只跟每个“区域”（排序之后某种元素应该占的位置）内的其他元素的数量相关。
 
+以及我觉得这道题和[Codeforces 1102D. Balanced Ternary String](/post/codeforces-1102d-balanced-ternary-string)有一点点像。（虽然像的程度很有限就是了……）
+
 ## 代码
 
 ```cpp

@@ -64,13 +64,13 @@ USACO的题解和文章翻译合集。
 * PROB: Ordered Fractions（题解：[USACO 2.1.2: Ordered Fractions](/post/usaco-2-1-2-ordered-fractions)）
 * PROB: Sorting A Three-Valued Sequence（题解：[USACO 2.1.3: Sorting a Three-Valued Sequence](/post/usaco-2-1-3-sorting-a-three-valued-sequence)）
 * PROB: Healthy Holsteins（题解：[USACO 2.1.4: Healthy Holsteins](/post/usaco-2-1-4-healthy-holsteins)）
-* PROB: Hamming Codes
+* PROB: Hamming Codes（题解：[USACO 2.1.5: Hamming Codes](/post/usaco-2-1-5-hamming-codes)）
 
 ### Section 2.2: Data Structures, Dynamic Prog.
 
-* TEXT: Data Structures
-* TEXT: Dynamic Programming
-* PROB: Preface Numbering
+* TEXT: Data Structures（翻译：[翻译：数据结构（USACO）](/post/data-structures-usaco-translation)）
+* TEXT: Dynamic Programming（翻译：[翻译：动态规划（USACO）](/post/dynamic-programming-usaco-translation)）
+* PROB: Preface Numbering（题解：[USACO 2.2.1: Preface Numbering](/post/usaco-2-2-1-preface-numbering)）
 * PROB: Subset Sums
 * PROB: Runaround Numbers
 * PROB: Party Lamps
