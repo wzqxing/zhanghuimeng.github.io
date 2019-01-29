@@ -63,7 +63,7 @@ USACO的题解和文章翻译合集。
 * PROB: The Castle（题解：[USACO 2.1.1: The Castle](/post/usaco-2-1-1-the-castle)）
 * PROB: Ordered Fractions（题解：[USACO 2.1.2: Ordered Fractions](/post/usaco-2-1-2-ordered-fractions)）
 * PROB: Sorting A Three-Valued Sequence（题解：[USACO 2.1.3: Sorting a Three-Valued Sequence](/post/usaco-2-1-3-sorting-a-three-valued-sequence)）
-* PROB: Healthy Holsteins
+* PROB: Healthy Holsteins（题解：[USACO 2.1.4: Healthy Holsteins](/post/usaco-2-1-4-healthy-holsteins)）
 * PROB: Hamming Codes
 
 ### Section 2.2: Data Structures, Dynamic Prog.
