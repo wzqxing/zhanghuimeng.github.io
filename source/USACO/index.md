@@ -61,7 +61,7 @@ USACO的题解和文章翻译合集。
 * TEXT: Graph Theory（翻译：[翻译：图论（USACO）](/post/graph-theory-usaco-translation)）
 * TEXT: Flood Fill Algorithms（翻译：[翻译：洪水填充算法（USACO）](/post/flood-fill-algorithms-usaco-translation)）
 * PROB: The Castle（题解：[USACO 2.1.1: The Castle](/post/usaco-2-1-1-the-castle)）
-* PROB: Ordered Fractions
+* PROB: Ordered Fractions（题解：[USACO 2.1.2: Ordered Fractions](/post/usaco-2-1-2-ordered-fractions)）
 * PROB: Sorting A Three-Valued Sequence
 * PROB: Healthy Holsteins
 * PROB: Hamming Codes
