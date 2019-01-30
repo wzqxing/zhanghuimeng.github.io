@@ -77,7 +77,7 @@ USACO的题解和文章翻译合集。
 
 ### Section 2.3 (All Tasks)
 
-* PROB: The Longest Prefix
+* PROB: The Longest Prefix（题解：[USACO 2.3.1: Longest Prefix](/post/usaco-2-3-1-longest-prefix)）
 * PROB: Cow Pedigrees
 * PROB: Zero Sum
 * PROB: Money Systems
