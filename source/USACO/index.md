@@ -72,7 +72,7 @@ USACO的题解和文章翻译合集。
 * TEXT: Dynamic Programming（翻译：[翻译：动态规划（USACO）](/post/dynamic-programming-usaco-translation)）
 * PROB: Preface Numbering（题解：[USACO 2.2.1: Preface Numbering](/post/usaco-2-2-1-preface-numbering)）
 * PROB: Subset Sums（题解：[USACO 2.2.2: Subset Sums（DP）](/post/usaco-2-2-2-subset-sums)）
-* PROB: Runaround Numbers
+* PROB: Runaround Numbers（题解：[USACO 2.2.3: Runaround Numbers](/post/usaco-2-2-3-runaround-numbers)）
 * PROB: Party Lamps
 
 ### Section 2.3 (All Tasks)
