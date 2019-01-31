@@ -78,14 +78,19 @@ USACO的题解和文章翻译合集。
 ### Section 2.3 (All Tasks)
 
 * PROB: The Longest Prefix（题解：[USACO 2.3.1: Longest Prefix](/post/usaco-2-3-1-longest-prefix)）
-* PROB: Cow Pedigrees
+* PROB: Cow Pedigrees（题解：[USACO 2.3.2: Cow Pedigrees](/post/usaco-2-3-2-cow-pedigrees)）
 * PROB: Zero Sum
 * PROB: Money Systems
 * PROB: Controlling Companies
 
 ### Section 2.4: Shortest Paths
 
-还没做
+* TEXT: Shortest Paths
+* PROB: The Tamworth Two
+* PROB: Overfencing
+* PROB: Cow Tours
+* PROB: Bessie Come Home
+* PROB: Fractions to Decimals
 
 ## Chapter 3: Techniques more subtle
 
