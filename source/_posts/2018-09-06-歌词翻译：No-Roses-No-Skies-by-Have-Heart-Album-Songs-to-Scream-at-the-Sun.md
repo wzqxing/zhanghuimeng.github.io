@@ -14,7 +14,7 @@ tags: [Lyric, Translation, artist:Have Heart]
 | 歌词 | 翻译 |
 | --- | ---- |
 | She’s a song unsung | 她是一首无名的歌 |
-| She’s the wild orchid in your ugly swamp | 她是你们肮脏沼泽里的一朵野兰花 |
+| She’s the wild orchid in your ugly swamp | 她是一朵开放在肮脏沼泽里的野兰花 |
 | She’s a song unsung | 她是一首无名的歌 |
 | And the only white walls of her mind know what the song sounds like | 只有她脑海四周的白墙听过那首歌的声音 |
 | The pills, the pills | 那些药片，那些药片 |
@@ -22,33 +22,33 @@ tags: [Lyric, Translation, artist:Have Heart]
 | Cause the arm’s of nothing she falls asleep in | 能让她睡下的臂弯也毫无用处 |
 | Can still bring the razor to the wrist | 那仍然没有阻止刀片划破手腕 |
 | The tv screens, the magazines | 那些电视屏幕，那些杂志 |
-| Scream at you like the dogs of hell | 像地狱犬一样向你咆哮 |
+| Scream at you like the dogs of hell | 如地狱犬一般向你咆哮 |
 | Advertising and advising you to be | 推销给你，推荐你变成 |
-| Anyone, anyone but your-beautiful-self | 任何人，任何人，只除了美丽的你自己 |
-| Prince charming never brought you flowers | 从没有白马王子给你带来花束 |
+| Anyone, anyone but your-beautiful-self | 任何人，任何人，只除了美好的你自己 |
+| Prince charming never brought you flowers | 白马王子从未为你带来花束 |
 | Just a loveless lifetime all alone | 只有独自一人的无爱人生 |
-| No roses for you, just unknocked doors | 没有一朵玫瑰献给你，只有未被敲响的门 |
+| No roses for you, just unknocked doors | 没有一朵玫瑰献给你，只有无人敲响的门 |
 | And the deafening silence of your phone | 和电话震耳欲聋的寂静 |
 | So block your ears, close your eyes | 那就堵住耳朵，闭上眼睛 |
 | Remember that you’re a golden soul fallen from the | 记住，你有一颗金子般的灵魂 |
 | Boring, heartless, Hollywood herd of lies that they call: | 你从大堆冷酷无聊的好莱坞谎言中坠落，他们称其为： |
 | B e a u t i f u l | 美 丽 的 |
 | With no shoulder, no hand, no body, no man, no door | 没有肩膀，没有手，没有身体，没有男人，没有门 |
-| No heart to let you: | 没有心让你： |
+| No heart to let you: | 没有心让你（依靠）： |
 | t h e s u n c a n t a k e t o o l o n g | 太 阳 花 太 长 时 间 来 |
 | t o e n d t h e e n d l e s s n i g h t | 结 束 这 无 尽 的 夜 了 |
-| I hear you, I feel you, I bleed with you | 我听到你了，我和你有相同的感受，我和你一起流血 |
+| I hear you, I feel you, I bleed with you | 我听见你了，我与你同感，我们共同战斗 |
 | When our hearts begin to scream: | 我们的心开始尖叫： |
-| t h i s l i f e c a n f e e l t o o l o n g | 人 生 过 起 来 太 长 了 |
-| But at night you’re dancing through the pain | 但当你在夜里与痛苦共舞的时候 |
+| t h i s l i f e c a n f e e l t o o l o n g | 这 人 生 太 过 漫 长 了 |
+| But at night you’re dancing through the pain | 但当你在痛苦的夜里翩翩起舞 |
 | Even when you’re the only one | 即使你独自一人 |
 | No rose, no sky as full of beauty as the girl who dies | 没有玫瑰，没有天空能比得上那女孩的美 |
 | But rises with every morning’s sun | 她死去，又在每天清晨日出时复活 |
 | Alone | 独自一人 |
-| She dances alone | 她独自跳着舞 |
+| She dances alone | 她独自起舞 |
 | Alone - so beautiful | 独自一人——她如此美丽 |
 | Alone - her own romance | 独自一人——她自己的浪漫传奇 |
-| Alone - Lady Lazaru’s Life – Sustaining Dance | 独自一人——拉撒路小姐的生命维持之舞 |
+| Alone - Lady Lazaru’s Life – Sustaining Dance | 独自一人——拉撒路小姐的维系生命之舞 |
 
 ## 一些诠释
 
@@ -90,3 +90,5 @@ tags: [Lyric, Translation, artist:Have Heart]
 [^emily]: [A Rose for Emily](https://en.wikipedia.org/wiki/A_Rose_for_Emily)
 
 [^gig]: [General Comment](https://songmeanings.com/songs/view/3530822107858727933/)
+
+2019.2.3 UPDATE：最后稍微修改了一些措辞，上传到网易云音乐上了。
