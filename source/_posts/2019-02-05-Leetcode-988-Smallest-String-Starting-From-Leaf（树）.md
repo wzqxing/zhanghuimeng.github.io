@@ -28,6 +28,14 @@ tags: [Leetcode, Leetcode Contest, alg:Tree]
 
 另一种稍微不那么暴力的方法是做BFS，找到出现叶结点的第一层，然后再回溯（或者直接暴力……）。
 
+---
+
+这道题实现过程中还有另一个问题：如何把单个char赋值给一个string？事实上，直接赋值和cast是不行的；如果想要采用`"" + 'a'`这种写法，就更是大错特错了，这相当于将指向字符串`""`首位的指针加上`(int) 'a'`……
+
+所以比较正确的方法是`string(1, 'a')`。不要把常量字符串加上char……[^str]
+
+[^str]: [stackoverflow - C++ convert from 1 char to string? \[closed\]](https://stackoverflow.com/questions/17201590/c-convert-from-1-char-to-string)
+
 ## 代码
 
 ### BFS
