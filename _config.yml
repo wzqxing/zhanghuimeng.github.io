@@ -78,7 +78,10 @@ math:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  - type: git
+    repo: git@github.com:zhanghuimeng/zhanghuimeng.github.io.git
+    branch: master
+    message: Hexo auto deploy
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
