@@ -94,7 +94,40 @@ USACO的题解和文章翻译合集。
 
 ## Chapter 3: Techniques more subtle
 
-还没做
+### Section 3.1: Spanning Trees
+
+* TEXT: Minimal Spanning Trees
+* PROB: Agri-Net
+* PROB: Score Inflation
+* PROB: Humble Numbers
+* PROB: Contact
+* PROB: Stamps
+
+### Section 3.2: Knapsack
+
+* TEXT: Knapsack Problems
+* PROB: Factorials
+* PROB: Stringobits
+* PROB: Spinning Wheels
+* PROB: Feed Ratios
+* PROB: Magic Squares
+* PROB: Sweet Butter
+
+### Section 3.3: Eulerian Tours
+
+* TEXT: Eulerian Tours（翻译：[翻译：欧拉路（USACO）](/post/eulerian-tour-usaco-translation)）
+* PROB: Riding The Fences
+* PROB: Shopping Offers
+* PROB: Camelot
+* PROB: Home on the Range
+* PROB: A Game
+
+### Section 3.4: Computational Geometry
+
+* TEXT: Computational Geometry（翻译：[翻译：计算几何（USACO）](/post/computational-geometry-usaco-translation)）
+* PROB: American Heritage
+* PROB: Electric Fence
+* PROB: Raucous Rockers
 
 ## Chapter 4: Advanced algorithms and difficult drills
 
