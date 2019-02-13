@@ -15,9 +15,9 @@ menu:
     url: /archives
   tags:
     url: /tags
-#  th-list:
-#    text: Categories
-#    url: /categories
+  th-list:
+    text: Categories
+    url: /categories
   github:
     url: https://github.com/zhanghuimeng
     target: _blank
