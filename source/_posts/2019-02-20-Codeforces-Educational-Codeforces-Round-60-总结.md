@@ -4,7 +4,7 @@ urlname: codeforces-educational-codeforces-round-60-summary
 toc: true
 date: 2019-02-20 18:50:42
 updated: 2019-02-21 19:32:00
-tags: [Codeforces, Codeforces Contest, alg:Binary Search, alg:Matrix, alg:Math]
+tags: [Codeforces, Codeforces Contest, alg:Binary Search, alg:Matrix, alg:Math, alg:Segmentation Tree]
 categories: Codeforces
 ---
 
@@ -342,3 +342,71 @@ int main() {
     return 0;
 }
 ```
+
+## 1117F
+
+题目来源：[https://codeforces.com/contest/1117/problem/F](https://codeforces.com/contest/1117/problem/F)
+
+提交次数：?/?
+
+### 题意
+
+还没看懂，感觉有点难度。
+
+## 111G
+
+题目来源：[https://codeforces.com/contest/1117/problem/G](https://codeforces.com/contest/1117/problem/G)
+
+提交次数：?/?
+
+### 题意
+
+给定一个由1到`n`的全排列组成的数组，记`m`是`[l, r]`范围内的最大元素index，定义函数
+
+```
+f(l, r) = (r - l + 1) + f(l, m - 1) + f(m + 1, r) (l <= r)
+f(l, r) = 0 (l > r)
+```
+
+给定`q`个询问，请给定`f`的值。
+
+`1 <= n, q <= 1e6`。
+
+### 分析
+
+这道题我比赛的时候自然是不会做的。比赛完了，看看题解，发现也晦涩难懂。[^sln2]
+
+首先需要把`f`分解成两个函数，`fl`和`fr`：
+
+```
+fl(l, r) = (m - l) + fl(l, m-1) + fl(m+1, r)
+fr(l, r) = (r - m) + fr(l, m-1) + fr(m+1, r)
+f(l, r) = (r - l + 1) + fl(l, r) + fr(l, r)
+```
+
+可以用数学归纳法简单地证明这个分解的正确性（虽然我可不知道为什么要这样分解……）：
+
+```
+f(l, r) = (r - l + 1) + fl(l, r) + fr(l, r)
+        = (r - l + 1) + fl(l, m-1) + fl(m+1, r) + (m - l)
+                      + fr(l, m-1) + fr(m+1, r) + (r - m)
+        = (r - l + 1) + f(l, m-1) - (m-1 - l + 1) + f(m+1, r) - (r - (m+1) + 1) + (r - l)
+        = (r - l + 1) + f(l, m-1) + f(m+1, r)
+```
+
+然后不妨举一个例子来看看`fl`是怎么算出来的：
+
+![fl的例子](tree.jpg)
+
+（显然`fl(i, i) = fr(i,i) = 0`）
+
+把这些式子全部展开，就会变成：
+
+```
+fl(1, 6) = (3-1) + fl(1, 2) + fl(4, 6)
+         = (3-1) + (1-1) + fl(2, 2) + (4-4) + fl(5, 6)
+         = (3-1) + (1-1) + (2-2) + (4-4) + (6-5) + fl(5, 5)
+         = (3-1) + (1-1) + (2-2) + (4-4) + (6-5) + (5, 5)
+```
+
+可以看出，`fl`其实是由6项组成的，而且每一项都是某个`l <= i <= r`与它左边最近的比它小的元素（或者`l`）之间的距离。这么想其实很合理。记`i`左边离它最近的比它大的元素为`lf[i]`，可以看出，它对`fl(l, r)`产生贡献当且仅当它被作为最大元素选中了，且贡献大小为`min(i - l, i - lf[i] - 1)`。
