@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: indigo
+theme: material-x
 
 # sitemap
 sitemap:
@@ -92,3 +92,55 @@ markdown:
     linkify: true
   plugins:
     - markdown-it-footnote
+
+# material-x theme config
+# (what is the author thinking about?)
+# 页脚社交信息
+social:
+  - icon: fas fa-envelope
+    url: mailto:zhanghuimeng1997@gmail.com
+  - icon: fab fa-github
+    url: https://github.com/zhanghuimeng
+  - icon: fas fa-music
+    url: https://music.163.com/#/user/home?id=261028414
+
+# 导航栏，建议以/结尾，少一次301重定向。
+nav_menu:
+  - name: home
+    icon: fas fa-home
+    url: https://zhanghuimeng.github.io/
+  - name: tags
+    icon: fas fa-rss
+    url: tags/
+  - name: archives
+    icon: fas fa-archive
+    url: archives/
+  - name: categories
+    icon: fas fa-users
+    url: categories/
+
+widgets:
+  - widget: author
+#    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/avatar/avatar.png
+#    jinrishici: true
+    social: true
+  - widget: toc
+  - widget: category
+  - widget: tagcloud
+  - widget: list
+    icon: fas fa-link
+    title: 特别链接
+    rows:
+      - name: wenj
+        icon: fas fa-comment-dots
+        url: https://wenj.github.io/
+      - name: ssh
+        icon: fas fa-comment-dots
+        url: http://bellasong.site/
+
+# Google Analytics
+google_analytics_key: UA-119345306-1
+root_domain: https://zhanghuimeng.github.io/
+
+# LiveRe Comments:
+livere_uid: MTAyMC80MjgyNi8xOTM3Mw==
