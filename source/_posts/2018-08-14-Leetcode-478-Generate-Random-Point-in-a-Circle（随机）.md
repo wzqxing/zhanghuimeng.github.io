@@ -158,18 +158,9 @@ public:
             y = y_leftdown + 2 * radius * dis(gen);
         } while ( (x - x_center) * (x - x_center) + (y - y_center) * (y - y_center) > radius * radius);
 
-        vector<double> ans;
-        ans.push_back(x);
-        ans.push_back(y);
-        return ans;
+        return {x, y};
     }
 };
-
-/**
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(radius, x_center, y_center);
- * vector<double> param_1 = obj.randPoint();
- */
 ```
 
 ### 极坐标
@@ -195,16 +186,7 @@ public:
         double x = x_center + r * cos(deg);
         double y = y_center + r * sin(deg);
 
-        vector<double> ans;
-        ans.push_back(x);
-        ans.push_back(y);
-        return ans;
+        return {x, y};
     }
 };
-
-/**
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(radius, x_center, y_center);
- * vector<double> param_1 = obj.randPoint();
- */
 ```

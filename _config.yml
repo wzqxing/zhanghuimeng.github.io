@@ -83,15 +83,20 @@ deploy:
     branch: master
     message: Hexo auto deploy
 
-# Markdown-it config
-## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+# Markdown-it-plus config
+## Docs: https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus
 markdown:
   render:
     html: true
     breaks: true
     linkify: true
   plugins:
-    - markdown-it-footnote
+    - plugin:
+      name: markdown-it-katex
+      enable: true
+    - plugin:
+      name: markdown-it-mark
+      enable: false
 
 # material-x theme config
 # (what is the author thinking about?)
