@@ -2,7 +2,7 @@
 title: Leetcode 478. Generate Random Point in a Circle（随机）
 urlname: leetcode-478-generate-random-point-in-a-circle
 toc: true
-mathjax: true
+mathjax: false
 date: 2018-08-14 17:20:01
 updated: 2018-08-14 22:17:01
 tags: [Leetcode, alg:Math, alg:Random, alg:Rejection Sampling]
@@ -77,11 +77,11 @@ tags: [Leetcode, alg:Math, alg:Random, alg:Rejection Sampling]
 
 我们重新考虑一下半径的问题。以半径$r$作为随机变量，则随机点落在$r$范围内的概率分布为
 
-$$CDF(r) = \frac{r^2}{R^2}$$
+$$\text{CDF}(r) = \frac{r^2}{R^2}$$
 
-$$PDF(r) = \frac{d}{dr} CDF(r) = \frac{2r}{R^2}$$
+$$\text{PDF}(r) = \frac{d}{dr} \text{CDF}(r) = \frac{2r}{R^2}$$
 
-以`[0, 1]`均匀分布对$CDF(r)$进行随机，则有$r = R \sqrt{rand()}$。
+以`[0, 1]`均匀分布对$\text{CDF}(r)$进行随机，则有$r = R \sqrt{\text{rand}()}$。
 
 ### C++中的数学运算
 

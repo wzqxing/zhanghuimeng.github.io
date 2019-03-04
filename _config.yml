@@ -73,7 +73,7 @@ baidusitemap:
   path: baidusitemap.xml
 
 math:
-  engine: 'mathjax'
+  engine: 'katex'
   
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -100,6 +100,14 @@ markdown:
 
 # material-x theme config
 # (what is the author thinking about?)
+
+# 全局导入
+import:
+  link:
+    - "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.0/katex.min.css'>"
+  # script:
+  
+
 # 页脚社交信息
 social:
   - icon: fas fa-envelope
